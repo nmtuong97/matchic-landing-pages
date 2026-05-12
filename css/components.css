@@ -385,3 +385,59 @@
     width: 100%;
   }
 }
+
+/* ===== WAITLIST FORM STATES ===== */
+.waitlist-form {
+  position: relative;
+}
+
+.waitlist-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: waitlist-spin 0.8s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes waitlist-spin {
+  to { transform: rotate(360deg); }
+}
+
+.waitlist-btn-success {
+  background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+}
+
+.waitlist-message {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--glass-radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: all 0.3s var(--ease-out-cubic);
+}
+
+.waitlist-message--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.waitlist-message--success {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.waitlist-message--error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #EF4444;
+}
+
+.waitlist-form input:invalid:not(:placeholder-shown) {
+  border-color: #EF4444;
+}

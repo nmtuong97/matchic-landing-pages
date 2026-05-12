@@ -255,32 +255,63 @@
 /**
  * Waitlist form handler
  */
-window.handleWaitlist = function (e) {
+window.handleWaitlist = function(e) {
   e.preventDefault();
   const form = e.target;
-  const email = form.querySelector('input[type="email"]').value;
-  const button = form.querySelector('button');
+  const input = form.querySelector('input[type="email"]');
+  const button = form.querySelector('button[type="submit"]');
+  const email = input.value.trim();
+
+  // Clear previous states
+  form.classList.remove('waitlist-error', 'waitlist-success');
+  const existingMsg = form.querySelector('.waitlist-message');
+  if (existingMsg) existingMsg.remove();
 
   // Validation
-  if (!email || !email.includes('@')) {
-    alert('Please enter a valid email address.');
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    showWaitlistMessage(form, 'Please enter a valid email address.', 'error');
+    input.focus();
     return false;
   }
 
-  // Visual feedback
+  // Loading state
   const originalText = button.textContent;
-  button.textContent = '\u2713 You\'re on the list!';
-  button.style.background = '#4CAF50';
   button.disabled = true;
+  button.innerHTML = '<span class="waitlist-spinner" aria-hidden="true"></span> Sending...';
 
-  // Reset after 3 seconds
+  // Simulate API call (replace with real endpoint)
   setTimeout(() => {
-    button.textContent = originalText;
-    button.style.background = '';
-    button.disabled = false;
-    form.querySelector('input[type="email"]').value = '';
-  }, 3000);
+    // Success
+    button.innerHTML = '✓ Saved!';
+    button.classList.add('waitlist-btn-success');
+    showWaitlistMessage(form, "You're on the list! We'll email you when Matchic is ready.", 'success');
+    input.value = '';
 
-  console.log('Waitlist signup:', email);
+    // Reset after 4 seconds
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+      button.classList.remove('waitlist-btn-success');
+      const msg = form.querySelector('.waitlist-message');
+      if (msg) {
+        msg.style.opacity = '0';
+        setTimeout(() => msg.remove(), 300);
+      }
+    }, 4000);
+  }, 1500);
+
   return false;
 };
+
+function showWaitlistMessage(form, text, type) {
+  const msg = document.createElement('div');
+  msg.className = 'waitlist-message waitlist-message--' + type;
+  msg.textContent = text;
+  msg.setAttribute('role', type === 'error' ? 'alert' : 'status');
+  msg.setAttribute('aria-live', 'polite');
+  form.appendChild(msg);
+  // Trigger reflow for animation
+  void msg.offsetWidth;
+  msg.classList.add('waitlist-message--visible');
+}
