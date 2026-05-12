@@ -16,6 +16,11 @@
 
   const LANGUAGES = [
     { code: 'en', flag: '🇺🇸', name: 'English', native: 'English' },
+    { code: 'vi', flag: '🇻🇳', name: 'Vietnamese', native: 'Tiếng Việt' }
+  ];
+//  { code: 'ja', flag: '🇯🇵', name: 'Japanese', native: '日本語' },
+//  { code: 'ko', flag: '🇰🇷', name: 'Korean', native: '한국어' }
+    { code: 'en', flag: '🇺🇸', name: 'English', native: 'English' },
     { code: 'vi', flag: '🇻🇳', name: 'Vietnamese', native: 'Tiếng Việt' },
     { code: 'ja', flag: '🇯🇵', name: 'Japanese', native: '日本語' },
     { code: 'ko', flag: '🇰🇷', name: 'Korean', native: '한국어' }
