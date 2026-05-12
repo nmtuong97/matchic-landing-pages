@@ -1,98 +1,170 @@
 /**
- * Matchic - Client-Side i18n & Theme Toggle
- * Supports: en (English), vi (Tiếng Việt)
- * Theme matches LiquidGlassTheme (dark/light)
+ * Matchic — i18n System
+ * Dynamic language switching with localStorage persistence
  */
 
-const i18n = {
-  currentLang: 'en',
-  translations: {},
+(function () {
+  'use strict';
 
-  async load(lang) {
+  const STORAGE_KEY = 'matchic-lang';
+  const DEFAULT_LANG = 'en';
+  const SUPPORTED_LANGS = ['en', 'vi'];
+
+  let currentLang = DEFAULT_LANG;
+  let translations = {};
+
+  /**
+   * Initialize i18n system
+   */
+  async function init() {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const browserLang = navigator.language.split('-')[0];
+
+    currentLang = SUPPORTED_LANGS.includes(stored)
+      ? stored
+      : SUPPORTED_LANGS.includes(browserLang)
+        ? browserLang
+        : DEFAULT_LANG;
+
+    await loadTranslations(currentLang);
+    applyTranslations();
+    updateLangSwitcher();
+    updateMetaTags();
+    updateHtmlLang();
+  }
+
+  /**
+   * Load translations from JSON file
+   */
+  async function loadTranslations(lang) {
     try {
-      const resp = await fetch(`locales/${lang}.json`);
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      this.translations[lang] = await resp.json();
-    } catch {
-      // Fallback
+      const res = await fetch(`locales/${lang}.json`);
+      translations = await res.json();
+    } catch (e) {
+      console.warn(`Failed to load translations for ${lang}:`, e);
+      translations = {};
     }
-  },
+  }
 
-  t(key, params = {}) {
-    let text = this.translations[this.currentLang]?.[key] || key;
-    Object.entries(params).forEach(([k, v]) => {
-      text = text.replace(`{${k}}`, v);
-    });
-    return text;
-  },
-
-  setLang(lang) {
-    if (!['en', 'vi'].includes(lang)) return;
-    this.currentLang = lang;
-
-    document.querySelectorAll('.lang-toggle button').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
-    document.documentElement.lang = lang;
-
-    try { localStorage.setItem('matchic_lang', lang); } catch {}
+  /**
+   * Apply translations to all data-i18n elements
+   */
+  function applyTranslations() {
+    if (!translations) return;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
-      const text = this.t(key);
-      if (text !== key) el.textContent = text;
-    });
-
-    document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
-  },
-
-  init() {
-    const saved = (() => { try { return localStorage.getItem('matchic_lang'); } catch { return null; } })();
-    this.setLang(saved || 'en');
-  },
-};
-
-/**
- * Theme Toggle — matches LiquidGlassTheme dark/light
- */
-const theme = {
-  current: 'dark',
-
-  setTheme(mode) {
-    if (!['dark', 'light'].includes(mode)) return;
-    this.current = mode;
-    document.documentElement.setAttribute('data-theme', mode);
-
-    document.querySelectorAll('.theme-toggle').forEach(btn => {
-      btn.innerHTML = mode === 'dark'
-        ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>'
-        : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-      btn.setAttribute('aria-label', mode === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-    });
-
-    try { localStorage.setItem('matchic_theme', mode); } catch {}
-  },
-
-  toggle() {
-    this.setTheme(this.current === 'dark' ? 'light' : 'dark');
-  },
-
-  init() {
-    const saved = (() => { try { return localStorage.getItem('matchic_theme'); } catch { return null; } })();
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    this.setTheme(saved || (prefersDark ? 'dark' : 'light'));
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if (!localStorage.getItem('matchic_theme')) {
-        this.setTheme(e.matches ? 'dark' : 'light');
+      const value = getNestedValue(translations, key);
+      if (value !== undefined) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          if (el.placeholder !== undefined) {
+            el.placeholder = value;
+          }
+        } else if (el.tagName === 'META') {
+          el.content = value;
+        } else {
+          el.textContent = value;
+        }
       }
     });
-  },
-};
 
-// Auto-init
-document.addEventListener('DOMContentLoaded', () => {
-  i18n.init();
-  theme.init();
-});
+    // Update document title
+    if (translations.meta?.title) {
+      document.title = translations.meta.title;
+    }
+  }
+
+  /**
+   * Get nested value from object using dot notation
+   */
+  function getNestedValue(obj, key) {
+    return key.split('.').reduce((acc, k) => acc?.[k], obj);
+  }
+
+  /**
+   * Switch language
+   */
+  async function setLanguage(lang) {
+    if (!SUPPORTED_LANGS.includes(lang) || lang === currentLang) return;
+
+    currentLang = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
+
+    await loadTranslations(lang);
+    applyTranslations();
+    updateLangSwitcher();
+    updateMetaTags();
+    updateHtmlLang();
+
+    // Dispatch custom event for other listeners
+    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
+  }
+
+  /**
+   * Update language switcher active state
+   */
+  function updateLangSwitcher() {
+    document.querySelectorAll('.lang-switcher button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === currentLang);
+    });
+  }
+
+  /**
+   * Update HTML lang attribute and meta tags
+   */
+  function updateHtmlLang() {
+    document.documentElement.lang = currentLang;
+  }
+
+  /**
+   * Update meta tags (description, OG, Twitter)
+   */
+  function updateMetaTags() {
+    if (!translations.meta) return;
+
+    const metaMap = {
+      'meta[name="description"]': 'meta.description',
+      'meta[property="og:title"]': 'meta.ogTitle',
+      'meta[property="og:description"]': 'meta.ogDescription',
+      'meta[name="twitter:title"]': 'meta.twitterTitle',
+      'meta[name="twitter:description"]': 'meta.twitterDescription',
+    };
+
+    Object.entries(metaMap).forEach(([selector, key]) => {
+      const el = document.querySelector(selector);
+      const value = getNestedValue(translations, key);
+      if (el && value) {
+        el.setAttribute('content', value);
+      }
+    });
+  }
+
+  /**
+   * Get current language
+   */
+  function getCurrentLang() {
+    return currentLang;
+  }
+
+  /**
+   * Get translation by key
+   */
+  function t(key) {
+    return getNestedValue(translations, key) || key;
+  }
+
+  // Expose API
+  window.matchicI18n = {
+    init,
+    setLanguage,
+    getCurrentLang,
+    t,
+  };
+
+  // Auto-init on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();

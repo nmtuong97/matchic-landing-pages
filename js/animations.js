@@ -1,39 +1,72 @@
 /**
- * Matchic - Scroll animations with Intersection Observer + GSAP
- * - Scroll-triggered reveal animations (css class fallback + GSAP enhanced)
- * - Animated number counters
- * - Smooth scroll for anchor links
- * - Waitlist form handler
+ * Matchic — Animation System
+ * GSAP + ScrollTrigger + IntersectionObserver fallback
+ * Respects prefers-reduced-motion
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // ========================================================
-  // 1. SCROLL REVEAL (Intersection Observer baseline)
-  // ========================================================
-  const revealElements = document.querySelectorAll('.reveal');
-  
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        revealObserver.unobserve(entry.target);
-      }
+(function () {
+  'use strict';
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /**
+   * Initialize all animations
+   */
+  function init() {
+    if (prefersReducedMotion) {
+      // Show all content immediately
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+      return;
+    }
+
+    initScrollReveal();
+    initHeroAnimations();
+    initMicroInteractions();
+    initCounters();
+    initFAQAccordion();
+  }
+
+  /**
+   * Scroll reveal with IntersectionObserver (baseline)
+   */
+  function initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => observer.observe(el));
+  }
 
-  // ========================================================
-  // 2. GSAP SCROLL ANIMATIONS (enhanced)
-  // ========================================================
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  /**
+   * GSAP animations (enhanced)
+   */
+  function initHeroAnimations() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animate bento cards on scroll
-    gsap.utils.toArray('.bento-card').forEach((card, i) => {
+    // Hero entrance
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    heroTl
+      .from('.hero-badge', { y: 20, opacity: 0, duration: 0.6 })
+      .from('h1', { y: 30, opacity: 0, duration: 0.8 }, '-=0.3')
+      .from('.hero-subtitle', { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
+      .from('.hero-actions', { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
+      .from('.hero-trust', { y: 15, opacity: 0, duration: 0.4 }, '-=0.2')
+      .from('.phone-mockup', { y: 60, opacity: 0, duration: 1 }, '-=0.6');
+
+    // Scroll-triggered sections
+    gsap.utils.toArray('.bento-card, .feature-card, .impact-card').forEach((card, i) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -48,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Animate tech cards
-    gsap.utils.toArray('.tech-card').forEach((card, i) => {
+    // AI cards
+    gsap.utils.toArray('.ai-card').forEach((card, i) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -64,157 +97,190 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Animate impact cards
-    gsap.utils.toArray('.impact-card').forEach((card, i) => {
-      gsap.from(card, {
+    // Solution points
+    gsap.utils.toArray('.solution-point').forEach((point, i) => {
+      gsap.from(point, {
         scrollTrigger: {
-          trigger: card,
+          trigger: point,
           start: 'top 85%',
           toggleActions: 'play none none none'
         },
-        y: 30,
-        opacity: 0,
-        duration: 0.6,
-        delay: i * 0.1,
-        ease: 'power2.out'
-      });
-    });
-
-    // Animate testimonial cards
-    gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
-      gsap.from(card, {
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
-        },
-        y: 30,
+        x: -30,
         opacity: 0,
         duration: 0.5,
         delay: i * 0.15,
         ease: 'power2.out'
       });
     });
-
-    // Animate hero visual
-    gsap.from('.hero-visual-col', {
-      scrollTrigger: {
-        trigger: '.hero-visual-col',
-        start: 'top 80%',
-        toggleActions: 'play none none none'
-      },
-      y: 60,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out'
-    });
-  } else {
-    // GSAP not loaded — use CSS animation fallback
-    document.querySelectorAll('.bento-card, .tech-card, .impact-card, .testimonial-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'all 0.6s ease';
-    });
-    
-    // Add a MutationObserver as fallback
-    const fallbackObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          fallbackObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    document.querySelectorAll('.bento-card, .tech-card, .impact-card, .testimonial-card').forEach(el => {
-      fallbackObserver.observe(el);
-    });
   }
 
-  // ========================================================
-  // 3. ANIMATED COUNTERS
-  // ========================================================
-  const counters = document.querySelectorAll('.counter-number');
-  
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = parseInt(entry.target.dataset.target) || 0;
-        animateCounter(entry.target, target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
+  /**
+   * Micro-interactions
+   */
+  function initMicroInteractions() {
+    // Button ripple effect
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        if (prefersReducedMotion) return;
 
-  counters.forEach(counter => counterObserver.observe(counter));
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: rgba(255,255,255,0.3);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple-effect 0.6s ease-out;
+          pointer-events: none;
+        `;
+
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Card tilt on hover (desktop only)
+    if (!window.matchMedia('(pointer: coarse)').matches) {
+      document.querySelectorAll('.glass-card, .feature-card, .bento-card').forEach(card => {
+        card.addEventListener('mousemove', function (e) {
+          if (prefersReducedMotion) return;
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (y - centerY) / 20;
+          const rotateY = (centerX - x) / 20;
+
+          this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+        });
+
+        card.addEventListener('mouseleave', function () {
+          this.style.transform = '';
+        });
+      });
+    }
+  }
+
+  /**
+   * Animated counters
+   */
+  function initCounters() {
+    const counters = document.querySelectorAll('.counter-number');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.dataset.target) || 0;
+          animateCounter(entry.target, target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+  }
 
   function animateCounter(el, target) {
     const duration = 1500;
     const start = performance.now();
-    
+
     function update(currentTime) {
       const elapsed = currentTime - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.round(eased * target);
       el.textContent = current;
-      
+
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
         el.textContent = target;
       }
     }
-    
+
     requestAnimationFrame(update);
   }
 
-  // ========================================================
-  // 4. SMOOTH SCROLL FOR ANCHOR LINKS
-  // ========================================================
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-      
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        
-        // Close mobile menu if open
-        document.querySelector('.nav-links')?.classList.remove('open');
-      }
-    });
-  });
+  /**
+   * FAQ Accordion
+   */
+  function initFAQAccordion() {
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
 
-  // ========================================================
-  // 5. WAITLIST FORM HANDLER
-  // ========================================================
-  window.handleWaitlist = function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const email = form.querySelector('input[type="email"]').value;
-    const button = form.querySelector('button');
-    
-    // Visual feedback
-    button.textContent = '✓ You\'re on the list!';
-    button.style.background = '#4CAF50';
-    button.disabled = true;
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      button.textContent = 'Notify Me ✨';
-      button.style.background = '';
-      button.disabled = false;
-      form.querySelector('input[type="email"]').value = '';
-    }, 3000);
-    
-    // In production: send to backend
-    console.log('Waitlist signup:', email);
-    
+        // Close all others (optional - accordion behavior)
+        // document.querySelectorAll('.faq-item.open').forEach(i => {
+        //   if (i !== item) i.classList.remove('open');
+        // });
+
+        item.classList.toggle('open', !isOpen);
+      });
+    });
+  }
+
+  // Add ripple keyframes
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Initialize
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/**
+ * Waitlist form handler
+ */
+window.handleWaitlist = function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const email = form.querySelector('input[type="email"]').value;
+  const button = form.querySelector('button');
+
+  // Validation
+  if (!email || !email.includes('@')) {
+    alert('Please enter a valid email address.');
     return false;
-  };
-});
+  }
+
+  // Visual feedback
+  const originalText = button.textContent;
+  button.textContent = '\u2713 You\'re on the list!';
+  button.style.background = '#4CAF50';
+  button.disabled = true;
+
+  // Reset after 3 seconds
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.style.background = '';
+    button.disabled = false;
+    form.querySelector('input[type="email"]').value = '';
+  }, 3000);
+
+  console.log('Waitlist signup:', email);
+  return false;
+};

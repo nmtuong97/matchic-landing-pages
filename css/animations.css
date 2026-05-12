@@ -1,0 +1,94 @@
+/* ============================================================
+   Matchic — Animation System
+   Motion Principles: Soft, deliberate, fashion-forward
+   Easing: cubic-bezier(0.215, 0.61, 0.355, 1)
+   ============================================================ */
+
+/* ===== REVEAL ANIMATIONS (CSS fallback) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.35s; }
+.reveal-delay-4 { transition-delay: 0.5s; }
+
+/* ===== HERO ENTRANCE ===== */
+@keyframes hero-glow-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-badge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.08); }
+  50% { box-shadow: 0 0 0 14px rgba(33, 150, 243, 0); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes mock-fade-in {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 0.85; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ===== CARD HOVER MICRO-INTERACTIONS ===== */
+.card-lift {
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              box-shadow 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow);
+}
+
+/* ===== ICON PULSE ===== */
+.icon-pulse {
+  animation: pulse-slow 2.5s ease-in-out infinite;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .reveal-delay-4 {
+    transition-delay: 0s;
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
+
+  .icon-pulse {
+    animation: none;
+    opacity: 1;
+  }
+}

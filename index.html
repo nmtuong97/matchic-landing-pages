@@ -1,623 +1,885 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Matchic — Your AI Wardrobe. Sustainable. Private. Intelligent.</title>
-  <meta name="description" content="Matchic digitizes your wardrobe, auto-tags clothing with on-device AI, and recommends outfits you'll love. 100% private. Works offline. No cloud, no uploads, no tracking." />
-  <meta name="keywords" content="AI wardrobe app, digital closet organizer, outfit planner AI, sustainable fashion app, on-device AI clothing, capsule wardrobe builder, fashion management, closet digitizer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matchic — Your Private Wardrobe Brain</title>
+  <meta name="description" content="Matchic helps you remember what you own, discover forgotten outfits, and buy less — with AI that runs entirely on your device. No uploads. No tracking. Open source.">
 
-  <meta property="og:title" content="Matchic — Your AI Wardrobe Assistant" />
-  <meta property="og:description" content="Digitize your wardrobe in seconds. Get AI outfit recommendations. 100% on-device. 100% private." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nmtuong97.github.io/matchic-landing-pages/" />
-  <meta property="og:image" content="https://nmtuong97.github.io/matchic-landing-pages/assets/og-image.svg" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://nmtuong97.github.io/matchic-landing-pages/">
 
-  <meta name="apple-itunes-app" content="app-id=1234567890" />
-  <meta name="google-play-app" content="app-id=com.matchic.app" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nmtuong97.github.io/matchic-landing-pages/">
+  <meta property="og:title" content="Matchic — Your Private Wardrobe Brain">
+  <meta property="og:description" content="AI wardrobe assistant that runs entirely on your phone. No cloud. No tracking. Open source.">
+  <meta property="og:image" content="https://nmtuong97.github.io/matchic-landing-pages/assets/og-image.svg">
 
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matchic — Your Private Wardrobe Brain">
+  <meta name="twitter:description" content="Know what you own. Wear what you love. Privately.">
+  <meta name="twitter:image" content="https://nmtuong97.github.io/matchic-landing-pages/assets/og-image.svg">
 
-  <!-- ===== JSON-LD SCHEMA (Phase 4) ===== -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- JSON-LD: SoftwareApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MobileApplication",
+    "@type": "SoftwareApplication",
     "name": "Matchic",
-    "operatingSystem": ["iOS 16.0+", "Android 8.0+"],
     "applicationCategory": "LifestyleApplication",
-    "description": "AI-powered wardrobe management app that runs entirely on-device. Digitize your closet, auto-tag clothing, and get outfit recommendations — all without sending data to the cloud.",
+    "operatingSystem": ["Android", "iOS"],
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
     },
     "featureList": [
-      "AI auto-tagging of clothing items",
-      "On-device outfit recommendations",
-      "Digital lookbook",
-      "Batch import (up to 20 photos)",
-      "Backup & restore as ZIP",
-      "100% offline mode",
-      "No account required"
+      "AI-powered wardrobe organization",
+      "On-device AI processing",
+      "Offline functionality",
+      "Outfit suggestions",
+      "Privacy-first design",
+      "Open source"
     ],
+    "softwareVersion": "Coming Soon",
     "author": {
-      "@type": "Person",
-      "name": "Nguyễn Mạnh Tường",
-      "url": "https://github.com/matchic"
+      "@type": "Organization",
+      "name": "Matchic",
+      "url": "https://nmtuong97.github.io/matchic-landing-pages/"
     },
-    "softwareHelp": {
-      "@type": "WebPage",
-      "url": "https://nmtuong97.github.io/matchic-landing-pages/support.html"
-    },
-    "termsOfService": "https://nmtuong97.github.io/matchic-landing-pages/terms.html",
-    "privacyPolicy": "https://nmtuong97.github.io/matchic-landing-pages/privacy.html"
+    "sameAs": [
+      "https://github.com/nmtuong97/matchic"
+    ]
   }
   </script>
+
+  <!-- JSON-LD: FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"Is Matchic really private?","acceptedAnswer":{"@type":"Answer","text":"Yes. Matchic processes everything on your device. AI runs locally via MediaPipe, and all wardrobe data is stored in ObjectBox on your phone. No data is ever sent to the cloud."}},
-      {"@type":"Question","name":"Does Matchic work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes, all core features work completely offline. The only time internet is needed is for the optional one-time AI model download (~275MB)."}},
-      {"@type":"Question","name":"What platforms does Matchic support?","acceptedAnswer":{"@type":"Answer","text":"Matchic supports iOS 16.0+ and Android 8.0 (API 26)+."}},
-      {"@type":"Question","name":"Is Matchic free?","acceptedAnswer":{"@type":"Answer","text":"Yes, Matchic is free to download and use. No subscriptions or in-app purchases for core features."}},
-      {"@type":"Question","name":"How does the AI tagging work?","acceptedAnswer":{"@type":"Answer","text":"When you add a clothing item, Matchic uses on-device Gemma 3 AI via MediaPipe to analyze the image. It identifies colors, suggests categories, detects patterns, and recommends style tags — all without sending your image anywhere."}}
+      {
+        "@type": "Question",
+        "name": "Is Matchic really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Matchic is free and open source. We don't sell data because we don't collect any."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You can use Matchic without creating an account. Your data stays on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All features work without internet. The AI runs entirely on your phone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my photos uploaded anywhere?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your photos never leave your device. They are processed locally by on-device AI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI does Matchic use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Matchic uses Google's MediaPipe GenAI framework and Gemma 3 model, both running locally on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your wardrobe data is stored locally and can be exported or backed up anytime."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the code really open source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Matchic is released under the MIT License. You can view, fork, and contribute to the code on GitHub."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will there be an iOS version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We are building for both iOS and Android. Join the waitlist to be notified."
+        }
+      }
     ]
   }
   </script>
 </head>
 <body>
-  <!-- ===== NAV ===== -->
-  <nav>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="site-nav" role="banner">
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#2196F3"/><path d="M10 24V14l8-4 8 4v10H10z" fill="white" fill-opacity="0.9"/><path d="M14 24v-6l4-2 4 2v6" fill="white" fill-opacity="0.6"/></svg>
+      <a href="#" class="nav-logo" aria-label="Matchic home">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46 16 2a4 4 0 0 1-3.75 2 4 4 0 0 1-3.75-2L4 3.46a2 2 0 0 0-1.61 2.68l3.87 10.95a2 2 0 0 0 1.88 1.34h5.72a2 2 0 0 0 1.88-1.34l3.87-10.95A2 2 0 0 0 20.38 3.46z"/><path d="M12 10v8"/><path d="M9 13h6"/></svg>
         <span class="nav-logo-text">Matchic</span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#technology">AI</a></li>
-        <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#" class="nav-cta">Get Early Access</a></li>
-        <li>
-          <div class="lang-toggle">
-            <button data-lang="en" class="active" onclick="i18n.setLang('en')">EN</button>
-            <button data-lang="vi" onclick="i18n.setLang('vi')">VI</button>
-          </div>
-        </li>
-        <li><button class="theme-toggle" onclick="theme.toggle()" aria-label="Switch theme"></button></li>
-      </ul>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#features" data-i18n="nav.features">Features</a></li>
+          <li><a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a></li>
+          <li><a href="#privacy" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="#waitlist" class="nav-cta" data-i18n="nav.waitlist">Get Early Access</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button type="button" data-lang="en" class="active" aria-label="English">EN</button>
+          <button type="button" data-lang="vi" aria-label="Vietnamese">VI</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="hero">
-    <div class="hero-glow"></div>
-    <div class="container">
-      <div class="hero-grid">
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
         <div class="hero-text-col">
-          <div class="hero-badge reveal">🌟 AI Fashion: $4.9B → $22B by 2032</div>
-          <h1 class="reveal reveal-delay-1">
-            <span class="gradient-text">Know what you own.</span><br />
-            <span>Wear what you love.</span>
-          </h1>
-          <p class="hero-subtitle reveal reveal-delay-2">
-            Matchic is your AI wardrobe assistant. Digitize your entire closet in minutes — snap a photo, let AI auto-tag everything, and get outfit recommendations that actually match your style. <strong>100% on-device. Zero data uploaded. Works offline.</strong>
-          </p>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a href="#" class="btn btn-primary btn-glow btn-lg">
-              ✨ Get Early Access
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#how-it-works" class="btn btn-secondary btn-lg">See How It Works</a>
+          <span class="hero-badge" data-i18n="hero.eyebrow">Private AI Wardrobe Assistant</span>
+          <h1 data-i18n="hero.title">Your Private Wardrobe Brain</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Know what you own. Wear what you love. All with AI that lives on your phone — never in the cloud.</p>
+          <div class="hero-actions">
+            <a href="#waitlist" class="btn btn-primary btn-lg btn-glow" data-i18n="hero.ctaPrimary">Join the Waitlist</a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg" data-i18n="hero.ctaSecondary">See How It Works</a>
           </div>
-
-          <div class="hero-trust row reveal reveal-delay-4">
-            <div class="trust-pill"><i class="fa-solid fa-lock"></i> On-Device AI</div>
-            <div class="trust-pill"><i class="fa-solid fa-wifi-slash"></i> Works Offline</div>
-            <div class="trust-pill"><i class="fa-solid fa-code-branch"></i> Open Source</div>
-            <div class="trust-pill"><i class="fa-regular fa-clock"></i> No Account</div>
+          <div class="hero-trust">
+            <span class="trust-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="hero.trust1">Open Source</span>
+            </span>
+            <span class="trust-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="hero.trust2">No Account Required</span>
+            </span>
+            <span class="trust-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="hero.trust3">100% Offline</span>
+            </span>
+            <span class="trust-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="hero.trust4">Zero Tracking</span>
+            </span>
           </div>
         </div>
-
-        <div class="hero-visual-col reveal reveal-delay-2">
+        <div class="hero-visual-col">
           <div class="phone-mockup">
             <div class="phone-frame">
               <div class="phone-notch"></div>
               <div class="phone-screen">
-                <!-- Animated UI mockup -->
                 <div class="mock-closet">
                   <div class="mock-header">
                     <span class="mock-title">My Closet</span>
                     <span class="mock-count">24 items</span>
                   </div>
                   <div class="mock-grid">
-                    <div class="mock-item" style="--h:60px;--c:#2196F3;"></div>
-                    <div class="mock-item" style="--h:80px;--c:#E91E63;"></div>
-                    <div class="mock-item" style="--h:55px;--c:#4CAF50;"></div>
-                    <div class="mock-item" style="--h:75px;--c:#FF9800;"></div>
-                    <div class="mock-item" style="--h:65px;--c:#9C27B0;"></div>
-                    <div class="mock-item" style="--h:70px;--c:#03DAC6;"></div>
-                    <div class="mock-item" style="--h:50px;--c:#F44336;"></div>
-                    <div class="mock-item" style="--h:85px;--c:#2196F3;"></div>
+                    <div class="mock-item" style="background:#E3F2FD;height:80px;animation-delay:0.1s"></div>
+                    <div class="mock-item" style="background:#F3E5F5;height:100px;animation-delay:0.2s"></div>
+                    <div class="mock-item" style="background:#E8F5E9;height:90px;animation-delay:0.3s"></div>
+                    <div class="mock-item" style="background:#FFF3E0;height:70px;animation-delay:0.4s"></div>
+                    <div class="mock-item" style="background:#E0F7FA;height:110px;animation-delay:0.5s"></div>
+                    <div class="mock-item" style="background:#FCE4EC;height:85px;animation-delay:0.6s"></div>
                   </div>
-                  <div class="mock-ai-badge pulse-slow">
-                    <i class="fa-solid fa-sparkles"></i> AI analyzing...
+                  <div class="mock-ai-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    AI analyzing...
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="phone-float-items">
-              <div class="float-tag" style="top:15%;left:-20px;">👕 Top</div>
-              <div class="float-tag" style="top:45%;right:-25px;">👖 Bottom</div>
-              <div class="float-tag" style="bottom:20%;left:-15px;">👟 Shoes</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LOGO CLOUD / SOCIAL PROOF ===== -->
-  <section class="logo-cloud">
-    <div class="container">
-      <p class="logo-cloud-label">Built with</p>
-      <div class="logo-row">
-        <span class="logo-chip"><i class="fa-brands fa-flutter"></i> Flutter</span>
-        <span class="logo-chip"><i class="fa-solid fa-database"></i> ObjectBox</span>
-        <span class="logo-chip"><i class="fa-brands fa-google"></i> MediaPipe</span>
-        <span class="logo-chip"><i class="fa-solid fa-brain"></i> Gemma 3</span>
-        <span class="logo-chip"><i class="fa-brands fa-github"></i> Open Source</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== HOW IT WORKS ===== -->
-  <section id="how-it-works" class="section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-regular fa-compass"></i> Simple. Fast. Private.</span>
-        <h2>Your Wardrobe, Digitized in 4 Steps</h2>
-        <p>From your closet to your phone in under 60 seconds. No manual data entry. No accounts. No cloud.</p>
-      </div>
-
-      <div class="steps-bento">
-        <div class="bento-card bento-card--lg reveal" style="--idx:0;">
-          <div class="bento-step-num">01</div>
-          <div class="bento-icon"><i class="fa-solid fa-camera"></i></div>
-          <h3>Snap a Photo</h3>
-          <p>Take a picture of any clothing item or import from your gallery. Batch-import up to <strong>20 items at once</strong>.</p>
-          <div class="bento-stat">📸 Camera + Gallery support</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:1;">
-          <div class="bento-step-num">02</div>
-          <div class="bento-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h3>AI Auto-Tags</h3>
-          <p>On-device AI instantly recognizes: <strong>category, color (hex), pattern, material, fit, season, style</strong>.</p>
-          <div class="bento-stat">🤖 Gemma 3 · MediaPipe</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:2;">
-          <div class="bento-step-num">03</div>
-          <div class="bento-icon"><i class="fa-solid fa-shirt"></i></div>
-          <h3>Get Outfit Ideas</h3>
-          <p>Scan any item and AI generates complete outfit suggestions from your own wardrobe. <strong>Like a personal stylist in your pocket</strong>.</p>
-          <div class="bento-stat">🔍 Context-aware matching</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:3;">
-          <div class="bento-step-num">04</div>
-          <div class="bento-icon"><i class="fa-regular fa-bookmark"></i></div>
-          <h3>Save & Track</h3>
-          <p>Save favorite outfits to your Lookbook, track wear frequency, export backups as ZIP. <strong>Your data, your control</strong>.</p>
-          <div class="bento-stat">💾 Backup & Restore included</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURES (Bento Grid) ===== -->
-  <section id="features">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-regular fa-star"></i> Core Features</span>
-        <h2>Everything You Need, Nothing You Don't</h2>
-        <p>Six features designed to solve the real problems of wardrobe management — not bloated extras you'll never use.</p>
-      </div>
-
-      <div class="features-bento">
-        <div class="bento-card bento-card--wide reveal" style="--idx:0;">
-          <div class="bento-card-left">
-            <div class="bento-icon" style="background:rgba(33,150,243,0.12);color:#2196F3;"><i class="fa-solid fa-tag"></i></div>
-            <h3>AI Auto-Tagging</h3>
-            <p>Our on-device AI recognizes colors (with hex codes), categories (tops, bottoms, shoes, outerwear, accessories), patterns, materials, and style tags — all from a single photo. <strong>Zero manual tagging</strong>.</p>
-            <div class="feature-tags">
-              <span class="mini-tag">20+ categories</span>
-              <span class="mini-tag">Color hex detection</span>
-              <span class="mini-tag">Pattern recognition</span>
-            </div>
-          </div>
-          <div class="bento-card-right">
-            <div class="tag-preview">
-              <div class="tag-preview-item"><span>Category</span><strong>👕 Top</strong></div>
-              <div class="tag-preview-item"><span>Color</span><strong>Navy #000080</strong></div>
-              <div class="tag-preview-item"><span>Material</span><strong>Cotton 97%</strong></div>
-              <div class="tag-preview-item"><span>Fit</span><strong>Regular</strong></div>
-              <div class="tag-preview-item"><span>Season</span><strong>Spring/Fall</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:1;">
-          <div class="bento-icon" style="background:rgba(3,218,198,0.12);color:#03DAC6;"><i class="fa-solid fa-wand-sparkles"></i></div>
-          <h3>Smart Outfit Matching</h3>
-          <p>Scan any clothing item and AI generates complete outfit suggestions pulled from your own wardrobe. Understands color harmony, seasonality, and occasion context.</p>
-          <div class="bento-stat">🧠 On-device GenAI</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:2;">
-          <div class="bento-icon" style="background:rgba(255,152,0,0.12);color:#FF9800;"><i class="fa-regular fa-bookmark"></i></div>
-          <h3>Digital Lookbook</h3>
-          <p>Save your favorite outfits, name them, add notes. Your personal style archive that's always searchable and always with you.</p>
-          <div class="bento-stat">📖 Unlimited saves</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:3;">
-          <div class="bento-icon" style="background:rgba(76,175,80,0.12);color:#4CAF50;"><i class="fa-solid fa-layer-group"></i></div>
-          <h3>Batch Import</h3>
-          <p>Select up to 20 photos at once. AI processes them in parallel. Digitize your entire wardrobe in minutes — not hours.</p>
-          <div class="bento-stat">⚡ 20× parallel processing</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:4;">
-          <div class="bento-icon" style="background:rgba(156,39,176,0.12);color:#9C27B0;"><i class="fa-solid fa-box-archive"></i></div>
-          <h3>Backup & Restore</h3>
-          <p>Export your entire wardrobe — photos, tags, metadata — as a single ZIP file. Restore on any device. No cloud dependency.</p>
-          <div class="bento-stat">📦 Portable ZIP format</div>
-        </div>
-
-        <div class="bento-card reveal" style="--idx:5;">
-          <div class="bento-icon" style="background:rgba(233,30,99,0.12);color:#E91E63;"><i class="fa-solid fa-plane"></i></div>
-          <h3>100% Offline</h3>
-          <p>Every single feature works without internet. No account, no sign-up, no data leaving your phone. Your wardrobe is always accessible — anywhere.</p>
-          <div class="bento-stat">📡 Zero network required</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== STATS COUNTER ===== -->
-  <section class="stats-counter">
-    <div class="container">
-      <div class="counter-grid">
-        <div class="counter-item reveal">
-          <span class="counter-number" data-target="100">100</span><span class="counter-suffix">%</span>
-          <span class="counter-label">On-Device Privacy</span>
-        </div>
-        <div class="counter-item reveal">
-          <span class="counter-number" data-target="275">275</span><span class="counter-suffix">MB</span>
-          <span class="counter-label">AI Model (1× download)</span>
-        </div>
-        <div class="counter-item reveal">
-          <span class="counter-number" data-target="0">0</span>
-          <span class="counter-label">Servers. Zero. Cloud.</span>
-        </div>
-        <div class="counter-item reveal">
-          <span class="counter-number" data-target="20">20</span><span class="counter-suffix">+</span>
-          <span class="counter-label">Clothing Categories</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TECHNOLOGY / AI DEEP DIVE ===== -->
-  <section id="technology" class="section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-solid fa-microchip"></i> On-Device Intelligence</span>
-        <h2>Powered by Gemma 3, Running on Your Phone</h2>
-        <p>No cloud. No uploads. No hidden servers. Matchic's AI runs entirely locally using Google's Gemma 3 model via MediaPipe.</p>
-      </div>
-
-      <div class="tech-showcase">
-        <div class="tech-card tech-card--featured reveal">
-          <div class="tech-card-header">
-            <i class="fa-solid fa-eye"></i>
-            <span>What the AI Sees</span>
-          </div>
-          <div class="tech-card-body">
-            <div class="tech-tag-row"><span class="tech-tag">👕 <strong>Category:</strong> Top (T-Shirt)</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">🎨 <strong>Color:</strong> #000080 (Navy)</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">🧵 <strong>Material:</strong> Cotton 97%, Elastane 3%</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">📐 <strong>Fit:</strong> Regular</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">🏷️ <strong>Style:</strong> Casual, Minimal, Preppy</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">🌡️ <strong>Season:</strong> Spring, Fall</span></div>
-            <div class="tech-tag-row"><span class="tech-tag">🔄 <strong>Coordinates with:</strong> 12 items in closet</span></div>
-          </div>
-        </div>
-
-        <div class="tech-card reveal">
-          <div class="tech-card-header"><i class="fa-solid fa-bolt"></i> <span>Why On-Device AI?</span></div>
-          <div class="tech-card-body">
-            <ul class="tech-bullets">
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> Instant inference — no network latency</li>
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> Your photos never leave your phone</li>
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> Works in airplane mode</li>
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> No subscription fees for AI</li>
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> Model: Gemma 3 270M params</li>
-              <li><i class="fa-solid fa-check-circle" style="color:#4CAF50;"></i> Framework: MediaPipe GenAI</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tech-card tech-card--accent reveal">
-          <div class="tech-card-header"><i class="fa-solid fa-shield-halved"></i> <span>Your Privacy, Guaranteed</span></div>
-          <div class="tech-card-body">
-            <div class="guarantee-list">
-              <div class="guarantee-item"><i class="fa-solid fa-lock"></i> <span>File-based encryption at rest</span></div>
-              <div class="guarantee-item"><i class="fa-solid fa-ban"></i> <span>Zero analytics or tracking SDKs</span></div>
-              <div class="guarantee-item"><i class="fa-solid fa-eye-slash"></i> <span>No third-party data access</span></div>
-              <div class="guarantee-item"><i class="fa-solid fa-code"></i> <span>Open source — full auditability</span></div>
-              <div class="guarantee-item"><i class="fa-solid fa-trash-can"></i> <span>Clear all data with one tap</span></div>
+              <div class="phone-float-items">
+                <span class="float-tag" style="top:20%;right:-15%;animation-delay:0s">Blue Shirt</span>
+                <span class="float-tag" style="top:50%;right:-20%;animation-delay:1s">Cotton</span>
+                <span class="float-tag" style="bottom:25%;right:-10%;animation-delay:2s">Casual</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== PRIVACY COMPARISON ===== -->
-  <section id="privacy">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-solid fa-shield"></i> Radical Privacy</span>
-        <h2>We Built It So We Couldn't Spy on You</h2>
-        <p>Most wardrobe apps upload your photos to the cloud. Matchic takes a different approach — one that makes data collection physically impossible.</p>
-      </div>
-
-      <div class="comparison-table reveal">
-        <div class="comp-header">
-          <div class="comp-col comp-feature">Feature</div>
-          <div class="comp-col comp-other">Other Wardrobe Apps</div>
-          <div class="comp-col comp-matchic">Matchic</div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">AI Processing</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-cloud"></i> Cloud-based</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-microchip"></i> <strong>On-device</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Your Photos</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-upload"></i> Uploaded to servers</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-check"></i> <strong>Stay on your phone</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Account Required</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-user"></i> Yes</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-xmark"></i> <strong>None needed</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Tracking</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-chart-line"></i> Analytics SDKs</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-check"></i> <strong>Zero tracking</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Offline Use</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-wifi"></i> Internet required</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-wifi-slash"></i> <strong>Fully offline</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Source Code</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-lock"></i> Proprietary</div>
-          <div class="comp-col comp-matchic"><i class="fa-brands fa-github"></i> <strong>Open Source (MIT)</strong></div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-col comp-feature">Data Collection</div>
-          <div class="comp-col comp-other"><i class="fa-solid fa-database"></i> Extensive</div>
-          <div class="comp-col comp-matchic"><i class="fa-solid fa-ban"></i> <strong>None. Period.</strong></div>
+    <!-- Trust Strip -->
+    <section class="logo-cloud" aria-label="Built with">
+      <div class="container">
+        <p class="logo-cloud-label" data-i18n="trustStrip.label">Built with</p>
+        <div class="logo-row">
+          <span class="logo-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            <span data-i18n="trustStrip.flutter">Flutter</span>
+          </span>
+          <span class="logo-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            <span data-i18n="trustStrip.objectbox">ObjectBox</span>
+          </span>
+          <span class="logo-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 12L2.5 8.5"/></svg>
+            <span data-i18n="trustStrip.mediapipe">MediaPipe</span>
+          </span>
+          <span class="logo-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+            <span data-i18n="trustStrip.gemma">Gemma 3</span>
+          </span>
+          <span class="logo-chip">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span data-i18n="trustStrip.opensource">Open Source</span>
+          </span>
         </div>
       </div>
+    </section>
 
-      <div class="privacy-cta reveal">
-        <div class="privacy-cta-card">
-          <i class="fa-brands fa-github"></i>
-          <div>
-            <h4>Full Source Code Available</h4>
-            <p>Matchic is MIT-licensed open source. Anyone can verify exactly what the app does — because trust shouldn't require faith.</p>
-            <a href="https://github.com/matchic/matchic" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <!-- Problem Section -->
+    <section class="section-alt" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="problem.eyebrow">The Problem</span>
+          <h2 id="problem-heading" data-i18n="problem.title">You Own More Than You Remember</h2>
+          <p data-i18n="problem.subtitle">Most people wear only a fraction of their wardrobe. Clothes get buried, forgotten, and replaced — while perfectly good pieces sit unworn.</p>
+        </div>
+        <div class="problem-stats">
+          <div class="glass-card stat-card reveal reveal-delay-1">
+            <span class="stat-number" data-target="20">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label" data-i18n="problem.stat1Label">of wardrobe typically worn regularly</span>
+          </div>
+          <div class="glass-card stat-card reveal reveal-delay-2">
+            <span class="stat-number" data-target="1200">0</span><span class="stat-suffix">$</span>
+            <span class="stat-label" data-i18n="problem.stat2Label">spent yearly on clothes that go unworn</span>
+          </div>
+          <div class="glass-card stat-card reveal reveal-delay-3">
+            <span class="stat-number" data-target="15">0</span><span class="stat-suffix">min</span>
+            <span class="stat-label" data-i18n="problem.stat3Label">average time deciding what to wear daily</span>
+          </div>
+          <div class="glass-card stat-card reveal reveal-delay-4">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">%</span>
+            <span class="stat-label" data-i18n="problem.stat4Label">of global carbon emissions from fashion</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== IMPACT / SUSTAINABILITY ===== -->
-  <section id="impact" class="section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-solid fa-leaf"></i> Sustainable Fashion</span>
-        <h2>Better for Your Wallet. Better for the Planet.</h2>
-        <p>Knowing what you own is the first step to buying less and wearing more. Matchic helps you build a wardrobe you'll actually use.</p>
-      </div>
-
-      <div class="impact-grid">
-        <div class="impact-card reveal">
-          <div class="impact-number gradient-text">20%</div>
-          <h3>Wardrobe Utilization</h3>
-          <p>The average person wears only 20% of their wardrobe. The other 80% sits unworn — not because it's bad, but because it's forgotten. Matchic brings your full closet to light.</p>
+    <!-- Solution Section -->
+    <section id="solution" aria-labelledby="solution-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="solution.eyebrow">The Solution</span>
+          <h2 id="solution-heading" data-i18n="solution.title">Meet Matchic</h2>
+          <p data-i18n="solution.subtitle">An AI wardrobe assistant that lives entirely on your phone. It helps you catalog your clothes, discover outfits you forgot about, and make the most of what you already own.</p>
         </div>
-        <div class="impact-card reveal">
-          <div class="impact-number gradient-text">$1,200</div>
-          <h3>Wasted Per Person</h3>
-          <p>Studies show the average person accidentally buys duplicates of items they already own. That's $1,200+ annually per person on clothes already in your closet.</p>
-        </div>
-        <div class="impact-card reveal">
-          <div class="impact-number gradient-text">60+</div>
-          <h3>Hours Saved Yearly</h3>
-          <p>10–15 minutes deciding what to wear every morning adds up to 60+ hours per year. Matchic's AI recommendations cut decision time to seconds.</p>
-        </div>
-        <div class="impact-card reveal">
-          <div class="impact-number gradient-text">10%</div>
-          <h3>Of Global CO₂</h3>
-          <p>The fashion industry produces 10% of global carbon emissions and 92M tons of textile waste annually. Digital wardrobes help reduce overconsumption at its source.</p>
-        </div>
-      </div>
-
-      <div class="capsule-pitch reveal">
-        <div class="capsule-icon"><i class="fa-solid fa-shirts"></i></div>
-        <div>
-          <h3>Build Your Capsule Wardrobe</h3>
-          <p>Matchic helps you identify your most-worn pieces, discover gaps in your collection, and build a minimalist capsule wardrobe that actually works for your lifestyle. Less clutter. More style. Lower footprint.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS / TRUST ===== -->
-  <section class="trust-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-regular fa-message"></i> Trusted by Builders</span>
-        <h2>What People Are Saying</h2>
-      </div>
-
-      <div class="testimonial-grid">
-        <div class="testimonial-card reveal">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Finally, a wardrobe app that actually respects my privacy. The fact that it works offline sealed the deal for me."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">MT</div>
-            <div class="author-info">
-              <strong>Minh T.</strong>
-              <span>Early Access User</span>
+        <div class="solution-grid">
+          <div class="solution-points">
+            <div class="solution-point reveal reveal-delay-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span data-i18n="solution.point1">Snap a photo — AI tags everything automatically</span>
+            </div>
+            <div class="solution-point reveal reveal-delay-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              <span data-i18n="solution.point2">Get outfit suggestions from your real wardrobe</span>
+            </div>
+            <div class="solution-point reveal reveal-delay-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              <span data-i18n="solution.point3">Track what you wear and what you don't</span>
+            </div>
+            <div class="solution-point reveal reveal-delay-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="solution.point4">All private. All offline. Always.</span>
             </div>
           </div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"The AI auto-tagging is surprisingly accurate. I imported my entire closet in about 5 minutes. Game changer for my morning routine."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">HL</div>
-            <div class="author-info">
-              <strong>Hương L.</strong>
-              <span>Beta Tester</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card reveal">
-          <div class="testimonial-stars">★★★★★</div>
-          <blockquote>"Open source AND on-device AI? I can actually verify what the app does. That level of transparency is rare in 2026."</blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">DT</div>
-            <div class="author-info">
-              <strong>Đức T.</strong>
-              <span>Privacy Advocate</span>
+          <div class="reveal">
+            <!-- Visual placeholder for solution illustration -->
+            <div style="display:flex;justify-content:center;align-items:center;min-height:400px;">
+              <div style="width:280px;height:400px;background:linear-gradient(135deg,var(--surface),var(--bg-alt));border-radius:var(--glass-radius);border:var(--glass-border) solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-4);padding:var(--space-8);">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--primary);opacity:0.6;"><path d="M20.38 3.46 16 2a4 4 0 0 1-3.75 2 4 4 0 0 1-3.75-2L4 3.46a2 2 0 0 0-1.61 2.68l3.87 10.95a2 2 0 0 0 1.88 1.34h5.72a2 2 0 0 0 1.88-1.34l3.87-10.95A2 2 0 0 0 20.38 3.46z"/><path d="M12 10v8"/><path d="M9 13h6"/></svg>
+                <p style="text-align:center;opacity:0.5;font-size:var(--text-sm);" data-i18n="appPreview.caption">Matchic running on-device with zero cloud dependency</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== WAITLIST / CTA ===== -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag"><i class="fa-regular fa-bell"></i> Launching Soon</span>
-        <h2>Ready to Transform Your Wardrobe?</h2>
-        <p>Matchic is coming to iOS and Android. Be the first to know when we launch.</p>
+    <!-- How It Works -->
+    <section class="section-alt" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="howItWorks.eyebrow">How It Works</span>
+          <h2 id="hiw-heading" data-i18n="howItWorks.title">From Chaos to Closet in Four Steps</h2>
+        </div>
+        <div class="steps-bento">
+          <div class="bento-card bento-card--lg reveal">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center;">
+              <div>
+                <span class="bento-step-num">STEP 01</span>
+                <div class="bento-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+                <h3 data-i18n="howItWorks.step1Title">Snap</h3>
+                <p data-i18n="howItWorks.step1Desc">Take photos of your clothes. One at a time or in batches.</p>
+              </div>
+              <div style="display:flex;justify-content:center;">
+                <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--primary),var(--secondary));border-radius:var(--glass-radius);display:flex;align-items:center;justify-content:center;opacity:0.2;">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bento-card reveal reveal-delay-1">
+            <span class="bento-step-num">STEP 02</span>
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step2Title">Auto-Tag</h3>
+            <p data-i18n="howItWorks.step2Desc">AI recognizes colors, patterns, materials, and categories instantly.</p>
+          </div>
+          <div class="bento-card reveal reveal-delay-2">
+            <span class="bento-step-num">STEP 03</span>
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step3Title">Discover</h3>
+            <p data-i18n="howItWorks.step3Desc">Get outfit suggestions based on what you actually own.</p>
+          </div>
+          <div class="bento-card reveal reveal-delay-3">
+            <span class="bento-step-num">STEP 04</span>
+            <div class="bento-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <h3 data-i18n="howItWorks.step4Title">Track</h3>
+            <p data-i18n="howItWorks.step4Desc">Log what you wear. See patterns. Shop smarter.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="cta-form reveal">
-        <form class="waitlist-form" onsubmit="handleWaitlist(event)">
-          <input type="email" placeholder="Enter your email for early access" required aria-label="Email address" />
-          <button type="submit" class="btn btn-primary btn-glow">Notify Me ✨</button>
+    <!-- Features -->
+    <section id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="features.eyebrow">Features</span>
+          <h2 id="features-heading" data-i18n="features.title">Everything You Need</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 data-i18n="features.feature1Title">AI Auto-Tagging</h3>
+            <p data-i18n="features.feature1Desc">Point your camera at any piece of clothing. Matchic identifies the category, color, material, and style — all on your device.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 data-i18n="features.feature2Title">Outfit Generator</h3>
+            <p data-i18n="features.feature2Desc">Stuck on what to wear? Matchic suggests combinations from your real wardrobe, not from a store.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3 data-i18n="features.feature3Title">Wardrobe Insights</h3>
+            <p data-i18n="features.feature3Desc">See what you wear most, what sits unused, and how much you actually use your closet.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 data-i18n="features.feature4Title">Offline First</h3>
+            <p data-i18n="features.feature4Desc">Works without internet. Your data never leaves your phone. Ever.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3 data-i18n="features.feature5Title">No Account Needed</h3>
+            <p data-i18n="features.feature5Desc">Open the app and start. No email, no password, no cloud sync.</p>
+          </div>
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <h3 data-i18n="features.feature6Title">Open Source</h3>
+            <p data-i18n="features.feature6Desc">The code is public. You can verify our privacy claims yourself.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- On-Device AI -->
+    <section class="section-alt" id="privacy" aria-labelledby="ai-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="onDeviceAI.eyebrow">On-Device AI</span>
+          <h2 id="ai-heading" data-i18n="onDeviceAI.title">Your Photos Never Leave Your Phone</h2>
+          <p data-i18n="onDeviceAI.subtitle">Matchic uses MediaPipe and Gemma 3 to process everything locally. We physically cannot see your photos because we don't have servers.</p>
+        </div>
+        <div class="ai-grid">
+          <div class="ai-card ai-card--featured reveal">
+            <div class="ai-card-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="onDeviceAI.point1Title">Local Processing</span>
+            </div>
+            <div class="ai-card-body">
+              <p data-i18n="onDeviceAI.point1Desc">AI models run directly on your device using MediaPipe GenAI.</p>
+              <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4);">
+                <span class="badge">MediaPipe</span>
+                <span class="badge">Gemma 3</span>
+                <span class="badge">On-Device</span>
+              </div>
+            </div>
+          </div>
+          <div class="ai-card reveal reveal-delay-1">
+            <div class="ai-card-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span data-i18n="onDeviceAI.point2Title">No Cloud Upload</span>
+            </div>
+            <div class="ai-card-body">
+              <p data-i18n="onDeviceAI.point2Desc">Every photo stays on your phone. No server. No database.</p>
+            </div>
+          </div>
+          <div class="ai-card reveal reveal-delay-2">
+            <div class="ai-card-header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span data-i18n="onDeviceAI.point3Title">Works Offline</span>
+            </div>
+            <div class="ai-card-body">
+              <p data-i18n="onDeviceAI.point3Desc">Use Matchic on a plane, in a basement, anywhere. No connection needed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card" style="padding:var(--space-8);margin-top:var(--space-10);text-align:center;">
+          <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-3);margin-bottom:var(--space-4);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3 data-i18n="onDeviceAI.point4Title">You Control Your Data</h3>
+          </div>
+          <p data-i18n="onDeviceAI.point4Desc" style="max-width:600px;margin:0 auto;">Export, backup, or delete everything anytime. It's yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Comparison -->
+    <section id="comparison" aria-labelledby="comparison-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="privacyComparison.eyebrow">Privacy Comparison</span>
+          <h2 id="comparison-heading" data-i18n="privacyComparison.title">How Matchic Compares</h2>
+          <p data-i18n="privacyComparison.subtitle">We built Matchic differently because we believe your wardrobe is personal.</p>
+        </div>
+        <div class="comparison-table reveal">
+          <div class="comp-header">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.featureLabel">Feature</div>
+            <div class="comp-col comp-matchic" data-i18n="privacyComparison.matchicLabel">Matchic</div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.othersLabel">Other Apps</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row1Feature">AI Processing</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row1Matchic">On-device only</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row1Others">Cloud-based</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row2Feature">Photo Storage</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row2Matchic">Your phone only</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row2Others">Company servers</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row3Feature">Account Required</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row3Matchic">Optional</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row3Others">Usually mandatory</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row4Feature">Offline Access</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row4Matchic">Full functionality</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row4Others">Often limited</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row5Feature">Open Source</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row5Matchic">Yes (MIT)</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row5Others">Usually no</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row6Feature">Tracking</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row6Matchic">None</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row6Others">Often extensive</div>
+          </div>
+          <div class="comp-row">
+            <div class="comp-col comp-feature" data-i18n="privacyComparison.row7Feature">Data Selling</div>
+            <div class="comp-col comp-matchic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-i18n="privacyComparison.row7Matchic">Never</span>
+            </div>
+            <div class="comp-col comp-other" data-i18n="privacyComparison.row7Others">Common practice</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability -->
+    <section class="section-alt" id="sustainability" aria-labelledby="sustainability-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="sustainability.eyebrow">Sustainable Fashion</span>
+          <h2 id="sustainability-heading" data-i18n="sustainability.title">Wear More. Buy Less.</h2>
+          <p data-i18n="sustainability.subtitle">The most sustainable outfit is the one already in your closet. Matchic helps you fall in love with your clothes again.</p>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-card reveal">
+            <div class="impact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 data-i18n="sustainability.point1Title">Shop Your Closet</h3>
+            <p data-i18n="sustainability.point1Desc">Discover outfits you forgot you had. Reduce impulse purchases.</p>
+          </div>
+          <div class="impact-card reveal reveal-delay-1">
+            <div class="impact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3 data-i18n="sustainability.point2Title">Track Usage</h3>
+            <p data-i18n="sustainability.point2Desc">See what you actually wear. Buy only what you need.</p>
+          </div>
+          <div class="impact-card reveal reveal-delay-2">
+            <div class="impact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 data-i18n="sustainability.point3Title">Capsule Wardrobe</h3>
+            <p data-i18n="sustainability.point3Desc">Build a versatile, curated wardrobe that works harder.</p>
+          </div>
+          <div class="impact-card reveal reveal-delay-3">
+            <div class="impact-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 data-i18n="sustainability.point4Title">Conscious Choices</h3>
+            <p data-i18n="sustainability.point4Desc">Make informed decisions about what to keep, donate, or buy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Source -->
+    <section id="open-source" aria-labelledby="opensource-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="openSource.eyebrow">Open Source</span>
+          <h2 id="opensource-heading" data-i18n="openSource.title">Built in Public. Verified by You.</h2>
+          <p data-i18n="openSource.subtitle">Matchic is open source under the MIT License. Every line of code is available for review. We have nothing to hide because we have nothing to collect.</p>
+        </div>
+        <div class="open-source-card reveal">
+          <div class="open-source-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div class="open-source-content">
+            <h3 data-i18n="openSource.title">Built in Public. Verified by You.</h3>
+            <p data-i18n="openSource.subtitle">Matchic is open source under the MIT License. Every line of code is available for review. We have nothing to hide because we have nothing to collect.</p>
+            <a href="https://github.com/nmtuong97/matchic" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span data-i18n="openSource.cta">View on GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Waitlist -->
+    <section class="waitlist-section" id="waitlist" aria-labelledby="waitlist-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="waitlist.eyebrow">Get Early Access</span>
+          <h2 id="waitlist-heading" data-i18n="waitlist.title">Be the First to Try Matchic</h2>
+          <p data-i18n="waitlist.subtitle">Join the waitlist and be notified when Matchic launches. No spam. Unsubscribe anytime.</p>
+        </div>
+        <form class="waitlist-form" onsubmit="return handleWaitlist(event)">
+          <input type="email" class="form-input" placeholder="Enter your email" aria-label="Email address" data-i18n="waitlist.emailPlaceholder" required>
+          <button type="submit" class="btn btn-primary btn-lg" data-i18n="waitlist.submitButton">Join Waitlist</button>
         </form>
-        <p class="form-note">No spam. No marketing emails. Just one notification when we launch.</p>
+        <p class="form-note" data-i18n="waitlist.privacyNote">We won't share your email. We won't track you. We don't even have a server.</p>
+        <div class="store-badges">
+          <span class="store-badge" style="opacity:0.5;cursor:not-allowed;" aria-disabled="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span data-i18n="waitlist.storeApple">App Store</span>
+            <span data-i18n="waitlist.comingSoon">Coming Soon</span>
+          </span>
+          <span class="store-badge" style="opacity:0.5;cursor:not-allowed;" aria-disabled="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+            <span data-i18n="waitlist.storeGoogle">Google Play</span>
+            <span data-i18n="waitlist.comingSoon">Coming Soon</span>
+          </span>
+        </div>
       </div>
+    </section>
 
-      <div class="store-badges reveal">
-        <a href="#" class="store-badge"><i class="fa-brands fa-apple"></i> App Store</a>
-        <a href="#" class="store-badge"><i class="fa-brands fa-google-play"></i> Google Play</a>
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="faq.eyebrow">FAQ</span>
+          <h2 id="faq-heading" data-i18n="faq.title">Questions? We Have Answers.</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q1">Is Matchic really free?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a1">Yes. Matchic is free and open source. We don't sell data because we don't collect any.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q2">Do I need an account?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a2">No. You can use Matchic without creating an account. Your data stays on your device.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q3">Does it work offline?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a3">Yes. All features work without internet. The AI runs entirely on your phone.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q4">Are my photos uploaded anywhere?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a4">No. Your photos never leave your device. They are processed locally by on-device AI.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-4">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q5">What AI does Matchic use?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a5">Matchic uses Google's MediaPipe GenAI framework and Gemma 3 model, both running locally on your device.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q6">Can I export my data?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a6">Yes. Your wardrobe data is stored locally and can be exported or backed up anytime.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q7">Is the code really open source?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a7">Yes. Matchic is released under the MIT License. You can view, fork, and contribute to the code on GitHub.</p></div>
+          </div>
+          <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-question" aria-expanded="false">
+              <span data-i18n="faq.q8">Will there be an iOS version?</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer"><p data-i18n="faq.a8">Yes. We are building for both iOS and Android. Join the waitlist to be notified.</p></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
+    <!-- Final CTA -->
+    <section class="section-alt" aria-labelledby="final-cta-heading">
+      <div class="container text-center">
+        <div class="reveal">
+          <h2 id="final-cta-heading" data-i18n="finalCTA.title">Ready to Know Your Wardrobe?</h2>
+          <p data-i18n="finalCTA.subtitle" style="max-width:600px;margin:var(--space-4) auto var(--space-8);">Join thousands who want a smarter, more private way to manage their clothes.</p>
+          <a href="#waitlist" class="btn btn-primary btn-lg btn-glow" data-i18n="finalCTA.cta">Join the Waitlist</a>
+          <a href="https://github.com/nmtuong97/matchic" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="margin-left:var(--space-3);" data-i18n="finalCTA.secondary">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#2196F3"/><path d="M10 24V14l8-4 8 4v10H10z" fill="white" fill-opacity="0.9"/><path d="M14 24v-6l4-2 4 2v6" fill="white" fill-opacity="0.6"/></svg>
-            Matchic
+          <a href="#" class="nav-logo" style="margin-bottom:var(--space-4);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46 16 2a4 4 0 0 1-3.75 2 4 4 0 0 1-3.75-2L4 3.46a2 2 0 0 0-1.61 2.68l3.87 10.95a2 2 0 0 0 1.88 1.34h5.72a2 2 0 0 0 1.88-1.34l3.87-10.95A2 2 0 0 0 20.38 3.46z"/><path d="M12 10v8"/><path d="M9 13h6"/></svg>
+            <span class="nav-logo-text">Matchic</span>
           </a>
-          <p>AI-powered wardrobe management.<br />100% private. 100% on-device.</p>
-          <p style="margin-top:8px;font-size:0.8rem;opacity:0.5;">Built with ❤️ in Vietnam</p>
+          <p data-i18n="footer.tagline">Your wardrobe, understood — completely on your device.</p>
         </div>
         <div class="footer-col">
-          <h4>Product</h4>
+          <h4 data-i18n="footer.product">Product</h4>
           <ul>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#technology">AI Technology</a></li>
-            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#features" data-i18n="footer.features">Features</a></li>
+            <li><a href="#how-it-works" data-i18n="footer.howItWorks">How It Works</a></li>
+            <li><a href="#privacy" data-i18n="footer.privacy">Privacy</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4 data-i18n="footer.company">Company</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="support.html">FAQ & Support</a></li>
-            <li><a href="https://github.com/matchic/matchic" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="licenses.html">Open Source Licenses</a></li>
+            <li><a href="#" data-i18n="footer.about">About</a></li>
+            <li><a href="https://github.com/nmtuong97/matchic" target="_blank" rel="noopener noreferrer" data-i18n="footer.openSource">Open Source</a></li>
+            <li><a href="#" data-i18n="footer.support">Support</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h4 data-i18n="footer.legal">Legal</h4>
           <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="eula.html">EULA</a></li>
-            <li><a href="data-deletion.html">Data Deletion</a></li>
+            <li><a href="privacy.html" data-i18n="footer.privacyPolicy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+            <li><a href="eula.html" data-i18n="footer.eula">EULA</a></li>
+            <li><a href="https://github.com/nmtuong97/matchic/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" data-i18n="footer.license">MIT License</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Matchic. MIT License.</span>
-        <span class="footer-lang">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-          <a href="security.html">Security</a>
-          <div class="lang-toggle" style="margin-left:12px;">
-            <button data-lang="en" class="active" onclick="i18n.setLang('en')">EN</button>
-            <button data-lang="vi" onclick="i18n.setLang('vi')">VI</button>
-          </div>
-        </span>
+        <span data-i18n="footer.copyright">© 2026 Matchic. Open source under MIT License.</span>
+        <span data-i18n="footer.madeWith">Made with care for people who value privacy.</span>
       </div>
     </div>
   </footer>
 
-  <!-- ===== JS ===== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/animations.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Matchic Scripts -->
+  <script src="js/i18n.js" defer></script>
+  <script src="js/animations.js" defer></script>
+
+  <!-- Theme Toggle -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('theme-toggle');
+      const icon = document.getElementById('theme-icon');
+      const STORAGE_KEY = 'matchic-theme';
+
+      function getTheme() {
+        return localStorage.getItem(STORAGE_KEY) ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem(STORAGE_KEY, theme);
+        updateIcon(theme);
+      }
+
+      function updateIcon(theme) {
+        if (!icon) return;
+        icon.innerHTML = theme === 'dark'
+          ? '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>'
+          : '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+      }
+
+      setTheme(getTheme());
+
+      toggle?.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+      });
+    })();
+  </script>
+
+  <!-- Mobile Menu -->
+  <script>
+    (function() {
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+      });
+
+      navLinks?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+  <!-- Language Switcher -->
+  <script>
+    (function() {
+      document.querySelectorAll('.lang-switcher button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.dataset.lang;
+          if (window.matchicI18n) {
+            window.matchicI18n.setLanguage(lang);
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,61 +1,75 @@
-# Matchic Landing Pages
+# Matchic Landing Page
 
-Landing pages for the Matchic app — an AI-powered wardrobe management app.
+The official landing page for **Matchic** — a privacy-first, AI-powered wardrobe assistant that runs entirely on your device.
 
-## Pages
+🔗 **Live:** [nmtuong97.github.io/matchic-landing-pages](https://nmtuong97.github.io/matchic-landing-pages/)
 
-| File | Purpose |
-|------|---------|
-| `index.html` | Main landing page with features, privacy highlights, tech stack, and CTA |
-| `privacy.html` | Privacy Policy — required for Google Play / App Store submission |
-| `terms.html` | Terms of Service — required for store submission |
-| `support.html` | Support & FAQ page with contact options |
+## What is Matchic?
 
-## Requirements for Store Submission
+Matchic helps you:
+- **Catalog** your wardrobe with AI auto-tagging
+- **Discover** outfits from clothes you already own
+- **Track** what you wear and make smarter buying decisions
+- **Stay private** — everything stays on your phone, always
 
-These pages satisfy the mandatory policy links required by:
+## Tech Stack
 
-- **Google Play Store**: Privacy Policy + Terms of Service links in the store listing
-- **Apple App Store**: Privacy Policy URL in App Store Connect
+- **Vanilla HTML/CSS/JS** — no heavy frameworks
+- **GSAP** + ScrollTrigger for scroll animations
+- **CSS Custom Properties** for theming (dark/light mode)
+- **JSON-based i18n** — English + Vietnamese
+- **GitHub Pages** for hosting
 
-## Structure
+## Design System
 
-```
-├── index.html          # Landing page (home)
-├── privacy.html        # Privacy Policy
-├── terms.html          # Terms of Service  
-├── support.html        # Support & FAQ
-├── css/
-│   └── style.css       # All styles (glass design system)
-├── js/
-│   └── i18n.js         # Client-side EN/VI internationalization
-├── locales/
-│   ├── en.json         # English translations
-│   └── vi.json         # Vietnamese translations
-├── assets/
-│   ├── favicon.svg     # SVG favicon
-│   └── og-image.svg    # Open Graph preview image
-└── manifest.json       # PWA manifest
-```
+Based on Matchic app's Liquid Glass Flutter theme:
 
-## Design
+| Token | Value |
+|-------|-------|
+| Primary | `#2196F3` |
+| Secondary | `#03DAC6` |
+| Dark BG | `#0D1117` |
+| Light BG | `#EFF6FF` |
+| Font | Inter |
+| Glass Blur | 24px |
+| Card Radius | 20px |
 
-- Dark theme with purple/rose gradient accents (matching the Matchic "Enchanted Design System")
-- Glass-morphism cards with backdrop blur
-- Responsive layout (mobile-first)
-- Bilingual (English + Vietnamese) via client-side i18n
-- No build tools — pure HTML/CSS/JS, deployable to any static host
-
-## Deploy
-
-Any static web server works:
+## Development
 
 ```bash
-# Python
-python3 -m http.server 8080
+# Serve locally
+python3 -m http.server 8000
 
-# Node
+# Or with Node
 npx serve .
-
-# Or deploy to Vercel / Netlify / GitHub Pages
 ```
+
+## Project Structure
+
+```
+matchic-landing-pages/
+├── index.html              # Main landing page
+├── css/
+│   ├── tokens.css          # Design tokens
+│   ├── base.css            # Base styles + theme
+│   ├── layout.css          # Layout + navigation
+│   ├── components.css       # Buttons, cards, forms
+│   ├── sections.css         # Section-specific styles
+│   └── animations.css       # Keyframes + transitions
+├── js/
+│   ├── main.js             # Entry point
+│   ├── i18n.js             # Internationalization
+│   └── animations.js       # GSAP + scroll animations
+├── locales/
+│   ├── en.json             # English copy
+│   └── vi.json             # Vietnamese copy
+├── assets/
+│   ├── favicon.svg
+│   └── og-image.svg
+├── STRATEGY.md             # Brand strategy document
+└── README.md
+```
+
+## License
+
+Landing page content is © 2026 Matchic. The Matchic app is open source under the [MIT License](https://github.com/nmtuong97/matchic/blob/main/LICENSE).

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://nmtuong97.github.io/matchic-landing-pages/sitemap.xml
