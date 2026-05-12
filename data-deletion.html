@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion Request - Matchic</title>
+  <meta name="description" content="How to delete your data from Matchic. Since all data is stored locally, deletion is straightforward." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#2196F3"/><path d="M10 24V14l8-4 8 4v10H10z" fill="white" fill-opacity="0.9"/><path d="M14 24v-6l4-2 4 2v6" fill="white" fill-opacity="0.6"/></svg>
+        Matchic
+      </a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/eula.html">EULA</a></li>
+        <li><a href="/support.html">Support</a></li>
+          <li>
+            <div class="lang-toggle">
+              <button data-lang="en" class="active" onclick="i18n.setLang(en\)">EN</button>
+              <button data-lang="vi" onclick="i18n.setLang(i\)">VI</button>
+            </div>
+          </li>
+          <li><button class="theme-toggle" onclick="theme.toggle()" aria-label="Switch theme"></button></li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="policy-page">
+    <div class="container">
+      <div class="policy-header">
+        <a href="/" style="display:inline-block;margin-bottom:16px;color:var(--text-muted);font-size:0.9rem;">&larr; Back to Home</a>
+        <h1>Data Deletion Instructions</h1>
+        <p class="last-updated">Last updated: May 12, 2026</p>
+      </div>
+
+      <div class="policy-content">
+        <div class="highlight-box">
+          <p><strong>Important:</strong> Matchic stores all data locally on your device. We do not collect or store any data on our servers. Therefore, data deletion is under your direct control.</p>
+        </div>
+
+        <h2>Option 1: Delete All Data Within the App</h2>
+        <ol>
+          <li>Open Matchic on your device</li>
+          <li>Go to <strong>Settings</strong> (gear icon)</li>
+          <li>Scroll down and tap <strong>"Clear All Data"</strong></li>
+          <li>Confirm the deletion in the dialog that appears</li>
+        </ol>
+        <p><strong>⚠️ This action is irreversible.</strong> We recommend exporting a backup first if you wish to keep your data for future use.</p>
+
+        <h2>Option 2: Delete Individual Items</h2>
+        <ol>
+          <li>Open Matchic and browse your closet</li>
+          <li>Tap on any clothing item to open its detail view</li>
+          <li>Tap the delete option</li>
+          <li>Confirm the deletion</li>
+        </ol>
+
+        <h2>Option 3: Uninstall the App</h2>
+        <p>Uninstalling Matchic will automatically delete all locally stored data, including:</p>
+        <ul>
+          <li>All clothing photos and metadata</li>
+          <li>Lookbook entries and saved outfits</li>
+          <li>App preferences and settings</li>
+          <li>AI model files (if downloaded)</li>
+          <li>Backup files stored in the app's private directory</li>
+        </ul>
+        <p><strong>Note:</strong> If you have previously exported a backup ZIP file to your device's shared storage (Downloads/Documents folder), that file will remain after uninstallation. You can manually delete it using your device's file manager.</p>
+
+        <h2>Option 4: Request Deletion via Email</h2>
+        <p>If you are unable to delete your data using the options above, you can contact us to request assistance:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@matchic.app?subject=Data%20Deletion%20Request">support@matchic.app</a></li>
+          <li><strong>Subject line:</strong> "Data Deletion Request"</li>
+          <li><strong>Include:</strong> Your device model and OS version (for troubleshooting)</li>
+        </ul>
+        <p><strong>Please note:</strong> Since we do not collect or store your data on any server, there is nothing for us to delete from our end. We will guide you through the on-device deletion process.</p>
+
+        <h2>What Data Gets Deleted vs. Retained</h2>
+        <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <th style="padding:8px;text-align:left;color:var(--text-primary);">Data Type</th>
+              <th style="padding:8px;text-align:left;color:var(--text-primary);">Deleted?</th>
+              <th style="padding:8px;text-align:left;color:var(--text-primary);">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <td style="padding:8px;color:var(--text-secondary);">Clothing photos</td>
+              <td style="padding:8px;color:var(--accent);">✅ Yes</td>
+              <td style="padding:8px;color:var(--text-muted);">Deleted from app storage</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <td style="padding:8px;color:var(--text-secondary);">Item metadata</td>
+              <td style="padding:8px;color:var(--accent);">✅ Yes</td>
+              <td style="padding:8px;color:var(--text-muted);">Deleted from ObjectBox</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <td style="padding:8px;color:var(--text-secondary);">Lookbook/saved outfits</td>
+              <td style="padding:8px;color:var(--accent);">✅ Yes</td>
+              <td style="padding:8px;color:var(--text-muted);">Deleted from ObjectBox</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <td style="padding:8px;color:var(--text-secondary);">AI model</td>
+              <td style="padding:8px;color:var(--accent);">✅ Yes</td>
+              <td style="padding:8px;color:var(--text-muted);">Deleted with app data</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-glass);">
+              <td style="padding:8px;color:var(--text-secondary);">Backup ZIP files</td>
+              <td style="padding:8px;color:var(--text-muted);">⚠️ Manual</td>
+              <td style="padding:8px;color:var(--text-muted);">Delete manually from device storage</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;color:var(--text-secondary);">Server-side data</td>
+              <td style="padding:8px;color:var(--accent);">✅ N/A</td>
+              <td style="padding:8px;color:var(--text-muted);">No server-side data exists</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>California & GDPR Users</h2>
+        <p>If you are a California resident or GDPR-protected user, you have the right to request deletion of your personal data. Given our on-device architecture, you can exercise this right directly through the methods above. For any questions related to your deletion rights, contact us at <a href="mailto:support@matchic.app">support@matchic.app</a> with the subject "Data Deletion Request."</p>
+        <p>We will respond to deletion requests within 30 days as required by applicable regulations.</p>
+
+        <h2>Confirmation</h2>
+        <p>Once data deletion is completed (via in-app Clear All Data or uninstallation), no further confirmation is needed — your data is permanently removed from the device. If you contacted us via email, we will confirm that we have guided you through the deletion process within 30 days.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="10" fill="#2196F3"/><path d="M10 24V14l8-4 8 4v10H10z" fill="white" fill-opacity="0.9"/><path d="M14 24v-6l4-2 4 2v6" fill="white" fill-opacity="0.6"/></svg>
+            Matchic
+          </a>
+          <p>AI-powered wardrobe management. 100% private. 100% on-device.</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="/">Home</a></li><li><a href="/support.html">Support & FAQ</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Service</a></li><li><a href="/eula.html">EULA</a></li><li><a href="/cookies.html">Cookie Policy</a></li></ul></div>
+        <div class="footer-col"><h4>Your Data</h4><ul><li><a href="/data-deletion.html">Data Deletion</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Matchic. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/i18n.js"></script>
+</body>
+</html>

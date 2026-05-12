@@ -1,0 +1,21 @@
+{
+  "name": "Matchic - AI Wardrobe Manager",
+  "short_name": "Matchic",
+  "description": "AI-powered wardrobe management app. 100% on-device, 100% private.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A1A",
+  "theme_color": "#7C5CFC",
+  "icons": [
+    {
+      "src": "/assets/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
