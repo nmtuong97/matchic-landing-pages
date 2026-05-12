@@ -1,4 +1,47 @@
 {
+  "_meta": {
+    "language": "vi",
+    "name": "Tiếng Việt",
+    "locale": "vi-VN"
+  },
+
+  "common": {
+    "appName": "Matchic",
+    "tagline": "Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
+    "comingSoon": "Sắp ra mắt",
+    "learnMore": "Tìm Hiểu Thêm",
+    "getStarted": "Bắt Đầu",
+    "download": "Tải Xuống",
+    "close": "Đóng",
+    "back": "Quay Lại",
+    "next": "Tiếp Theo",
+    "skip": "Bỏ Qua",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm",
+    "remove": "Gỡ",
+    "search": "Tìm Kiếm",
+    "filter": "Lọc",
+    "sort": "Sắp Xếp",
+    "share": "Chia Sẻ",
+    "export": "Xuất",
+    "import": "Nhập",
+    "backup": "Sao Lưu",
+    "restore": "Khôi Phục",
+    "settings": "Cài Đặt",
+    "help": "Trợ Giúp",
+    "feedback": "Phản Hồi",
+    "rateApp": "Đánh Giá App",
+    "privacyPolicy": "Chính Sách Riêng Tư",
+    "termsOfService": "Điều Khoản Sử Dụng",
+    "eula": "Thỏa Thuận Người Dùng",
+    "version": "Phiên Bản",
+    "copyright": "© 2026 Matchic. Đã đăng ký bản quyền.",
+    "allRightsReserved": "Đã đăng ký bản quyền."
+  },
+
   "meta": {
     "title": "Matchic — Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
     "description": "Đứng trước tủ đầy đồ mà chẳng biết mặc gì? Matchic dùng AI chạy trên điện thoại để gợi ý outfit từ quần áo bạn đang có. Không upload. Không theo dõi.",
@@ -7,199 +50,477 @@
     "twitterTitle": "Matchic — Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
     "twitterDescription": "Đứng trước tủ đầy đồ mà chẳng biết mặc gì? AI gợi ý outfit từ tủ đồ của bạn. Không đám mây. Không theo dõi."
   },
+
   "nav": {
     "logo": "Matchic",
-    "features": "Tính năng",
-    "howItWorks": "Cách hoạt động",
-    "privacy": "Quyền riêng tư",
-    "waitlist": "Đăng ký trải nghiệm sớm",
-    "language": "Ngôn ngữ"
+    "features": "Tính Năng",
+    "howItWorks": "Cách Hoạt Động",
+    "privacy": "Quyền Riêng Tư",
+    "waitlist": "Đăng Ký Trải Nghiệm Sớm",
+    "language": "Ngôn Ngữ"
   },
+
+  "language": {
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+
   "hero": {
     "eyebrow": "AI Gợi Ý Outfit Từ Chính Tủ Đồ Của Bạn",
     "title": "Đứng Trước Tủ Đầy Đồ Mà Chẳng Biết Mặc Gì?",
     "subtitle": "Matchic gợi ý outfit từ quần áo bạn đang có — với AI chạy ngay trên điện thoại. Không upload. Không theo dõi. Không cần tài khoản.",
-    "ctaPrimary": "Dùng Matchic Ngay",
-    "ctaSecondary": "Xem Cách Hoạt Động",
-    "trust1": "AI Riêng Tư",
-    "trust2": "Không Cần Tài Khoản",
-    "trust3": "100% Ngoại Tuyến",
-    "trust4": "Không Theo Dõi"
+    "cta": {
+      "primary": "Dùng Matchic Ngay",
+      "secondary": "Xem Cách Hoạt Động"
+    },
+    "trust": {
+      "privateAI": "AI Riêng Tư",
+      "noAccount": "Không Cần Tài Khoản",
+      "offline": "100% Ngoại Tuyến",
+      "noTracking": "Không Theo Dõi"
+    }
   },
+
   "trustStrip": {
-    "label": "Xây dựng với",
-    "flutter": "Riêng Tư",
-    "objectbox": "Không Đám Mây",
-    "mediapipe": "Không Theo Dõi",
-    "gemma": "Đơn Giản",
-    "opensource": "Bảo Mật Hàng Đầu"
+    "label": "Điểm Nổi Bật",
+    "items": {
+      "builtForPrivacy": "Riêng Tư",
+      "noCloud": "Không Đám Mây",
+      "noTracking": "Không Theo Dõi",
+      "simplicity": "Đơn Giản"
+    }
   },
+
   "problem": {
     "eyebrow": "Nỗi Ám Ảnh Mỗi Sáng",
     "title": "7:15 Sáng. Sắp Trễ. Nhìn Đống Đồ Quên Mất Là Có.",
     "subtitle": "Phần lớn người chỉ mặc 20% tủ đồ. 80% còn lại nằm im — không phải vì xấu, mà vì bạn quên mất nó tồn tại.",
-    "stat1Value": "20%",
-    "stat1Label": "tủ đồ được mặc thường xuyên. Còn lại? Bị lãng quên.",
-    "stat2Value": "1,200$",
-    "stat2Label": "chi mỗi năm cho đồ mua rồi để đấy",
-    "stat3Value": "15 phút",
-    "stat3Label": "mỗi sáng đứng chọn đồ trước gương",
-    "stat4Value": "10%",
-    "stat4Label": "quần áo mua về chưa mặc lần nào"
+    "stats": {
+      "wardrobeUsed": {
+        "value": "20%",
+        "label": "tủ đồ được mặc thường xuyên. Còn lại? Bị lãng quên."
+      },
+      "moneyWasted": {
+        "value": "1,200$",
+        "label": "chi mỗi năm cho đồ mua rồi để đấy"
+      },
+      "timeDeciding": {
+        "value": "15 phút",
+        "label": "mỗi sáng đứng chọn đồ trước gương"
+      },
+      "fashionWaste": {
+        "value": "10%",
+        "label": "quần áo mua về chưa mặc lần nào"
+      }
+    }
   },
-  "appPreview": {
-    "caption": "Tủ đồ của bạn, được tổ chức và tìm kiếm — ngay trên điện thoại."
+
+  "beforeAfter": {
+    "eyebrow": "Buổi Sáng Thay Đổi",
+    "title": "Buổi Sáng Của Bạn, Thay Đổi Hoàn Toàn",
+    "withoutMatchic": {
+      "title": "7:15 Sáng: Hoảng Loạn",
+      "description": "Mở tủ đồ. Nhìn chằm chằm. Đóng tủ đồ. Lặp lại. Cuối cùng mặc lại đồ hôm qua. Đi trễ 15 phút.",
+      "points": [
+        "Nhìn chằm chằm đống đồ 15 phút",
+        "\"Chẳng có gì để mặc\"",
+        "Mặc lại bộ đồ cũ",
+        "Mua đồ mới không cần thiết"
+      ]
+    },
+    "withMatchic": {
+      "title": "7:15 Sáng: Mỉm Cười",
+      "description": "Mở app. Vuốt xem gợi ý outfit. Chọn một bộ. Mặc xong trong 2 phút. Đi đúng giờ, tự tin.",
+      "points": [
+        "3 gợi ý outfit trong 5 giây",
+        "\"Bộ này đẹp quá\"",
+        "Mặc lại đồ bạn quên mất là có",
+        "Tiết kiệm $100/tháng không mua đồ ngẫu hứng"
+      ]
+    }
   },
+
+  "outfitShowcase": {
+    "eyebrow": "Outfit Cho Mọi Khoảnh Khắc",
+    "title": "Outfit Cho Mọi Khoảnh Khắc",
+    "scenarios": {
+      "work": {
+        "title": "Thứ Hai Đi Làm",
+        "style": "Chuyên nghiệp & chỉn chu",
+        "items": ["Áo Blazer Navy", "Sơ Mi Trắng", "Quần Chinos"]
+      },
+      "date": {
+        "title": "Hẹn Hò Tối",
+        "style": "Phong cách & tự tin",
+        "items": ["Váy Đen", "Giày Cao Gót", "Đồng Hồ Vàng"]
+      },
+      "gym": {
+        "title": "Tập Gym",
+        "style": "Thoải mái & năng động",
+        "items": ["Áo Thể Thao", "Quần Short", "Giày Chạy Bộ"]
+      },
+      "weekend": {
+        "title": "Chủ Nhật Lười Biếng",
+        "style": "Thư giãn & ấm áp",
+        "items": ["Áo Len Oversized", "Quần Jeans", "Giày Sneaker"]
+      }
+    }
+  },
+
   "solution": {
     "eyebrow": "Giải Pháp",
     "title": "Matchic Nhớ Tất Cả Để Bạn Không Cần Nhớ",
     "subtitle": "Chụp đồ một lần. Matchic phân loại, gắn thẻ tự động, và mỗi sáng gợi ý outfit — từ chính những gì bạn đang có.",
-    "point1": "Chụp ảnh — AI nhận diện màu sắc, chất liệu, kiểu dáng ngay lập tức",
-    "point2": "Gợi ý outfit phù hợp mọi dịp: đi làm, hẹn hò, gym, cuối tuần",
-    "point3": "Theo dõi bạn mặc gì. Mua đồ thông minh hơn. Lãng phí ít hơn.",
-    "point4": "Tất cả trên điện thoại bạn. Không bao giờ rời đi."
+    "points": [
+      "Chụp ảnh — AI nhận diện màu sắc, chất liệu, kiểu dáng ngay lập tức",
+      "Gợi ý outfit phù hợp mọi dịp: đi làm, hẹn hò, gym, cuối tuần",
+      "Theo dõi bạn mặc gì. Mua đồ thông minh hơn. Lãng phí ít hơn.",
+      "Tất cả trên điện thoại bạn. Không bao giờ rời đi."
+    ]
   },
+
+  "demo": {
+    "title": "Thử Matchic",
+    "subtitle": "Click các nút bên dưới để xem cách hoạt động",
+    "states": {
+      "empty": {
+        "title": "Tủ Đồ Của Bạn",
+        "description": "Bắt đầu bằng cách thêm đồ",
+        "action": "Thêm Đồ"
+      },
+      "scanning": {
+        "title": "Đang Quét...",
+        "description": "Giữ yên trong khi AI nhận diện món đồ",
+        "tags": {
+          "category": "Loại",
+          "color": "Màu Sắc",
+          "material": "Chất Liệu",
+          "pattern": "Họa Tiết"
+        }
+      },
+      "closet": {
+        "title": "Tủ Đồ Của Tôi",
+        "description": "Chạm vào món đồ hoặc chọn dịp",
+        "actions": {
+          "addMore": "Thêm Đồ",
+          "pickOccasion": "Chọn Dịp"
+        }
+      },
+      "occasion": {
+        "title": "Bạn Đi Đâu?",
+        "description": "Chọn nơi bạn đang đến",
+        "options": {
+          "work": "Công Sở",
+          "weekend": "Cuối Tuần",
+          "date": "Hẹn Hò",
+          "rainy": "Ngày Mưa"
+        }
+      },
+      "outfit": {
+        "title": "Outfit Của Bạn",
+        "description": "AI ghép từ tủ đồ của bạn",
+        "actions": {
+          "shuffle": "Đổi Outfit",
+          "save": "Lưu Outfit"
+        }
+      }
+    },
+    "controls": {
+      "addItem": "Thêm Đồ",
+      "pickOccasion": "Chọn Dịp",
+      "generateOutfit": "Tạo Outfit",
+      "shuffle": "Đổi Outfit",
+      "reset": "Bắt Đầu Lại"
+    }
+  },
+
   "howItWorks": {
     "eyebrow": "Cách Hoạt Động",
     "title": "Buổi Sáng Của Bạn Trong 30 Giây",
     "subtitle": "Ba bước. Không cài đặt phức tạp. Không cần học cách dùng.",
-    "step1Title": "Chụp Tủ Đồ",
-    "step1Desc": "Chụp từng món đồ. AI nhận diện màu sắc, kiểu dáng, chất liệu — ngay lập tức.",
-    "step2Title": "Nhận Gợi Ý Outfit",
-    "step2Desc": "Nói Matchic bạn đi đâu: công sở, hẹn hò, gym, cuối tuần. Nó gợi ý từ đồ bạn có.",
-    "step3Title": "Theo Dõi & Cải Thiện",
-    "step3Desc": "Ghi lại bạn mặc gì. Thấy gì bạn không dùng. Xây tủ đồ bạn thực sự yêu thích."
+    "steps": {
+      "wardrobe": {
+        "number": "01",
+        "title": "Chụp Tủ Đồ",
+        "description": "Chụp từng món đồ. AI nhận diện màu sắc, kiểu dáng, chất liệu — ngay lập tức."
+      },
+      "outfit": {
+        "number": "02",
+        "title": "Nhận Gợi Ý Outfit",
+        "description": "Nói Matchic bạn đi đâu: công sở, hẹn hò, gym, cuối tuần. Nó gợi ý từ đồ bạn có."
+      },
+      "track": {
+        "number": "03",
+        "title": "Theo Dõi & Cải Thiện",
+        "description": "Ghi lại bạn mặc gì. Thấy gì bạn không dùng. Xây tủ đồ bạn thực sự yêu thích."
+      }
+    }
   },
+
   "features": {
     "eyebrow": "Tính Năng",
     "title": "Tủ Đồ Của Bạn Cần Gì",
-    "feature1Title": "AI Gợi Ý Outfit",
-    "feature1Desc": "Không biết mặc gì? Matchic gợi ý từ tủ đồ thật của bạn — không phải từ catalog cửa hàng.",
-    "feature2Title": "Tự Động Phân Loại",
-    "feature2Desc": "Chĩa camera vào đồ. Matchic nhận diện loại, màu sắc, chất liệu, phong cách tự động.",
-    "feature3Title": "Thống Kê Tủ Đồ",
-    "feature3Desc": "Xem gì bạn mặc nhiều nhất, gì nằm im, và bạn dùng bao nhiêu phần trăm tủ đồ.",
-    "feature4Title": "Hoạt Động Ngoại Tuyến",
-    "feature4Desc": "Dùng trên máy bay, tầng hầm, bất kỳ đâu. Không cần internet. Không bao giờ.",
-    "feature5Title": "Không Cần Tài Khoản",
-    "feature5Desc": "Mở app và dùng. Không email, không mật khẩu, không đồng bộ đám mây.",
-    "feature6Title": "Dữ Liệu Của Bạn, Luật Của Bạn",
-    "feature6Desc": "Xuất, sao lưu, hoặc xóa mọi thứ bất cứ lúc nào. Dữ liệu tủ đồ thuộc về bạn."
+    "items": {
+      "outfitGenerator": {
+        "title": "AI Gợi Ý Outfit",
+        "description": "Không biết mặc gì? Matchic gợi ý từ tủ đồ thật của bạn — không phải từ catalog cửa hàng."
+      },
+      "autoTagging": {
+        "title": "Tự Động Phân Loại",
+        "description": "Chĩa camera vào đồ. Matchic nhận diện loại, màu sắc, chất liệu, phong cách tự động."
+      },
+      "wardrobeInsights": {
+        "title": "Thống Kê Tủ Đồ",
+        "description": "Xem gì bạn mặc nhiều nhất, gì nằm im, và bạn dùng bao nhiêu phần trăm tủ đồ."
+      },
+      "offlineFirst": {
+        "title": "Hoạt Động Ngoại Tuyến",
+        "description": "Dùng trên máy bay, tầng hầm, bất kỳ đâu. Không cần internet. Không bao giờ."
+      },
+      "noAccount": {
+        "title": "Không Cần Tài Khoản",
+        "description": "Mở app và dùng. Không email, không mật khẩu, không đồng bộ đám mây."
+      },
+      "dataOwnership": {
+        "title": "Dữ Liệu Của Bạn, Luật Của Bạn",
+        "description": "Xuất, sao lưu, hoặc xóa mọi thứ bất kỳ lúc nào. Dữ liệu tủ đồ thuộc về bạn."
+      }
+    }
   },
-  "onDeviceAI": {
-    "eyebrow": "Thiết Kế Riêng Tư",
+
+  "privacy": {
+    "eyebrow": "Quyền Riêng Tư",
     "title": "Ảnh Của Bạn Không Bao Giờ Rời Khỏi Điện Thoại",
-    "subtitle": "Mọi thứ xảy ra trên điện thoại bạn. Chúng tôi không có máy chủ, nên không thể xem ảnh của bạn.",
-    "point1Title": "Chạy Trên Điện Thoại Bạn",
-    "point1Desc": "Mọi xử lý diễn ra ngay trên thiết bị bạn. Tủ đồ của bạn ở lại với bạn.",
-    "point2Title": "Không Upload Đám Mây",
-    "point2Desc": "Mọi bức ảnh ở lại điện thoại bạn. Không máy chủ. Không cơ sở dữ liệu.",
-    "point3Title": "Hoạt Động Ngoại Tuyến",
-    "point3Desc": "Dùng Matchic trên máy bay, tầng hầm, bất kỳ đâu. Không cần kết nối.",
-    "point4Title": "Bạn Kiểm Soát Dữ Liệu",
-    "point4Desc": "Xuất, sao lưu, hoặc xóa mọi thứ bất cứ lúc nào. Tất cả là của bạn."
+    "subtitle": "Matchic xử lý mọi thứ trên điện thoại bạn. Chúng tôi không thể xem ảnh vì chúng tôi không có máy chủ.",
+    "points": {
+      "onDevice": {
+        "title": "AI Trên Thiết Bị",
+        "description": "AI chạy trực tiếp trên điện thoại bạn. Không gì được gửi lên mạng."
+      },
+      "offline": {
+        "title": "Hoạt Động Ngoại Tuyến",
+        "description": "Dùng Matchic trên máy bay, tầng hầm, bất kỳ đâu. Không cần kết nối."
+      },
+      "dataControl": {
+        "title": "Bạn Kiểm Soát Dữ Liệu",
+        "description": "Xuất, sao lưu, hoặc xóa mọi thứ bất kỳ lúc nào. Là của bạn."
+      }
+    }
   },
-  "privacyComparison": {
-    "eyebrow": "So Sánh Quyền Riêng Tư",
+
+  "comparison": {
+    "eyebrow": "So Sánh",
     "title": "Matchic Khác Biệt Như Thế Nào",
-    "subtitle": "Chúng tôi xây dựng Matchic theo cách khác vì tin tủ đồ của bạn là chuyện riêng tư.",
-    "featureLabel": "Tính năng",
-    "matchicLabel": "Matchic",
-    "othersLabel": "App khác",
-    "row1Feature": "Xử lý AI",
-    "row1Matchic": "Chỉ trên máy",
-    "row1Others": "Dựa trên đám mây",
-    "row2Feature": "Lưu ảnh",
-    "row2Matchic": "Chỉ trên điện thoại",
-    "row2Others": "Máy chủ công ty",
-    "row3Feature": "Cần tài khoản",
-    "row3Matchic": "Tùy chọn",
-    "row3Others": "Thường bắt buộc",
-    "row4Feature": "Ngoại tuyến",
-    "row4Matchic": "Đầy đủ tính năng",
-    "row4Others": "Thường hạn chế",
-    "row5Feature": "Xuất Dữ Liệu",
-    "row5Matchic": "Toàn quyền kiểm soát",
-    "row5Others": "Thường hạn chế",
-    "row6Feature": "Theo dõi",
-    "row6Matchic": "Không",
-    "row6Others": "Thường nhiều",
-    "row7Feature": "Bán dữ liệu",
-    "row7Matchic": "Không bao giờ",
-    "row7Others": "Thực hành phổ biến"
+    "headers": {
+      "feature": "Tính Năng",
+      "matchic": "Matchic",
+      "others": "App Khác"
+    },
+    "rows": {
+      "aiProcessing": {
+        "feature": "Xử Lý AI",
+        "matchic": "Chỉ trên thiết bị",
+        "others": "Trên đám mây"
+      },
+      "photoStorage": {
+        "feature": "Lưu Trữ Ảnh",
+        "matchic": "Chỉ trên điện thoại",
+        "others": "Máy chủ công ty"
+      },
+      "accountRequired": {
+        "feature": "Cần Tài Khoản",
+        "matchic": "Tùy chọn",
+        "others": "Thường bắt buộc"
+      },
+      "offlineAccess": {
+        "feature": "Truy Cập Ngoại Tuyến",
+        "matchic": "Đầy đủ tính năng",
+        "others": "Thường hạn chế"
+      },
+      "dataExport": {
+        "feature": "Xuất Dữ Liệu",
+        "matchic": "Kiểm soát toàn bộ",
+        "others": "Thường hạn chế"
+      }
+    }
   },
+
   "sustainability": {
-    "eyebrow": "Thời Trang Bền Vững",
+    "eyebrow": "Bền Vững",
     "title": "Mặc Nhiều Hơn. Mua Ít Hơn.",
-    "subtitle": "Bộ đồ bền vững nhất là bộ bạn đang có trong tủ. Matchic giúp bạn yêu lại quần áo của mình.",
-    "point1Title": "Khám Phá Tủ Đồ",
-    "point1Desc": "Tìm lại những bộ bạn quên mất. Giảm mua sắm bốc đồng.",
-    "point2Title": "Theo Dõi Sử Dụng",
-    "point2Desc": "Xem bạn thực sự mặc gì. Chỉ mua những gì bạn cần.",
-    "point3Title": "Tủ Đồ Tinh Giản",
-    "point3Desc": "Xây tủ đồ linh hoạt, được chọn lọc, phục vụ bạn tốt hơn.",
-    "point4Title": "Lựa Chọn Có Ý Thức",
-    "point4Desc": "Quyết định thông minh về giữ, cho đi, hay mua đồ mới."
+    "subtitle": "Matchic giúp bạn tận dụng tối đa những gì đang có. Ít lãng phí, ít chi tiêu, nhiều tự tin.",
+    "features": {
+      "shopYourCloset": {
+        "title": "Mua Sắm Trong Tủ Đồ",
+        "description": "Khám phá combo mới từ đồ bạn đang có."
+      },
+      "trackUsage": {
+        "title": "Theo Dõi Sử Dụng",
+        "description": "Xem gì bạn không bao giờ mặc. Quyết định có nên giữ lại."
+      },
+      "capsuleWardrobe": {
+        "title": "Tủ Đồ Tối Giản",
+        "description": "Xây tủ đồ nhỏ hơn, linh hoạt hơn. Chất lượng hơn số lượng."
+      },
+      "consciousChoices": {
+        "title": "Lựa Chọn Có Ý Thức",
+        "description": "Mỗi quyết định mua đều quan trọng. Mua ít hơn, mặc nhiều hơn, không lãng phí."
+      }
+    }
   },
-  "openSource": {
-    "eyebrow": "Quyền Sở Hữu Dữ Liệu",
-    "title": "Tủ Đồ Của Bạn, Luật Của Bạn",
-    "subtitle": "Matchic cho bạn toàn quyền kiểm soát dữ liệu. Xuất, sao lưu, hoặc xóa mọi thứ — bất cứ lúc nào. Chúng tôi không thu thập dữ liệu vì tin rằng tủ đồ của bạn là chuyện riêng tư.",
+
+  "dataOwnership": {
+    "eyebrow": "Kiểm Soát Dữ Liệu",
+    "title": "Tủ Đồ Của Bạn, Quy Tắc Của Bạn",
+    "subtitle": "Dữ liệu của bạn nằm trên thiết bị. Không phải máy chủ của chúng tôi. Không phải đám mây. Điện thoại của bạn.",
+    "features": {
+      "dataControl": {
+        "title": "Tủ Đồ Của Bạn, Quy Tắc Của Bạn",
+        "description": "Xuất mọi thứ. Sao lưu cục bộ. Hoặc xóa tất cả. Tùy bạn."
+      }
+    },
     "cta": "Tìm Hiểu Thêm"
   },
+
   "waitlist": {
     "eyebrow": "Đăng Ký Trải Nghiệm Sớm",
-    "title": "Không Bao Giờ Đứng Trước Tủ Đồ Bối Rối Nữa",
-    "subtitle": "Tham gia danh sách chờ để là người đầu tiên dùng Matchic. Không spam. Hủy đăng ký bất cứ lúc nào.",
-    "emailPlaceholder": "Nhập email của bạn",
-    "submitButton": "Tham Gia Danh Sách Chờ",
-    "privacyNote": "Chúng tôi không chia sẻ email. Không theo dõi bạn. Chúng tôi thậm chí không có máy chủ.",
-    "storeApple": "App Store",
-    "storeGoogle": "Google Play",
-    "comingSoon": "Sắp ra mắt"
+    "title": "Trở Thành Người Dùng Đầu Tiên",
+    "subtitle": "Đăng ký danh sách chờ và nhận thông báo khi Matchic ra mắt. Không spam. Hủy đăng ký bất kỳ lúc nào.",
+    "form": {
+      "emailPlaceholder": "Nhập email của bạn",
+      "submitButton": "Đăng Ký Ngay",
+      "privacyNote": "Chúng tôi không chia sẻ email. Không theo dõi bạn. Chúng tôi thậm chí không có máy chủ.",
+      "loading": "Đang gửi...",
+      "success": "Bạn đã trong danh sách! Chúng tôi sẽ email khi Matchic sẵn sàng.",
+      "error": "Vui lòng nhập email hợp lệ."
+    },
+    "stores": {
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    }
   },
+
   "faq": {
     "eyebrow": "Câu Hỏi Thường Gặp",
     "title": "Có Thắc Mắc? Chúng Tôi Có Câu Trả Lời.",
-    "q1": "Matchic có thực sự miễn phí không?",
-    "a1": "Có. Matchic miễn phí. Chúng tôi không bán dữ liệu vì chúng tôi không thu thập dữ liệu.",
-    "q2": "Tôi có cần tạo tài khoản không?",
-    "a2": "Không. Bạn có thể dùng Matchic mà không cần tài khoản. Dữ liệu của bạn ở lại trên thiết bị.",
-    "q3": "Nó có hoạt động khi không có internet không?",
-    "a3": "Có. Mọi tính năng đều hoạt động không cần internet. AI chạy hoàn toàn trên điện thoại của bạn.",
-    "q4": "Ảnh của tôi có được upload đi đâu không?",
-    "a4": "Không. Ảnh của bạn không bao giờ rời khỏi thiết bị. Được xử lý ngay trên điện thoại bạn.",
-    "q5": "Matchic dùng AI gì?",
-    "a5": "Matchic dùng AI chạy ngay trên điện thoại bạn. Không gì được gửi lên đám mây.",
-    "q6": "Tôi có thể xuất dữ liệu không?",
-    "a6": "Có. Dữ liệu tủ đồ của bạn được lưu cục bộ và có thể xuất hoặc sao lưu bất cứ lúc nào.",
-    "q7": "Tôi có thể xuất dữ liệu tủ đồ không?",
-    "a7": "Có. Dữ liệu tủ đồ của bạn được lưu cục bộ và có thể xuất hoặc sao lưu bất cứ lúc nào. Bạn sở hữu dữ liệu của mình.",
-    "q8": "Có phiên bản iOS không?",
-    "a8": "Có. Chúng tôi đang xây dựng cho cả iOS và Android. Tham gia danh sách chờ để được thông báo."
+    "items": {
+      "free": {
+        "question": "Matchic có miễn phí không?",
+        "answer": "Có. Matchic miễn phí sử dụng. Chúng tôi không bán dữ liệu vì chúng tôi không thu thập gì."
+      },
+      "offline": {
+        "question": "App có hoạt động khi không có mạng không?",
+        "answer": "Có. Matchic hoạt động hoàn toàn ngoại tuyến. Xử lý AI, lưu trữ ảnh, tạo outfit — tất cả trên điện thoại bạn."
+      },
+      "photos": {
+        "question": "Ảnh của tôi được lưu ở đâu?",
+        "answer": "Chỉ trên điện thoại của bạn. Chúng tôi không có máy chủ. Chúng tôi không upload gì. Tủ đồ của bạn ở trên thiết bị."
+      },
+      "accuracy": {
+        "question": "AI chính xác đến đâu?",
+        "answer": "Matchic nhận diện màu sắc, họa tiết, loại quần áo với độ chính xác cao. Không hoàn hảo 100%, nhưng càng dùng càng tốt."
+      },
+      "wardrobeSize": {
+        "question": "Tôi có thể thêm bao nhiêu món đồ?",
+        "answer": "Thêm bao nhiêu cũng được. Matchic xử lý mọi kích cỡ tủ đồ — từ 20 món đến 2,000 món."
+      },
+      "export": {
+        "question": "Tôi có thể xuất dữ liệu tủ đồ không?",
+        "answer": "Có. Dữ liệu tủ đồ được lưu cục bộ và có thể xuất hoặc sao lưu bất kỳ lúc nào. Bạn sở hữu dữ liệu của mình."
+      },
+      "trust": {
+        "question": "Tôi có thể tin tưởng Matchic với dữ liệu của mình không?",
+        "answer": "Có. Tất cả ảnh tủ đồ ở trên điện thoại bạn. Chúng tôi không có máy chủ, nên không thể truy cập dữ liệu ngay cả khi muốn."
+      },
+      "platforms": {
+        "question": "Matchic có trên iOS không?",
+        "answer": "Có. Chúng tôi đang phát triển cho cả iOS và Android. Đăng ký danh sách chờ để nhận thông báo."
+      }
+    }
   },
-  "finalCTA": {
-    "title": "Sẵn Sàng Ngừng Lãng Phí Buổi Sáng?",
-    "subtitle": "Tham gia cùng hàng ngàn người muốn dành ít thời gian chọn đồ hơn và nhiều thời gian sống hơn.",
-    "cta": "Dùng Matchic Ngay",
+
+  "finalCta": {
+    "eyebrow": "Dùng Matchic",
+    "title": "Sẵn Sàng Khám Phá Tủ Đồ Của Bạn?",
+    "subtitle": "Đăng ký danh sách chờ. Trở thành người đầu tiên trải nghiệm tủ đồ thông minh.",
+    "cta": "Dùng Matchic",
     "secondary": "Tìm Hiểu Thêm"
   },
+
   "footer": {
-    "tagline": "Tủ đồ của bạn, được hiểu rõ — hoàn toàn trên thiết bị của bạn.",
-    "product": "Sản Phẩm",
-    "features": "Tính Năng",
-    "howItWorks": "Cách Hoạt Động",
-    "privacy": "Quyền Riêng Tư",
-    "company": "Công Ty",
-    "about": "Giới Thiệu",
-    "support": "Hỗ Trợ",
-    "legal": "Pháp Lý",
-    "privacyPolicy": "Chính Sách Riêng Tư",
-    "terms": "Điều Khoản Dịch Vụ",
-    "eula": "EULA",
-    "license": "Giấy Phép",
-    "copyright": "© 2026 Matchic. Mọi quyền được bảo lưu.",
-    "madeWith": "Được xây dựng với tâm huyết cho những người trân trọng thời gian.",
-    "blog": "Blog"
+    "product": {
+      "title": "Sản Phẩm",
+      "features": "Tính Năng",
+      "howItWorks": "Cách Hoạt Động",
+      "privacy": "Quyền Riêng Tư",
+      "waitlist": "Đăng Ký Sớm"
+    },
+    "company": {
+      "title": "Công Ty",
+      "about": "Giới Thiệu",
+      "contact": "Liên Hệ",
+      "press": "Báo Chí"
+    },
+    "legal": {
+      "title": "Pháp Lý",
+      "privacyPolicy": "Chính Sách Riêng Tư",
+      "termsOfService": "Điều Khoản Sử Dụng",
+      "eula": "Thỏa Thuận Người Dùng"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+
+  "legalPages": {
+    "privacy": {
+      "title": "Chính Sách Riêng Tư",
+      "lastUpdated": "Cập nhật: Tháng 5 năm 2026",
+      "sections": {
+        "collect": {
+          "title": "Chúng Tôi Thu Thập Gì",
+          "content": "Matchic được thiết kế để thu thập ít dữ liệu nhất có thể."
+        },
+        "doNot": {
+          "title": "Chúng Tôi Không Làm Gì",
+          "content": "Chúng tôi không upload ảnh của bạn lên máy chủ nào. Chúng tôi không theo dõi hành vi hoặc vị trí. Chúng tôi không bán hoặc chia sẻ dữ liệu với bên thứ ba."
+        },
+        "choices": {
+          "title": "Lựa Chọn Của Bạn",
+          "content": "Bạn có thể dùng Matchic không cần tạo tài khoản. Bạn có thể xóa dữ liệu tủ đồ bất kỳ lúc nào."
+        }
+      }
+    },
+    "terms": {
+      "title": "Điều Khoản Sử Dụng",
+      "lastUpdated": "Cập nhật: Tháng 5 năm 2026",
+      "sections": {
+        "usage": {
+          "title": "Sử Dụng Matchic",
+          "content": "Bằng cách sử dụng Matchic, bạn đồng ý với các điều khoản này."
+        },
+        "limitations": {
+          "title": "Giới Hạn",
+          "content": "Gợi ý outfit là đề xuất, không phải đảm bảo. Nhận diện AI có thể không hoàn hảo."
+        }
+      }
+    },
+    "eula": {
+      "title": "Thỏa Thuận Người Dùng",
+      "lastUpdated": "Cập nhật: Tháng 5 năm 2026",
+      "sections": {
+        "license": {
+          "title": "Cấp Phép",
+          "content": "Matchic cấp cho bạn giấy phép cá nhân, không độc quyền, không chuyển nhượng để sử dụng app."
+        },
+        "data": {
+          "title": "Dữ Liệu Của Bạn",
+          "content": "Tất cả ảnh tủ đồ và dữ liệu được lưu cục bộ trên thiết bị. Chúng tôi không có quyền truy cập."
+        }
+      }
+    }
   }
 }

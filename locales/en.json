@@ -1,12 +1,56 @@
 {
+  "_meta": {
+    "language": "en",
+    "name": "English",
+    "locale": "en-US"
+  },
+
+  "common": {
+    "appName": "Matchic",
+    "tagline": "Know What to Wear. Every Day.",
+    "comingSoon": "Coming Soon",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "download": "Download",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "share": "Share",
+    "export": "Export",
+    "import": "Import",
+    "backup": "Backup",
+    "restore": "Restore",
+    "settings": "Settings",
+    "help": "Help",
+    "feedback": "Feedback",
+    "rateApp": "Rate App",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "eula": "End User License Agreement",
+    "version": "Version",
+    "copyright": "© 2026 Matchic. All rights reserved.",
+    "allRightsReserved": "All rights reserved."
+  },
+
   "meta": {
-    "title": "Matchic \u2014 Know What to Wear. Every Day.",
+    "title": "Matchic — Know What to Wear. Every Day.",
     "description": "Standing in front of your closet with nothing to wear? Matchic uses private AI to suggest outfits from clothes you already own. No uploads. No tracking.",
-    "ogTitle": "Matchic \u2014 Know What to Wear. Every Day.",
+    "ogTitle": "Matchic — Know What to Wear. Every Day.",
     "ogDescription": "Standing in front of your closet with nothing to wear? Matchic uses private AI to suggest outfits from clothes you already own.",
-    "twitterTitle": "Matchic \u2014 Know What to Wear. Every Day.",
+    "twitterTitle": "Matchic — Know What to Wear. Every Day.",
     "twitterDescription": "Staring at your closet with nothing to wear? AI outfit suggestions from your own wardrobe. No cloud. No tracking."
   },
+
   "nav": {
     "logo": "Matchic",
     "features": "Features",
@@ -15,191 +59,468 @@
     "waitlist": "Get Early Access",
     "language": "Language"
   },
+
+  "language": {
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "ko": "한국어"
+  },
+
   "hero": {
     "eyebrow": "AI Outfit Suggestions from Your Own Closet",
     "title": "Standing in Front of a Full Closet with Nothing to Wear?",
-    "subtitle": "Matchic suggests outfits from clothes you already own \u2014 powered by AI that lives on your phone. No uploads. No tracking. No account needed.",
-    "ctaPrimary": "Get Matchic",
-    "ctaSecondary": "See How It Works",
-    "trust1": "Private AI",
-    "trust2": "No Account",
-    "trust3": "100% Offline",
-    "trust4": "No Tracking"
+    "subtitle": "Matchic suggests outfits from clothes you already own — powered by AI that lives on your phone. No uploads. No tracking. No account needed.",
+    "cta": {
+      "primary": "Get Matchic",
+      "secondary": "See How It Works"
+    },
+    "trust": {
+      "privateAI": "Private AI",
+      "noAccount": "No Account Required",
+      "offline": "100% Offline",
+      "noTracking": "No Tracking"
+    }
   },
+
   "trustStrip": {
-    "label": "Built with",
-    "flutter": "Built for Privacy",
-    "objectbox": "No Cloud",
-    "mediapipe": "No Tracking",
-    "gemma": "Simple",
-    "opensource": "Privacy First"
+    "label": "Highlights",
+    "items": {
+      "builtForPrivacy": "Built for Privacy",
+      "noCloud": "No Cloud",
+      "noTracking": "No Tracking",
+      "simplicity": "Simple"
+    }
   },
+
   "problem": {
     "eyebrow": "The Morning Struggle",
     "title": "7:15 AM. Running Late. Staring at Clothes You Forgot You Had.",
-    "subtitle": "Most people wear the same few outfits while 80% of their wardrobe sits untouched. Not because the clothes are bad \u2014 because you forgot they exist.",
-    "stat1Value": "20%",
-    "stat1Label": "of wardrobe typically worn. The rest? Forgotten.",
-    "stat2Value": "$1,200",
-    "stat2Label": "spent yearly on clothes that go unworn",
-    "stat3Value": "15min",
-    "stat3Label": "every morning deciding what to wear",
-    "stat4Value": "10%",
-    "stat4Label": "of fashion ends up unworn in the first year"
+    "subtitle": "Most people wear the same few outfits while 80% of their wardrobe sits untouched. Not because the clothes are bad — because you forgot they exist.",
+    "stats": {
+      "wardrobeUsed": {
+        "value": "20%",
+        "label": "of wardrobe typically worn. The rest? Forgotten."
+      },
+      "moneyWasted": {
+        "value": "$1,200",
+        "label": "spent yearly on clothes that go unworn"
+      },
+      "timeDeciding": {
+        "value": "15min",
+        "label": "every morning deciding what to wear"
+      },
+      "fashionWaste": {
+        "value": "10%",
+        "label": "of fashion ends up unworn in the first year"
+      }
+    }
   },
-  "appPreview": {
-    "caption": "Your closet, organized and searchable \u2014 all on your phone."
+
+  "beforeAfter": {
+    "eyebrow": "Your Morning, Transformed",
+    "title": "Your Morning, Transformed",
+    "withoutMatchic": {
+      "title": "7:15 AM: The Panic",
+      "description": "Open closet. Stare. Close closet. Repeat. End up wearing the same thing you wore yesterday. Leave 15 minutes late.",
+      "points": [
+        "Staring at clothes for 15 minutes",
+        "\"I have nothing to wear\"",
+        "Wearing same outfit again",
+        "Buying something you don't need"
+      ]
+    },
+    "withMatchic": {
+      "title": "7:15 AM: The Smile",
+      "description": "Open app. Swipe through AI-suggested outfits. Pick one. Get dressed in 2 minutes. Leave on time, looking sharp.",
+      "points": [
+        "3 outfit suggestions in 5 seconds",
+        "\"This looks great on me\"",
+        "Wearing something you forgot you had",
+        "Saving $100/month on impulse buys"
+      ]
+    }
   },
+
+  "outfitShowcase": {
+    "eyebrow": "Outfits for Every Moment",
+    "title": "Outfits for Every Moment",
+    "scenarios": {
+      "work": {
+        "title": "Monday Meeting",
+        "style": "Professional & sharp",
+        "items": ["Navy Blazer", "White Shirt", "Chinos"]
+      },
+      "date": {
+        "title": "Date Night",
+        "style": "Stylish & confident",
+        "items": ["Black Dress", "Heels", "Gold Watch"]
+      },
+      "gym": {
+        "title": "Gym Session",
+        "style": "Comfortable & functional",
+        "items": ["Sports Tee", "Shorts", "Running Shoes"]
+      },
+      "weekend": {
+        "title": "Lazy Sunday",
+        "style": "Relaxed & cozy",
+        "items": ["Oversized Sweater", "Jeans", "Sneakers"]
+      }
+    }
+  },
+
   "solution": {
     "eyebrow": "The Fix",
     "title": "Matchic Remembers Everything So You Don't Have To",
-    "subtitle": "Snap your clothes once. Matchic catalogs them, tags them automatically, and suggests outfits every morning \u2014 from what you actually own.",
-    "point1": "Snap a photo \u2014 AI recognizes every item instantly",
-    "point2": "Get outfit suggestions for any occasion",
-    "point3": "Track what you wear. Shop smarter. Waste less.",
-    "point4": "Everything stays on your phone. Always."
+    "subtitle": "Snap your clothes once. Matchic catalogs them, tags them automatically, and suggests outfits every morning — from what you actually own.",
+    "points": [
+      "Snap a photo — AI recognizes every item instantly",
+      "Get outfit suggestions for any occasion",
+      "Track what you wear. Shop smarter. Waste less.",
+      "Everything stays on your phone. Always."
+    ]
   },
+
+  "demo": {
+    "title": "Try Matchic",
+    "subtitle": "Click the buttons below to see how it works",
+    "states": {
+      "empty": {
+        "title": "Your Closet",
+        "description": "Start by adding clothes",
+        "action": "Add Item"
+      },
+      "scanning": {
+        "title": "Scanning...",
+        "description": "Hold still while AI recognizes your item",
+        "tags": {
+          "category": "Category",
+          "color": "Color",
+          "material": "Material",
+          "pattern": "Pattern"
+        }
+      },
+      "closet": {
+        "title": "My Closet",
+        "description": "Tap an item or pick an occasion",
+        "actions": {
+          "addMore": "Add More",
+          "pickOccasion": "Pick Occasion"
+        }
+      },
+      "occasion": {
+        "title": "What's the Occasion?",
+        "description": "Choose where you're going",
+        "options": {
+          "work": "Work",
+          "weekend": "Weekend",
+          "date": "Date Night",
+          "rainy": "Rainy Day"
+        }
+      },
+      "outfit": {
+        "title": "Your Outfit",
+        "description": "AI matched this from your wardrobe",
+        "actions": {
+          "shuffle": "Shuffle",
+          "save": "Save Outfit"
+        }
+      }
+    },
+    "controls": {
+      "addItem": "Add Item",
+      "pickOccasion": "Pick Occasion",
+      "generateOutfit": "Generate Outfit",
+      "shuffle": "Shuffle",
+      "reset": "Start Over"
+    }
+  },
+
   "howItWorks": {
     "eyebrow": "How It Works",
     "title": "Your Morning Routine in 30 Seconds",
     "subtitle": "Three steps. No setup. No learning curve.",
-    "step1Title": "Snap Your Wardrobe",
-    "step1Desc": "Photograph your clothes. One by one or in batches. Matchic identifies colors, styles, materials \u2014 instantly.",
-    "step2Title": "Get Outfit Ideas",
-    "step2Desc": "Tell Matchic the occasion: work, date, gym, lazy Sunday. It suggests combinations from your actual clothes.",
-    "step3Title": "Track & Improve",
-    "step3Desc": "Log what you wear. See what you never use. Build a wardrobe you actually love."
+    "steps": {
+      "wardrobe": {
+        "number": "01",
+        "title": "Snap Your Wardrobe",
+        "description": "Photograph your clothes. One by one or in batches. Matchic identifies colors, styles, materials — instantly."
+      },
+      "outfit": {
+        "number": "02",
+        "title": "Get Outfit Ideas",
+        "description": "Tell Matchic the occasion: work, date, gym, lazy Sunday. It suggests combinations from your actual clothes."
+      },
+      "track": {
+        "number": "03",
+        "title": "Track & Improve",
+        "description": "Log what you wear. See what you never use. Build a wardrobe you actually love."
+      }
+    }
   },
+
   "features": {
     "eyebrow": "Features",
     "title": "Everything Your Closet Needs",
-    "feature1Title": "AI Outfit Generator",
-    "feature1Desc": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe \u2014 not from a store catalog.",
-    "feature2Title": "Smart Auto-Tagging",
-    "feature2Desc": "Point your camera at any piece. Matchic identifies the category, color, material, and style automatically.",
-    "feature3Title": "Wardrobe Insights",
-    "feature3Desc": "See what you wear most, what sits unused, and how much of your closet you actually use.",
-    "feature4Title": "Offline First",
-    "feature4Desc": "Works on a plane, in a basement, anywhere. No internet needed. Ever.",
-    "feature5Title": "No Account Required",
-    "feature5Desc": "Open the app and start. No email, no password, no cloud sync.",
-    "feature6Title": "Your Data, Your Rules",
-    "feature6Desc": "Export, backup, or delete everything anytime. Your wardrobe data belongs to you."
+    "items": {
+      "outfitGenerator": {
+        "title": "AI Outfit Generator",
+        "description": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe — not from a store catalog."
+      },
+      "autoTagging": {
+        "title": "Smart Auto-Tagging",
+        "description": "Point your camera at any piece. Matchic identifies the category, color, material, and style automatically."
+      },
+      "wardrobeInsights": {
+        "title": "Wardrobe Insights",
+        "description": "See what you wear most, what sits unused, and how much of your closet you actually use."
+      },
+      "offlineFirst": {
+        "title": "Offline First",
+        "description": "Works on a plane, in a basement, anywhere. No internet needed. Ever."
+      },
+      "noAccount": {
+        "title": "No Account Needed",
+        "description": "Open the app and start. No email, no password, no cloud sync."
+      },
+      "dataOwnership": {
+        "title": "Your Data, Your Rules",
+        "description": "Export, backup, or delete everything anytime. Your wardrobe data belongs to you."
+      }
+    }
   },
-  "onDeviceAI": {
-    "eyebrow": "Built for Privacy",
+
+  "privacy": {
+    "eyebrow": "Privacy",
     "title": "Your Photos Never Leave Your Phone",
-    "subtitle": "Everything happens on your device. We do not have servers, so we physically cannot see your photos.",
-    "point1Title": "Runs on Your Phone",
-    "point1Desc": "All processing happens right on your device. Your wardrobe stays with you.",
-    "point2Title": "No Cloud Uploads",
-    "point2Desc": "Every photo stays on your phone. No servers. No databases.",
-    "point3Title": "Works Offline",
-    "point3Desc": "Use Matchic on a plane, in a basement, anywhere. No connection needed.",
-    "point4Title": "You Control Your Data",
-    "point4Desc": "Export, backup, or delete everything anytime. It is yours."
+    "subtitle": "Matchic processes everything on your phone. We physically cannot see your photos because we don't have servers.",
+    "points": {
+      "onDevice": {
+        "title": "On-Device AI",
+        "description": "AI runs directly on your phone. Nothing is sent to the internet."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Use Matchic on a plane, in a basement, anywhere. No connection needed."
+      },
+      "dataControl": {
+        "title": "You Control Your Data",
+        "description": "Export, backup, or delete everything anytime. It's yours."
+      }
+    }
   },
-  "privacyComparison": {
-    "eyebrow": "Privacy Comparison",
+
+  "comparison": {
+    "eyebrow": "Compare",
     "title": "How Matchic Compares",
-    "subtitle": "We built Matchic differently because we believe your wardrobe is personal.",
-    "featureLabel": "Feature",
-    "matchicLabel": "Matchic",
-    "othersLabel": "Other Apps",
-    "row1Feature": "AI Processing",
-    "row1Matchic": "On-device only",
-    "row1Others": "Cloud-based",
-    "row2Feature": "Photo Storage",
-    "row2Matchic": "Your phone only",
-    "row2Others": "Company servers",
-    "row3Feature": "Account Required",
-    "row3Matchic": "Optional",
-    "row3Others": "Usually mandatory",
-    "row4Feature": "Offline Access",
-    "row4Matchic": "Full functionality",
-    "row4Others": "Often limited",
-    "row5Feature": "Data Export",
-    "row5Matchic": "Full control",
-    "row5Others": "Often limited",
-    "row6Feature": "Tracking",
-    "row6Matchic": "None",
-    "row6Others": "Often extensive",
-    "row7Feature": "Data Selling",
-    "row7Matchic": "Never",
-    "row7Others": "Common practice"
+    "headers": {
+      "feature": "Feature",
+      "matchic": "Matchic",
+      "others": "Other Apps"
+    },
+    "rows": {
+      "aiProcessing": {
+        "feature": "AI Processing",
+        "matchic": "On-device only",
+        "others": "Cloud-based"
+      },
+      "photoStorage": {
+        "feature": "Photo Storage",
+        "matchic": "Your phone only",
+        "others": "Company servers"
+      },
+      "accountRequired": {
+        "feature": "Account Required",
+        "matchic": "Optional",
+        "others": "Usually mandatory"
+      },
+      "offlineAccess": {
+        "feature": "Offline Access",
+        "matchic": "Full functionality",
+        "others": "Often limited"
+      },
+      "dataExport": {
+        "feature": "Data Export",
+        "matchic": "Full control",
+        "others": "Often limited"
+      }
+    }
   },
+
   "sustainability": {
-    "eyebrow": "Sustainable Fashion",
+    "eyebrow": "Sustainability",
     "title": "Wear More. Buy Less.",
-    "subtitle": "The most sustainable outfit is the one already in your closet. Matchic helps you fall in love with your clothes again.",
-    "point1Title": "Shop Your Closet",
-    "point1Desc": "Discover outfits you forgot you had. Reduce impulse purchases.",
-    "point2Title": "Track Usage",
-    "point2Desc": "See what you actually wear. Buy only what you need.",
-    "point3Title": "Capsule Wardrobe",
-    "point3Desc": "Build a versatile, curated wardrobe that works harder.",
-    "point4Title": "Conscious Choices",
-    "point4Desc": "Make informed decisions about what to keep, donate, or buy."
+    "subtitle": "Matchic helps you maximize what you own. Less waste, less spending, more confidence.",
+    "features": {
+      "shopYourCloset": {
+        "title": "Shop Your Closet",
+        "description": "Discover new combinations from clothes you already have."
+      },
+      "trackUsage": {
+        "title": "Track Usage",
+        "description": "See what you never wear. Make conscious decisions about what to keep."
+      },
+      "capsuleWardrobe": {
+        "title": "Capsule Wardrobe",
+        "description": "Build a smaller, more versatile wardrobe. Quality over quantity."
+      },
+      "consciousChoices": {
+        "title": "Conscious Choices",
+        "description": "Every purchase decision matters. Buy less, wear more, waste nothing."
+      }
+    }
   },
-  "openSource": {
-    "eyebrow": "Data Ownership",
+
+  "dataOwnership": {
+    "eyebrow": "Data Control",
     "title": "Your Wardrobe, Your Rules",
-    "subtitle": "Matchic gives you full control over your data. Export everything, back it up, or delete it all \u2014 anytime. We don't collect your data because we believe your wardrobe is personal.",
+    "subtitle": "Your data lives on your device. Not our servers. Not the cloud. Your phone.",
+    "features": {
+      "dataControl": {
+        "title": "Your Wardrobe, Your Rules",
+        "description": "Export everything. Backup locally. Or wipe it all. Your choice."
+      }
+    },
     "cta": "Learn More"
   },
+
   "waitlist": {
     "eyebrow": "Get Early Access",
-    "title": "Never Stand in Front of Your Closet Confused Again",
-    "subtitle": "Join the waitlist and be the first to try Matchic. No spam. Unsubscribe anytime.",
-    "emailPlaceholder": "Enter your email",
-    "submitButton": "Join the Waitlist",
-    "privacyNote": "We won't share your email. We won't track you. We don't even have a server.",
-    "storeApple": "App Store",
-    "storeGoogle": "Google Play",
-    "comingSoon": "Coming Soon"
+    "title": "Be the First to Try Matchic",
+    "subtitle": "Join the waitlist and be notified when Matchic launches. No spam. Unsubscribe anytime.",
+    "form": {
+      "emailPlaceholder": "Enter your email",
+      "submitButton": "Join Waitlist",
+      "privacyNote": "We won't share your email. We won't track you. We don't even have a server.",
+      "loading": "Sending...",
+      "success": "You're on the list! We'll email you when Matchic is ready.",
+      "error": "Please enter a valid email address."
+    },
+    "stores": {
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    }
   },
+
   "faq": {
     "eyebrow": "FAQ",
     "title": "Questions? We Have Answers.",
-    "q1": "Is Matchic really free?",
-    "a1": "Yes. Matchic is free. We don't sell data because we don't collect any.",
-    "q2": "Do I need an account?",
-    "a2": "No. You can use Matchic without creating an account. Your data stays on your device.",
-    "q3": "Does it work offline?",
-    "a3": "Yes. All features work without internet. The AI runs entirely on your phone.",
-    "q4": "Are my photos uploaded anywhere?",
-    "a4": "No. Your photos never leave your device. They are processed right on your phone.",
-    "q5": "What AI does Matchic use?",
-    "a5": "Matchic uses AI that runs locally on your device. Nothing is sent to the cloud.",
-    "q6": "Can I export my data?",
-    "a6": "Yes. Your wardrobe data is stored locally and can be exported or backed up anytime.",
-    "q7": "Can I export my wardrobe data?",
-    "a7": "Yes. Your wardrobe data is stored locally and can be exported or backed up anytime. You own your data.",
-    "q8": "Will there be an iOS version?",
-    "a8": "Yes. We are building for both iOS and Android. Join the waitlist to be notified."
+    "items": {
+      "free": {
+        "question": "Is Matchic really free?",
+        "answer": "Yes. Matchic is free to use. We don't sell data because we don't collect any."
+      },
+      "offline": {
+        "question": "Does it work without internet?",
+        "answer": "Yes. Matchic works entirely offline. AI processing, photo storage, outfit generation — everything happens on your phone."
+      },
+      "photos": {
+        "question": "Where are my photos stored?",
+        "answer": "On your phone only. We don't have servers. We don't upload anything. Your wardrobe stays on your device."
+      },
+      "accuracy": {
+        "question": "How accurate is the AI?",
+        "answer": "Matchic recognizes colors, patterns, and clothing categories with high accuracy. It's not perfect, but it gets better as you use it."
+      },
+      "wardrobeSize": {
+        "question": "How many items can I add?",
+        "answer": "As many as you want. Matchic handles wardrobes of all sizes — from 20 items to 2,000."
+      },
+      "export": {
+        "question": "Can I export my wardrobe data?",
+        "answer": "Yes. Your wardrobe data is stored locally and can be exported or backed up anytime. You own your data."
+      },
+      "trust": {
+        "question": "Can I trust Matchic with my data?",
+        "answer": "Yes. All your wardrobe photos stay on your phone. We don't have servers, so we can't access your data even if we wanted to."
+      },
+      "platforms": {
+        "question": "Will Matchic be available on iOS?",
+        "answer": "Yes. We are building for both iOS and Android. Join the waitlist to be notified."
+      }
+    }
   },
-  "finalCTA": {
-    "title": "Ready to Stop Wasting Mornings?",
-    "subtitle": "Join thousands who want to spend less time deciding and more time living.",
+
+  "finalCta": {
+    "eyebrow": "Get Matchic",
+    "title": "Ready to Know Your Wardrobe?",
+    "subtitle": "Join the waitlist. Be the first to experience a smarter closet.",
     "cta": "Get Matchic",
     "secondary": "Learn More"
   },
+
   "footer": {
-    "tagline": "Your wardrobe, understood \u2014 completely on your device.",
-    "product": "Product",
-    "features": "Features",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "company": "Company",
-    "about": "About",
-    "blog": "Blog",
-    "support": "Support",
-    "legal": "Legal",
-    "privacyPolicy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "eula": "EULA",
-    "license": "License",
-    "copyright": "\u00a9 2026 Matchic. All rights reserved.",
-    "madeWith": "Made with care for people who value their time."
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "howItWorks": "How It Works",
+      "privacy": "Privacy",
+      "waitlist": "Get Early Access"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About",
+      "contact": "Contact",
+      "press": "Press"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "eula": "EULA"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+
+  "legalPages": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: May 2026",
+      "sections": {
+        "collect": {
+          "title": "What We Collect",
+          "content": "Matchic is designed to collect as little data as possible. Here's what we handle:"
+        },
+        "doNot": {
+          "title": "What We Do Not Do",
+          "content": "We do not upload your photos to any server. We do not track your behavior or location. We do not sell or share your data with third parties. We do not use analytics or advertising cookies."
+        },
+        "choices": {
+          "title": "Your Choices",
+          "content": "You can use Matchic without creating an account. You can delete your wardrobe data at any time. You can unsubscribe from waitlist emails anytime."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: May 2026",
+      "sections": {
+        "usage": {
+          "title": "Using Matchic",
+          "content": "By using Matchic, you agree to these terms. If you do not agree, please do not use the app."
+        },
+        "limitations": {
+          "title": "Limitations",
+          "content": "Outfit suggestions are recommendations, not guarantees. AI recognition may not always be perfect. We are not responsible for fashion choices made using the app."
+        }
+      }
+    },
+    "eula": {
+      "title": "End User License Agreement",
+      "lastUpdated": "Last updated: May 2026",
+      "sections": {
+        "license": {
+          "title": "License Grant",
+          "content": "Matchic grants you a personal, non-exclusive, non-transferable license to use the app on your own devices."
+        },
+        "data": {
+          "title": "Your Data",
+          "content": "All wardrobe photos and data are stored locally on your device. We do not have access to your content."
+        }
+      }
+    }
   }
 }
