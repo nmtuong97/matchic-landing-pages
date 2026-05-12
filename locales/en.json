@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Matchic — Your Private Wardrobe Brain",
-    "description": "Matchic helps you remember what you own, discover forgotten outfits, and buy less — with AI that runs entirely on your device. No uploads. No tracking. Open source.",
-    "ogTitle": "Matchic — Your Private Wardrobe Brain",
-    "ogDescription": "AI wardrobe assistant that runs entirely on your phone. No cloud. No tracking. Open source.",
-    "twitterTitle": "Matchic — Your Private Wardrobe Brain",
-    "twitterDescription": "Know what you own. Wear what you love. Privately."
+    "title": "Matchic — Know What to Wear. Every Day.",
+    "description": "Standing in front of your closet with nothing to wear? Matchic uses on-device AI to suggest outfits from clothes you already own. No uploads. No tracking. Open source.",
+    "ogTitle": "Matchic — Know What to Wear. Every Day.",
+    "ogDescription": "Standing in front of your closet with nothing to wear? Matchic uses on-device AI to suggest outfits from clothes you already own.",
+    "twitterTitle": "Matchic — Know What to Wear. Every Day.",
+    "twitterDescription": "Staring at your closet with nothing to wear? AI outfit suggestions from your own wardrobe. No cloud. No tracking."
   },
   "nav": {
     "logo": "Matchic",
@@ -16,15 +16,15 @@
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "Private AI Wardrobe Assistant",
-    "title": "Your Private Wardrobe Brain",
-    "subtitle": "Know what you own. Wear what you love.\nAll with AI that lives on your phone — never in the cloud.",
-    "ctaPrimary": "Join the Waitlist",
+    "eyebrow": "AI Outfit Suggestions from Your Own Closet",
+    "title": "Standing in Front of a Full Closet with Nothing to Wear?",
+    "subtitle": "Matchic suggests outfits from clothes you already own — powered by AI that lives on your phone. No uploads. No tracking. No account needed.",
+    "ctaPrimary": "Get Matchic",
     "ctaSecondary": "See How It Works",
     "trust1": "Open Source",
-    "trust2": "No Account Required",
+    "trust2": "No Account",
     "trust3": "100% Offline",
-    "trust4": "Zero Tracking"
+    "trust4": "No Tracking"
   },
   "trustStrip": {
     "label": "Built with",
@@ -35,57 +35,53 @@
     "opensource": "Open Source"
   },
   "problem": {
-    "eyebrow": "The Problem",
-    "title": "You Own More Than You Remember",
-    "subtitle": "Most people wear only a fraction of their wardrobe. Clothes get buried, forgotten, and replaced — while perfectly good pieces sit unworn.",
+    "eyebrow": "The Morning Struggle",
+    "title": "7:15 AM. Running Late. Staring at Clothes You Forgot You Had.",
+    "subtitle": "Most people wear the same few outfits while 80% of their wardrobe sits untouched. Not because the clothes are bad — because you forgot they exist.",
     "stat1Value": "20%",
-    "stat1Label": "of wardrobe typically worn regularly",
+    "stat1Label": "of wardrobe typically worn. The rest? Forgotten.",
     "stat2Value": "$1,200",
     "stat2Label": "spent yearly on clothes that go unworn",
     "stat3Value": "15min",
-    "stat3Label": "average time deciding what to wear daily",
+    "stat3Label": "every morning deciding what to wear",
     "stat4Value": "10%",
-    "stat4Label": "of global carbon emissions from fashion"
+    "stat4Label": "of fashion ends up unworn in the first year"
+  },
+  "appPreview": {
+    "caption": "Your closet, organized and searchable — all on your phone."
   },
   "solution": {
-    "eyebrow": "The Solution",
-    "title": "Meet Matchic",
-    "subtitle": "An AI wardrobe assistant that lives entirely on your phone. It helps you catalog your clothes, discover outfits you forgot about, and make the most of what you already own.",
-    "point1": "Snap a photo — AI tags everything automatically",
-    "point2": "Get outfit suggestions from your real wardrobe",
-    "point3": "Track what you wear and what you don't",
-    "point4": "All private. All offline. Always."
+    "eyebrow": "The Fix",
+    "title": "Matchic Remembers Everything So You Don't Have To",
+    "subtitle": "Snap your clothes once. Matchic catalogs them, tags them automatically, and suggests outfits every morning — from what you actually own.",
+    "point1": "Snap a photo — AI recognizes every item instantly",
+    "point2": "Get outfit suggestions for any occasion",
+    "point3": "Track what you wear. Shop smarter. Waste less.",
+    "point4": "Everything stays on your phone. Always."
   },
   "howItWorks": {
     "eyebrow": "How It Works",
-    "title": "From Chaos to Closet in Four Steps",
-    "step1Title": "Snap",
-    "step1Desc": "Take photos of your clothes. One at a time or in batches.",
-    "step2Title": "Auto-Tag",
-    "step2Desc": "AI recognizes colors, patterns, materials, and categories instantly.",
-    "step3Title": "Discover",
-    "step3Desc": "Get outfit suggestions based on what you actually own.",
-    "step4Title": "Track",
-    "step4Desc": "Log what you wear. See patterns. Shop smarter."
-  },
-  "appPreview": {
-    "eyebrow": "App Preview",
-    "title": "Your Wardrobe, Beautifully Organized",
-    "subtitle": "A clean, intuitive interface that makes managing your closet feel effortless.",
-    "caption": "Matchic running on-device with zero cloud dependency"
+    "title": "Your Morning Routine in 30 Seconds",
+    "subtitle": "Three steps. No setup. No learning curve.",
+    "step1Title": "Snap Your Wardrobe",
+    "step1Desc": "Photograph your clothes. One by one or in batches. Matchic identifies colors, styles, materials — instantly.",
+    "step2Title": "Get Outfit Ideas",
+    "step2Desc": "Tell Matchic the occasion: work, date, gym, lazy Sunday. It suggests combinations from your actual clothes.",
+    "step3Title": "Track \u0026 Improve",
+    "step3Desc": "Log what you wear. See what you never use. Build a wardrobe you actually love."
   },
   "features": {
     "eyebrow": "Features",
-    "title": "Everything You Need",
-    "feature1Title": "AI Auto-Tagging",
-    "feature1Desc": "Point your camera at any piece of clothing. Matchic identifies the category, color, material, and style — all on your device.",
-    "feature2Title": "Outfit Generator",
-    "feature2Desc": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe, not from a store.",
+    "title": "Everything Your Closet Needs",
+    "feature1Title": "AI Outfit Generator",
+    "feature1Desc": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe — not from a store catalog.",
+    "feature2Title": "Smart Auto-Tagging",
+    "feature2Desc": "Point your camera at any piece. Matchic identifies the category, color, material, and style automatically.",
     "feature3Title": "Wardrobe Insights",
-    "feature3Desc": "See what you wear most, what sits unused, and how much you actually use your closet.",
+    "feature3Desc": "See what you wear most, what sits unused, and how much of your closet you actually use.",
     "feature4Title": "Offline First",
-    "feature4Desc": "Works without internet. Your data never leaves your phone. Ever.",
-    "feature5Title": "No Account Needed",
+    "feature4Desc": "Works on a plane, in a basement, anywhere. No internet needed. Ever.",
+    "feature5Title": "No Account Required",
     "feature5Desc": "Open the app and start. No email, no password, no cloud sync.",
     "feature6Title": "Open Source",
     "feature6Desc": "The code is public. You can verify our privacy claims yourself."
@@ -93,7 +89,7 @@
   "onDeviceAI": {
     "eyebrow": "On-Device AI",
     "title": "Your Photos Never Leave Your Phone",
-    "subtitle": "Matchic uses MediaPipe and Gemma 3 to process everything locally. We physically cannot see your photos because we don't have servers.",
+    "subtitle": "Matchic uses Google's MediaPipe and Gemma 3 to process everything locally. We physically cannot see your photos — because we don't have servers.",
     "point1Title": "Local Processing",
     "point1Desc": "AI models run directly on your device using MediaPipe GenAI.",
     "point2Title": "No Cloud Upload",
@@ -149,19 +145,14 @@
     "eyebrow": "Open Source",
     "title": "Built in Public. Verified by You.",
     "subtitle": "Matchic is open source under the MIT License. Every line of code is available for review. We have nothing to hide because we have nothing to collect.",
-    "cta": "View on GitHub",
-    "license": "MIT License"
+    "cta": "View on GitHub"
   },
   "waitlist": {
     "eyebrow": "Get Early Access",
-    "title": "Be the First to Try Matchic",
-    "subtitle": "Join the waitlist and be notified when Matchic launches. No spam. Unsubscribe anytime.",
+    "title": "Never Stand in Front of Your Closet Confused Again",
+    "subtitle": "Join the waitlist and be the first to try Matchic. No spam. Unsubscribe anytime.",
     "emailPlaceholder": "Enter your email",
-    "submitButton": "Join Waitlist",
-    "successTitle": "You're on the list!",
-    "successMessage": "We'll notify you when Matchic is ready. Thank you for your interest.",
-    "errorInvalidEmail": "Please enter a valid email address.",
-    "errorRequired": "Email is required.",
+    "submitButton": "Join the Waitlist",
     "privacyNote": "We won't share your email. We won't track you. We don't even have a server.",
     "storeApple": "App Store",
     "storeGoogle": "Google Play",
@@ -185,16 +176,12 @@
     "q7": "Is the code really open source?",
     "a7": "Yes. Matchic is released under the MIT License. You can view, fork, and contribute to the code on GitHub.",
     "q8": "Will there be an iOS version?",
-    "a8": "Yes. We are building for both iOS and Android. Join the waitlist to be notified.",
-    "q9": "How is this different from other wardrobe apps?",
-    "a9": "Matchic is the only wardrobe app that runs AI entirely on your device with zero cloud dependency. Your privacy is not a feature — it's the foundation.",
-    "q10": "Can I contribute to the project?",
-    "a10": "Absolutely. We welcome contributors. Check out our GitHub repository for guidelines."
+    "a8": "Yes. We are building for both iOS and Android. Join the waitlist to be notified."
   },
   "finalCTA": {
-    "title": "Ready to Know Your Wardrobe?",
-    "subtitle": "Join thousands who want a smarter, more private way to manage their clothes.",
-    "cta": "Join the Waitlist",
+    "title": "Ready to Stop Wasting Mornings?",
+    "subtitle": "Join thousands who want to spend less time deciding and more time living.",
+    "cta": "Get Matchic",
     "secondary": "View on GitHub"
   },
   "footer": {
