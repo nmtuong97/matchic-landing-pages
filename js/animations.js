@@ -1,7 +1,18 @@
 /**
- * Matchic — Animation System
- * GSAP + ScrollTrigger + IntersectionObserver fallback
- * Respects prefers-reduced-motion
+ * Matchic — Animation System v2
+ * Liquid Glass Motion (from Flutter)
+ *
+ * Features:
+ * - Page load orchestration (hero entrance sequence)
+ * - Scroll reveal with IntersectionObserver
+ * - GSAP + ScrollTrigger (enhanced)
+ * - Micro-interactions (ripple, hover, focus)
+ * - Parallax depth layers
+ * - Stagger animations
+ * - Counter animation
+ * - Keyboard navigation
+ * - prefers-reduced-motion support
+ * - Performance optimized
  */
 
 (function () {
@@ -13,29 +24,88 @@
    * Initialize all animations
    */
   function init() {
+    // Handle reduced motion
     if (prefersReducedMotion) {
-      // Show all content immediately
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+      document.querySelectorAll('.reveal, .reveal-up, .reveal-down, .reveal-left, .reveal-right, .reveal-scale, .reveal-scale-up').forEach(el => {
+        el.classList.add('revealed');
+      });
       return;
     }
 
+    // Page load animations
+    initPageLoad();
+
+    // Scroll reveal
     initScrollReveal();
-    initHeroAnimations();
+
+    // GSAP enhancements (if available)
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      initGSAPEnhancements();
+    }
+
+    // Micro-interactions
     initMicroInteractions();
+
+    // Parallax
+    initParallax();
+
+    // Counters
     initCounters();
+
+    // FAQ
     initFAQAccordion();
+
+    // Waitlist form
+    initWaitlistForm();
   }
 
-  /**
-   * Scroll reveal with IntersectionObserver (baseline)
-   */
+  /* ============================================================
+     PAGE LOAD — Hero Entrance Sequence
+     ============================================================ */
+
+  function initPageLoad() {
+    // Add page-loaded class after a short delay
+    setTimeout(() => {
+      document.body.classList.add('page-loaded');
+    }, 100);
+  }
+
+  /* ============================================================
+     SCROLL REVEAL — IntersectionObserver
+     ============================================================ */
+
   function initScrollReveal() {
-    const revealElements = document.querySelectorAll('.reveal');
+    const revealSelectors = [
+      '.reveal',
+      '.reveal-up',
+      '.reveal-down',
+      '.reveal-left',
+      '.reveal-right',
+      '.reveal-scale',
+      '.reveal-scale-up',
+      '.stagger-children'
+    ];
+
+    const revealElements = document.querySelectorAll(revealSelectors.join(', '));
+
+    if (!revealElements.length) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          // Add revealed class
           entry.target.classList.add('revealed');
+
+          // Handle stagger-children
+          if (entry.target.classList.contains('stagger-children')) {
+            const children = entry.target.children;
+            Array.from(children).forEach((child, i) => {
+              setTimeout(() => {
+                child.classList.add('revealed');
+              }, i * 80);
+            });
+          }
+
           observer.unobserve(entry.target);
         }
       });
@@ -47,26 +117,29 @@
     revealElements.forEach(el => observer.observe(el));
   }
 
-  /**
-   * GSAP animations (enhanced)
-   */
-  function initHeroAnimations() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  /* ============================================================
+     GSAP ENHANCEMENTS
+     ============================================================ */
+
+  function initGSAPEnhancements() {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero entrance
-    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    // Hero entrance timeline
+    const heroTl = gsap.timeline({
+      defaults: { ease: 'power3.out' },
+      delay: 0.3
+    });
 
     heroTl
-      .from('.hero-badge', { y: 20, opacity: 0, duration: 0.6 })
-      .from('h1', { y: 30, opacity: 0, duration: 0.8 }, '-=0.3')
+      .from('.hero-badge', { y: 20, opacity: 0, duration: 0.6, filter: 'blur(8px)' })
+      .from('h1', { y: 30, opacity: 0, duration: 0.8, filter: 'blur(8px)' }, '-=0.3')
       .from('.hero-subtitle', { y: 20, opacity: 0, duration: 0.6 }, '-=0.4')
       .from('.hero-actions', { y: 20, opacity: 0, duration: 0.5 }, '-=0.3')
       .from('.hero-trust', { y: 15, opacity: 0, duration: 0.4 }, '-=0.2')
-      .from('.phone-mockup', { y: 60, opacity: 0, duration: 1 }, '-=0.6');
+      .from('.hero-visual-wrapper', { y: 60, opacity: 0, scale: 0.95, duration: 1 }, '-=0.6');
 
     // Scroll-triggered sections
-    gsap.utils.toArray('.bento-card, .feature-card, .impact-card').forEach((card, i) => {
+    gsap.utils.toArray('.feature-card, .step-card, .bento-card, .impact-card').forEach((card, i) => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
@@ -81,109 +154,174 @@
       });
     });
 
-    // AI cards
-    gsap.utils.toArray('.ai-card').forEach((card, i) => {
+    // Stats counter
+    gsap.utils.toArray('.stat-card').forEach(card => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
+          start: 'top 85%'
         },
         y: 30,
         opacity: 0,
         duration: 0.6,
-        delay: i * 0.12,
-        ease: 'power2.out'
+        stagger: 0.1,
+        ease: 'power3.out'
       });
     });
 
-    // Solution points
-    gsap.utils.toArray('.solution-point').forEach((point, i) => {
-      gsap.from(point, {
+    // Parallax layers
+    gsap.utils.toArray('.parallax-layer').forEach(layer => {
+      const speed = parseFloat(getComputedStyle(layer).getPropertyValue('--parallax-speed')) || 0.5;
+
+      gsap.to(layer, {
         scrollTrigger: {
-          trigger: point,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
+          trigger: layer.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1
         },
-        x: -30,
-        opacity: 0,
-        duration: 0.5,
-        delay: i * 0.15,
-        ease: 'power2.out'
+        y: () => window.innerHeight * speed * 0.3,
+        ease: 'none'
       });
+    });
+
+    // Fade in images
+    gsap.utils.toArray('img').forEach(img => {
+      if (img.complete) {
+        gsap.from(img, {
+          scrollTrigger: {
+            trigger: img,
+            start: 'top 90%'
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          ease: 'power3.out'
+        });
+      } else {
+        img.addEventListener('load', () => {
+          gsap.from(img, {
+            scrollTrigger: {
+              trigger: img,
+              start: 'top 90%'
+            },
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+            ease: 'power3.out'
+          });
+        });
+      }
     });
   }
 
-  /**
-   * Micro-interactions
-   */
+  /* ============================================================
+     MICRO-INTERACTIONS
+     ============================================================ */
+
   function initMicroInteractions() {
-    // Button ripple effect
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        if (prefersReducedMotion) return;
-
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-
-        ripple.style.cssText = `
-          position: absolute;
-          width: ${size}px;
-          height: ${size}px;
-          left: ${x}px;
-          top: ${y}px;
-          background: rgba(255,255,255,0.3);
-          border-radius: 50%;
-          transform: scale(0);
-          animation: ripple-effect 0.6s ease-out;
-          pointer-events: none;
-        `;
-
-        this.style.position = 'relative';
-        this.style.overflow = 'hidden';
-        this.appendChild(ripple);
-
-        setTimeout(() => ripple.remove(), 600);
-      });
+    // Ripple effect on buttons
+    document.querySelectorAll('.btn, .chip, .feature-card').forEach(el => {
+      el.addEventListener('click', createRipple);
     });
 
-    // Card tilt on hover (desktop only)
-    if (!window.matchMedia('(pointer: coarse)').matches) {
-      document.querySelectorAll('.glass-card, .feature-card, .bento-card').forEach(card => {
-        card.addEventListener('mousemove', function (e) {
-          if (prefersReducedMotion) return;
-          const rect = this.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const centerX = rect.width / 2;
-          const centerY = rect.height / 2;
-          const rotateX = (y - centerY) / 20;
-          const rotateY = (centerX - x) / 20;
+    // Magnetic hover effect
+    document.querySelectorAll('.magnetic-hover').forEach(el => {
+      el.addEventListener('mousemove', handleMagneticHover);
+      el.addEventListener('mouseleave', resetMagneticHover);
+    });
 
-          this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
-        });
-
-        card.addEventListener('mouseleave', function () {
-          this.style.transform = '';
-        });
-      });
-    }
+    // Focus ring enhancement
+    document.querySelectorAll('button, a, input, textarea, select').forEach(el => {
+      el.classList.add('focus-ring');
+    });
   }
 
-  /**
-   * Animated counters
-   */
+  function createRipple(e) {
+    const button = e.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const ripple = document.createElement('span');
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+
+    ripple.style.cssText = `
+      position: absolute;
+      width: ${size}px;
+      height: ${size}px;
+      left: ${x}px;
+      top: ${y}px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      animation: ripple-animation 0.6s ease-out;
+      pointer-events: none;
+    `;
+
+    button.style.overflow = 'hidden';
+    button.style.position = 'relative';
+    button.appendChild(ripple);
+
+    setTimeout(() => ripple.remove(), 600);
+  }
+
+  function handleMagneticHover(e) {
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    el.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.02)`;
+  }
+
+  function resetMagneticHover(e) {
+    e.currentTarget.style.transform = '';
+  }
+
+  /* ============================================================
+     PARALLAX
+     ============================================================ */
+
+  function initParallax() {
+    if (prefersReducedMotion) return;
+
+    const parallaxElements = document.querySelectorAll('.parallax-layer');
+    if (!parallaxElements.length) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+      const scrollY = window.scrollY;
+
+      parallaxElements.forEach(el => {
+        const speed = parseFloat(getComputedStyle(el).getPropertyValue('--parallax-speed')) || 0.5;
+        const y = scrollY * speed * 0.3;
+        el.style.transform = `translateY(${y}px)`;
+      });
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  /* ============================================================
+     COUNTERS
+     ============================================================ */
+
   function initCounters() {
     const counters = document.querySelectorAll('.stat-number');
+    if (!counters.length) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const target = parseInt(entry.target.dataset.target) || 0;
-          animateCounter(entry.target, target);
+          animateCounter(entry.target);
           observer.unobserve(entry.target);
         }
       });
@@ -192,126 +330,159 @@
     counters.forEach(counter => observer.observe(counter));
   }
 
-  function animateCounter(el, target) {
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target) || 0;
+    const suffix = el.nextElementSibling?.textContent || '';
     const duration = 1500;
-    const start = performance.now();
+    const startTime = performance.now();
 
     function update(currentTime) {
-      const elapsed = currentTime - start;
+      const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
       const current = Math.round(eased * target);
-      el.textContent = current;
+
+      el.textContent = current.toLocaleString();
 
       if (progress < 1) {
         requestAnimationFrame(update);
-      } else {
-        el.textContent = target;
       }
     }
 
     requestAnimationFrame(update);
   }
 
-  /**
-   * FAQ Accordion
-   */
+  /* ============================================================
+     FAQ ACCORDION
+     ============================================================ */
+
   function initFAQAccordion() {
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', function () {
-        const item = this.closest('.faq-item');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      if (!question || !answer) return;
+
+      question.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
 
-        // Close all others (optional - accordion behavior)
-        // document.querySelectorAll('.faq-item.open').forEach(i => {
-        //   if (i !== item) i.classList.remove('open');
-        // });
+        // Close all
+        faqItems.forEach(i => {
+          i.classList.remove('open');
+          const a = i.querySelector('.faq-answer');
+          if (a) a.style.maxHeight = '0';
+        });
 
-        item.classList.toggle('open', !isOpen);
+        // Open clicked
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+
+      // Keyboard support
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.click();
+        }
       });
     });
   }
 
-  // Add ripple keyframes
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes ripple-effect {
-      to {
-        transform: scale(4);
-        opacity: 0;
-      }
-    }
-  `;
-  document.head.appendChild(style);
+  /* ============================================================
+     WAITLIST FORM
+     ============================================================ */
 
-  // Initialize
+  function initWaitlistForm() {
+    const form = document.querySelector('.waitlist-form');
+    if (!form) return;
+
+    form.addEventListener('submit', handleWaitlistSubmit);
+  }
+
+  function handleWaitlistSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const input = form.querySelector('input[type="email"]');
+    const button = form.querySelector('button[type="submit"]');
+    const email = input.value.trim();
+
+    // Reset states
+    form.classList.remove('error', 'success');
+    input.classList.remove('error');
+
+    // Validate
+    if (!email || !email.includes('@')) {
+      showFormError(form, input, 'Please enter a valid email address.');
+      return;
+    }
+
+    // Loading state
+    button.disabled = true;
+    button.innerHTML = '<span class="spin">⟳</span> Joining...';
+
+    // Simulate API call
+    setTimeout(() => {
+      button.disabled = false;
+      button.innerHTML = '✓ Joined!';
+      button.classList.add('btn-success');
+      form.classList.add('success');
+      input.value = '';
+
+      // Reset after 3 seconds
+      setTimeout(() => {
+        button.innerHTML = 'Join the Waitlist';
+        button.classList.remove('btn-success');
+        form.classList.remove('success');
+      }, 3000);
+    }, 1500);
+  }
+
+  function showFormError(form, input, message) {
+    input.classList.add('error');
+    form.classList.add('error');
+
+    // Shake animation
+    form.classList.add('shake');
+    setTimeout(() => form.classList.remove('shake'), 500);
+
+    // Show error message
+    let errorEl = form.querySelector('.form-error');
+    if (!errorEl) {
+      errorEl = document.createElement('p');
+      errorEl.className = 'form-error';
+      form.appendChild(errorEl);
+    }
+    errorEl.textContent = message;
+    errorEl.style.color = 'var(--color-error)';
+    errorEl.style.fontSize = 'var(--text-sm)';
+    errorEl.style.marginTop = 'var(--space-2)';
+  }
+
+  /* ============================================================
+     KEYBOARD NAVIGATION
+     ============================================================ */
+
+  document.addEventListener('keydown', (e) => {
+    // Escape to close modals/dropdowns
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dialog-overlay.active, .lang-menu:not([hidden])').forEach(el => {
+        el.classList.remove('active');
+        if (el.hasAttribute('hidden')) el.setAttribute('hidden', '');
+      });
+    }
+  });
+
+  /* ============================================================
+     INITIALIZE
+     ============================================================ */
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
 })();
-
-/**
- * Waitlist form handler
- */
-window.handleWaitlist = function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const input = form.querySelector('input[type="email"]');
-  const button = form.querySelector('button[type="submit"]');
-  const email = input.value.trim();
-
-  // Clear previous states
-  form.classList.remove('waitlist-error', 'waitlist-success');
-  const existingMsg = form.querySelector('.waitlist-message');
-  if (existingMsg) existingMsg.remove();
-
-  // Validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email || !emailRegex.test(email)) {
-    showWaitlistMessage(form, 'Please enter a valid email address.', 'error');
-    input.focus();
-    return false;
-  }
-
-  // Loading state
-  const originalText = button.textContent;
-  button.disabled = true;
-  button.innerHTML = '<span class="waitlist-spinner" aria-hidden="true"></span> Sending...';
-
-  // Simulate API call (replace with real endpoint)
-  setTimeout(() => {
-    // Success
-    button.innerHTML = '✓ Saved!';
-    button.classList.add('waitlist-btn-success');
-    showWaitlistMessage(form, "You're on the list! We'll email you when Matchic is ready.", 'success');
-    input.value = '';
-
-    // Reset after 4 seconds
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.disabled = false;
-      button.classList.remove('waitlist-btn-success');
-      const msg = form.querySelector('.waitlist-message');
-      if (msg) {
-        msg.style.opacity = '0';
-        setTimeout(() => msg.remove(), 300);
-      }
-    }, 4000);
-  }, 1500);
-
-  return false;
-};
-
-function showWaitlistMessage(form, text, type) {
-  const msg = document.createElement('div');
-  msg.className = 'waitlist-message waitlist-message--' + type;
-  msg.textContent = text;
-  msg.setAttribute('role', type === 'error' ? 'alert' : 'status');
-  msg.setAttribute('aria-live', 'polite');
-  form.appendChild(msg);
-  // Trigger reflow for animation
-  void msg.offsetWidth;
-  msg.classList.add('waitlist-message--visible');
-}
