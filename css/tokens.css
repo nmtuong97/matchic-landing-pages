@@ -1,77 +1,149 @@
 /* ============================================================
-   Matchic — Design Tokens
-   Liquid Glass Design System
+   Matchic — Design Tokens v2
+   Liquid Glass Design System (from Flutter)
    ============================================================ */
 
 :root {
-  /* ===== COLORS ===== */
+  /* ========================================================
+     BASE COLORS (from Flutter liquid_glass_theme.dart)
+     ======================================================== */
+
+  /* Primary — Vibrant Blue */
   --color-primary: #2196F3;
   --color-primary-variant: #1976D2;
   --color-primary-light: #64B5F6;
+  --color-primary-alpha: rgba(33, 150, 243, 0.12);
+  --color-primary-alpha-strong: rgba(33, 150, 243, 0.25);
+
+  /* Secondary — Complementary Teal */
   --color-secondary: #03DAC6;
   --color-secondary-variant: #018786;
   --color-secondary-light: #80CBC4;
+  --color-secondary-alpha: rgba(3, 218, 198, 0.12);
 
+  /* Backgrounds */
   --color-bg-dark: #0D1117;
   --color-bg-dark-alt: #161B22;
   --color-bg-light: #EFF6FF;
   --color-bg-light-alt: #F8FBFF;
 
+  /* Surfaces (Glassmorphism) */
   --color-surface-dark: rgba(55, 70, 90, 0.72);
+  --color-surface-dark-high: rgba(55, 70, 90, 0.85);
   --color-surface-light: rgba(255, 255, 255, 0.2);
+  --color-surface-light-high: rgba(255, 255, 255, 0.35);
   --color-surface-solid-dark: rgba(22, 27, 34, 0.95);
   --color-surface-solid-light: rgba(255, 255, 255, 0.85);
 
-  --color-border-dark: rgba(255, 255, 255, 0.12);
-  --color-border-light: rgba(0, 0, 0, 0.1);
+  /* Specular Highlights (Light Diffusion) */
+  --color-specular-light: rgba(255, 255, 255, 0.25);
+  --color-specular-dark: rgba(255, 255, 255, 0.15);
 
+  /* Borders */
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+  --color-border-dark-visible: rgba(255, 255, 255, 0.25);
+  --color-border-light: rgba(0, 0, 0, 0.1);
+  --color-border-light-visible: rgba(0, 0, 0, 0.2);
+
+  /* Text */
   --color-text-primary-dark: #F5F5F5;
   --color-text-secondary-dark: #CCCCCC;
+  --color-text-disabled-dark: #666666;
   --color-text-primary-light: #1A1A1A;
   --color-text-secondary-light: #666666;
+  --color-text-disabled-light: #AAAAAA;
 
-  --color-success: #4CAF50;
-  --color-warning: #FF9800;
-  --color-error: #E53935;
+  /* Semantic Status Colors */
+  --color-success: #66BB6A;
+  --color-success-bg: rgba(102, 187, 106, 0.12);
+  --color-on-success: #000000;
+  --color-warning: #FFB74D;
+  --color-warning-bg: rgba(255, 183, 77, 0.12);
+  --color-on-warning: #000000;
+  --color-error: #EF5350;
+  --color-error-bg: rgba(239, 83, 80, 0.12);
+  --color-on-error: #FFFFFF;
+  --color-info: #64B5F6;
+  --color-info-bg: rgba(100, 181, 246, 0.12);
+  --color-on-info: #000000;
 
+  /* Shadows */
   --color-shadow-dark: rgba(0, 0, 0, 0.25);
+  --color-shadow-dark-elevated: rgba(0, 0, 0, 0.4);
   --color-shadow-light: rgba(0, 0, 0, 0.08);
+  --color-shadow-light-elevated: rgba(0, 0, 0, 0.15);
 
-  /* ===== GLASS EFFECT ===== */
+  /* ========================================================
+     GLASS EFFECT CONSTANTS (from Flutter spec)
+     ======================================================== */
   --glass-blur: 24px;
   --glass-blur-sm: 12px;
+  --glass-blur-lg: 32px;
   --glass-radius: 20px;
   --glass-radius-sm: 12px;
+  --glass-radius-lg: 24px;
   --glass-border: 0.5px;
+  --glass-border-visible: 0.75px;
+  --glass-shadow-blur: 10px;
 
-  /* ===== TYPOGRAPHY ===== */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  /* ========================================================
+     TYPOGRAPHY (Inter — matches Flutter font)
+     ======================================================== */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Flutter type scale → CSS mapping */
+  --text-display-lg: clamp(2.5rem, 6vw, 4rem);      /* displayLarge */
+  --text-display-md: clamp(2rem, 5vw, 3.2rem);       /* displayMedium */
+  --text-display-sm: clamp(1.5rem, 4vw, 2.35rem);    /* displaySmall */
+
+  --text-headline-lg: clamp(1.5rem, 3.5vw, 2rem);   /* headlineLarge */
+  --text-headline-md: clamp(1.3rem, 3vw, 1.6rem);   /* headlineMedium */
+  --text-headline-sm: clamp(1.1rem, 2.5vw, 1.4rem); /* headlineSmall */
+
+  --text-title-lg: clamp(1.1rem, 2vw, 1.3rem);      /* titleLarge */
+  --text-title-md: 1.05rem;                          /* titleMedium */
+  --text-title-sm: 0.95rem;                          /* titleSmall */
+
+  --text-body-lg: 1.05rem;                           /* bodyLarge */
+  --text-body-md: 0.95rem;                           /* bodyMedium */
+  --text-body-sm: 0.85rem;                           /* bodySmall */
+
+  --text-label-lg: 0.95rem;                          /* labelLarge */
+  --text-label-md: 0.85rem;                          /* labelMedium */
+  --text-label-sm: 0.75rem;                          /* labelSmall */
 
   --text-xs: 0.75rem;
-  --text-sm: 0.82rem;
-  --text-base: 0.9rem;
+  --text-sm: 0.85rem;
+  --text-base: 0.95rem;
   --text-lg: 1.05rem;
   --text-xl: 1.3rem;
-  --text-2xl: clamp(1.5rem, 4vw, 2.35rem);
-  --text-3xl: clamp(2rem, 5vw, 3.2rem);
-  --text-4xl: clamp(2.5rem, 6vw, 4rem);
+  --text-2xl: var(--text-display-sm);
+  --text-3xl: var(--text-display-md);
+  --text-4xl: var(--text-display-lg);
 
+  /* Font weights */
   --font-normal: 400;
   --font-medium: 500;
   --font-semibold: 600;
   --font-bold: 700;
 
-  --leading-tight: 1.2;
-  --leading-normal: 1.65;
-  --leading-relaxed: 1.7;
+  /* Line heights (from Flutter) */
+  --leading-tight: 1.2;     /* display, headline */
+  --leading-snug: 1.3;      /* headline */
+  --leading-normal: 1.4;    /* title */
+  --leading-relaxed: 1.5;   /* body, label */
+  --leading-loose: 1.65;
 
+  /* Letter spacing */
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
-  --tracking-wide: 0.05em;
+  --tracking-wide: 0.5px;   /* Flutter labels */
   --tracking-wider: 0.1em;
 
-  /* ===== SPACING ===== */
+  /* ========================================================
+     SPACING (8px base grid)
+     ======================================================== */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -84,85 +156,207 @@
   --space-16: 64px;
   --space-20: 80px;
 
-  /* ===== LAYOUT ===== */
+  /* ========================================================
+     LAYOUT
+     ======================================================== */
   --nav-height: 68px;
   --container-max: 1200px;
   --container-narrow: 800px;
   --container-wide: 1400px;
 
-  /* ===== ANIMATION ===== */
+  /* ========================================================
+     ANIMATION (from Flutter: 250ms easeOutCubic)
+     ======================================================== */
   --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
   --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   --duration-fast: 150ms;
-  --duration-normal: 250ms;
-  --duration-slow: 500ms;
-  --duration-slower: 800ms;
+  --duration-normal: 250ms;    /* Flutter glassAnimationDuration */
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
 
-  /* ===== Z-INDEX ===== */
+  /* ========================================================
+     Z-INDEX
+     ======================================================== */
   --z-base: 0;
   --z-above: 10;
   --z-nav: 100;
-  --z-modal: 200;
-  --z-tooltip: 300;
+  --z-dropdown: 200;
+  --z-modal: 300;
+  --z-tooltip: 400;
 
-  /* ===== DEFAULT THEME (DARK) ===== */
+  /* ========================================================
+     DEFAULT THEME (Dark — matches Flutter default)
+     ======================================================== */
   --bg: var(--color-bg-dark);
   --bg-alt: var(--color-bg-dark-alt);
+  --bg-elevated: var(--color-bg-dark-alt);
+
   --primary: var(--color-primary-light);
   --primary-variant: var(--color-primary-light);
+  --on-primary: #1A1A1A;
+  --primary-alpha: var(--color-primary-alpha);
+  --primary-alpha-strong: var(--color-primary-alpha-strong);
+
   --secondary: var(--color-secondary-light);
+  --secondary-variant: var(--color-secondary-light);
+  --on-secondary: #1A1A1A;
+  --secondary-alpha: var(--color-secondary-alpha);
+
   --surface: var(--color-surface-dark);
+  --surface-high: var(--color-surface-dark-high);
   --surface-solid: var(--color-surface-solid-dark);
+  --on-surface: var(--color-text-primary-dark);
+  --on-surface-variant: var(--color-text-secondary-dark);
+
   --border: var(--color-border-dark);
-  --text-primary: var(--color-text-primary-dark);
+  --border-visible: var(--color-border-dark-visible);
+  --outline: var(--color-border-dark);
+  --outline-variant: rgba(255, 255, 255, 0.08);
+
+  --text: var(--color-text-primary-dark);
   --text-secondary: var(--color-text-secondary-dark);
+  --text-disabled: var(--color-text-disabled-dark);
+  --text-hint: rgba(255, 255, 255, 0.38);
+
   --shadow: var(--color-shadow-dark);
+  --shadow-elevated: var(--color-shadow-dark-elevated);
+
+  --scrim: rgba(0, 0, 0, 0.6);
+  --inverse-surface: #F5F5F5;
+  --on-inverse-surface: #1A1A1A;
+  --inverse-primary: var(--color-primary);
 }
 
-/* ===== LIGHT MODE (system preference) ===== */
+/* ============================================================
+   LIGHT MODE (system preference)
+   ============================================================ */
 @media (prefers-color-scheme: light) {
   :root {
     --bg: var(--color-bg-light);
     --bg-alt: var(--color-bg-light-alt);
+    --bg-elevated: #FFFFFF;
+
     --primary: var(--color-primary);
     --primary-variant: var(--color-primary-variant);
+    --on-primary: #FFFFFF;
+    --primary-alpha: rgba(33, 150, 243, 0.1);
+    --primary-alpha-strong: rgba(33, 150, 243, 0.2);
+
     --secondary: var(--color-secondary);
+    --secondary-variant: var(--color-secondary-variant);
+    --on-secondary: #1A1A1A;
+    --secondary-alpha: rgba(3, 218, 198, 0.1);
+
     --surface: var(--color-surface-light);
+    --surface-high: var(--color-surface-light-high);
     --surface-solid: var(--color-surface-solid-light);
+    --on-surface: var(--color-text-primary-light);
+    --on-surface-variant: var(--color-text-secondary-light);
+
     --border: var(--color-border-light);
-    --text-primary: var(--color-text-primary-light);
+    --border-visible: var(--color-border-light-visible);
+    --outline: var(--color-border-light);
+    --outline-variant: rgba(0, 0, 0, 0.06);
+
+    --text: var(--color-text-primary-light);
     --text-secondary: var(--color-text-secondary-light);
+    --text-disabled: var(--color-text-disabled-light);
+    --text-hint: rgba(0, 0, 0, 0.38);
+
     --shadow: var(--color-shadow-light);
+    --shadow-elevated: var(--color-shadow-light-elevated);
+
+    --scrim: rgba(0, 0, 0, 0.4);
+    --inverse-surface: #1A1A1A;
+    --on-inverse-surface: #F5F5F5;
+    --inverse-primary: var(--color-primary-light);
   }
 }
 
-/* ===== MANUAL THEME OVERRIDE ===== */
+/* ============================================================
+   MANUAL THEME OVERRIDE
+   ============================================================ */
 [data-theme="dark"] {
   --bg: var(--color-bg-dark);
   --bg-alt: var(--color-bg-dark-alt);
+  --bg-elevated: var(--color-bg-dark-alt);
+
   --primary: var(--color-primary-light);
   --primary-variant: var(--color-primary-light);
+  --on-primary: #1A1A1A;
+  --primary-alpha: var(--color-primary-alpha);
+  --primary-alpha-strong: var(--color-primary-alpha-strong);
+
   --secondary: var(--color-secondary-light);
+  --secondary-variant: var(--color-secondary-light);
+  --on-secondary: #1A1A1A;
+  --secondary-alpha: var(--color-secondary-alpha);
+
   --surface: var(--color-surface-dark);
+  --surface-high: var(--color-surface-dark-high);
   --surface-solid: var(--color-surface-solid-dark);
+  --on-surface: var(--color-text-primary-dark);
+  --on-surface-variant: var(--color-text-secondary-dark);
+
   --border: var(--color-border-dark);
-  --text-primary: var(--color-text-primary-dark);
+  --border-visible: var(--color-border-dark-visible);
+  --outline: var(--color-border-dark);
+  --outline-variant: rgba(255, 255, 255, 0.08);
+
+  --text: var(--color-text-primary-dark);
   --text-secondary: var(--color-text-secondary-dark);
+  --text-disabled: var(--color-text-disabled-dark);
+  --text-hint: rgba(255, 255, 255, 0.38);
+
   --shadow: var(--color-shadow-dark);
+  --shadow-elevated: var(--color-shadow-dark-elevated);
+
+  --scrim: rgba(0, 0, 0, 0.6);
+  --inverse-surface: #F5F5F5;
+  --on-inverse-surface: #1A1A1A;
+  --inverse-primary: var(--color-primary);
 }
 
 [data-theme="light"] {
   --bg: var(--color-bg-light);
   --bg-alt: var(--color-bg-light-alt);
+  --bg-elevated: #FFFFFF;
+
   --primary: var(--color-primary);
   --primary-variant: var(--color-primary-variant);
+  --on-primary: #FFFFFF;
+  --primary-alpha: rgba(33, 150, 243, 0.1);
+  --primary-alpha-strong: rgba(33, 150, 243, 0.2);
+
   --secondary: var(--color-secondary);
+  --secondary-variant: var(--color-secondary-variant);
+  --on-secondary: #1A1A1A;
+  --secondary-alpha: rgba(3, 218, 198, 0.1);
+
   --surface: var(--color-surface-light);
+  --surface-high: var(--color-surface-light-high);
   --surface-solid: var(--color-surface-solid-light);
+  --on-surface: var(--color-text-primary-light);
+  --on-surface-variant: var(--color-text-secondary-light);
+
   --border: var(--color-border-light);
-  --text-primary: var(--color-text-primary-light);
+  --border-visible: var(--color-border-light-visible);
+  --outline: var(--color-border-light);
+  --outline-variant: rgba(0, 0, 0, 0.06);
+
+  --text: var(--color-text-primary-light);
   --text-secondary: var(--color-text-secondary-light);
+  --text-disabled: var(--color-text-disabled-light);
+  --text-hint: rgba(0, 0, 0, 0.38);
+
   --shadow: var(--color-shadow-light);
+  --shadow-elevated: var(--color-shadow-light-elevated);
+
+  --scrim: rgba(0, 0, 0, 0.4);
+  --inverse-surface: #1A1A1A;
+  --on-inverse-surface: #F5F5F5;
+  --inverse-primary: var(--color-primary-light);
 }
