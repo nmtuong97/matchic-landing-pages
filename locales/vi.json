@@ -28,10 +28,10 @@
   },
   "trustStrip": {
     "label": "Xây dựng với",
-    "flutter": "Flutter",
-    "objectbox": "ObjectBox",
-    "mediapipe": "MediaPipe",
-    "gemma": "Gemma 3",
+    "flutter": "Riêng Tư",
+    "objectbox": "Không Đám Mây",
+    "mediapipe": "Không Theo Dõi",
+    "gemma": "Đơn Giản",
     "opensource": "Bảo Mật Hàng Đầu"
   },
   "problem": {
@@ -87,11 +87,11 @@
     "feature6Desc": "Xuất, sao lưu, hoặc xóa mọi thứ bất cứ lúc nào. Dữ liệu tủ đồ thuộc về bạn."
   },
   "onDeviceAI": {
-    "eyebrow": "AI Trên Thiết Bị",
+    "eyebrow": "Thiết Kế Riêng Tư",
     "title": "Ảnh Của Bạn Không Bao Giờ Rời Khỏi Điện Thoại",
-    "subtitle": "Matchic dùng MediaPipe và Gemma 3 của Google để xử lý mọi thứ ngay trên máy. Chúng tôi vật lý không thể xem ảnh bạn — vì chúng tôi không có máy chủ.",
-    "point1Title": "Xử Lý Trên Máy",
-    "point1Desc": "Mô hình AI chạy trực tiếp trên thiết bị bạn bằng MediaPipe GenAI.",
+    "subtitle": "Mọi thứ xảy ra trên điện thoại bạn. Chúng tôi không có máy chủ, nên không thể xem ảnh của bạn.",
+    "point1Title": "Chạy Trên Điện Thoại Bạn",
+    "point1Desc": "Mọi xử lý diễn ra ngay trên thiết bị bạn. Tủ đồ của bạn ở lại với bạn.",
     "point2Title": "Không Upload Đám Mây",
     "point2Desc": "Mọi bức ảnh ở lại điện thoại bạn. Không máy chủ. Không cơ sở dữ liệu.",
     "point3Title": "Hoạt Động Ngoại Tuyến",
@@ -168,9 +168,9 @@
     "q3": "Nó có hoạt động khi không có internet không?",
     "a3": "Có. Mọi tính năng đều hoạt động không cần internet. AI chạy hoàn toàn trên điện thoại của bạn.",
     "q4": "Ảnh của tôi có được upload đi đâu không?",
-    "a4": "Không. Ảnh của bạn không bao giờ rời khỏi thiết bị. Được xử lý cục bộ bởi AI trên máy.",
+    "a4": "Không. Ảnh của bạn không bao giờ rời khỏi thiết bị. Được xử lý ngay trên điện thoại bạn.",
     "q5": "Matchic dùng AI gì?",
-    "a5": "Matchic sử dụng framework MediaPipe GenAI và mô hình Gemma 3 của Google, cả hai đều chạy cục bộ trên thiết bị của bạn.",
+    "a5": "Matchic dùng AI chạy ngay trên điện thoại bạn. Không gì được gửi lên đám mây.",
     "q6": "Tôi có thể xuất dữ liệu không?",
     "a6": "Có. Dữ liệu tủ đồ của bạn được lưu cục bộ và có thể xuất hoặc sao lưu bất cứ lúc nào.",
     "q7": "Tôi có thể xuất dữ liệu tủ đồ không?",

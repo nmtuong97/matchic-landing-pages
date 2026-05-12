@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Matchic — Know What to Wear. Every Day.",
-    "description": "Standing in front of your closet with nothing to wear? Matchic uses on-device AI to suggest outfits from clothes you already own. No uploads. No tracking.",,
-    "ogTitle": "Matchic — Know What to Wear. Every Day.",
-    "ogDescription": "Standing in front of your closet with nothing to wear? Matchic uses on-device AI to suggest outfits from clothes you already own.",
-    "twitterTitle": "Matchic — Know What to Wear. Every Day.",
+    "title": "Matchic \u2014 Know What to Wear. Every Day.",
+    "description": "Standing in front of your closet with nothing to wear? Matchic uses private AI to suggest outfits from clothes you already own. No uploads. No tracking.",
+    "ogTitle": "Matchic \u2014 Know What to Wear. Every Day.",
+    "ogDescription": "Standing in front of your closet with nothing to wear? Matchic uses private AI to suggest outfits from clothes you already own.",
+    "twitterTitle": "Matchic \u2014 Know What to Wear. Every Day.",
     "twitterDescription": "Staring at your closet with nothing to wear? AI outfit suggestions from your own wardrobe. No cloud. No tracking."
   },
   "nav": {
@@ -18,7 +18,7 @@
   "hero": {
     "eyebrow": "AI Outfit Suggestions from Your Own Closet",
     "title": "Standing in Front of a Full Closet with Nothing to Wear?",
-    "subtitle": "Matchic suggests outfits from clothes you already own — powered by AI that lives on your phone. No uploads. No tracking. No account needed.",
+    "subtitle": "Matchic suggests outfits from clothes you already own \u2014 powered by AI that lives on your phone. No uploads. No tracking. No account needed.",
     "ctaPrimary": "Get Matchic",
     "ctaSecondary": "See How It Works",
     "trust1": "Private AI",
@@ -28,16 +28,16 @@
   },
   "trustStrip": {
     "label": "Built with",
-    "flutter": "Flutter",
-    "objectbox": "ObjectBox",
-    "mediapipe": "MediaPipe",
-    "gemma": "Gemma 3",
+    "flutter": "Built for Privacy",
+    "objectbox": "No Cloud",
+    "mediapipe": "No Tracking",
+    "gemma": "Simple",
     "opensource": "Privacy First"
   },
   "problem": {
     "eyebrow": "The Morning Struggle",
     "title": "7:15 AM. Running Late. Staring at Clothes You Forgot You Had.",
-    "subtitle": "Most people wear the same few outfits while 80% of their wardrobe sits untouched. Not because the clothes are bad — because you forgot they exist.",
+    "subtitle": "Most people wear the same few outfits while 80% of their wardrobe sits untouched. Not because the clothes are bad \u2014 because you forgot they exist.",
     "stat1Value": "20%",
     "stat1Label": "of wardrobe typically worn. The rest? Forgotten.",
     "stat2Value": "$1,200",
@@ -48,13 +48,13 @@
     "stat4Label": "of fashion ends up unworn in the first year"
   },
   "appPreview": {
-    "caption": "Your closet, organized and searchable — all on your phone."
+    "caption": "Your closet, organized and searchable \u2014 all on your phone."
   },
   "solution": {
     "eyebrow": "The Fix",
     "title": "Matchic Remembers Everything So You Don't Have To",
-    "subtitle": "Snap your clothes once. Matchic catalogs them, tags them automatically, and suggests outfits every morning — from what you actually own.",
-    "point1": "Snap a photo — AI recognizes every item instantly",
+    "subtitle": "Snap your clothes once. Matchic catalogs them, tags them automatically, and suggests outfits every morning \u2014 from what you actually own.",
+    "point1": "Snap a photo \u2014 AI recognizes every item instantly",
     "point2": "Get outfit suggestions for any occasion",
     "point3": "Track what you wear. Shop smarter. Waste less.",
     "point4": "Everything stays on your phone. Always."
@@ -64,17 +64,17 @@
     "title": "Your Morning Routine in 30 Seconds",
     "subtitle": "Three steps. No setup. No learning curve.",
     "step1Title": "Snap Your Wardrobe",
-    "step1Desc": "Photograph your clothes. One by one or in batches. Matchic identifies colors, styles, materials — instantly.",
+    "step1Desc": "Photograph your clothes. One by one or in batches. Matchic identifies colors, styles, materials \u2014 instantly.",
     "step2Title": "Get Outfit Ideas",
     "step2Desc": "Tell Matchic the occasion: work, date, gym, lazy Sunday. It suggests combinations from your actual clothes.",
-    "step3Title": "Track \u0026 Improve",
+    "step3Title": "Track & Improve",
     "step3Desc": "Log what you wear. See what you never use. Build a wardrobe you actually love."
   },
   "features": {
     "eyebrow": "Features",
     "title": "Everything Your Closet Needs",
     "feature1Title": "AI Outfit Generator",
-    "feature1Desc": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe — not from a store catalog.",
+    "feature1Desc": "Stuck on what to wear? Matchic suggests combinations from your real wardrobe \u2014 not from a store catalog.",
     "feature2Title": "Smart Auto-Tagging",
     "feature2Desc": "Point your camera at any piece. Matchic identifies the category, color, material, and style automatically.",
     "feature3Title": "Wardrobe Insights",
@@ -87,17 +87,17 @@
     "feature6Desc": "Export, backup, or delete everything anytime. Your wardrobe data belongs to you."
   },
   "onDeviceAI": {
-    "eyebrow": "On-Device AI",
+    "eyebrow": "Built for Privacy",
     "title": "Your Photos Never Leave Your Phone",
-    "subtitle": "Matchic uses Google's MediaPipe and Gemma 3 to process everything locally. We physically cannot see your photos — because we don't have servers.",
-    "point1Title": "Local Processing",
-    "point1Desc": "AI models run directly on your device using MediaPipe GenAI.",
-    "point2Title": "No Cloud Upload",
-    "point2Desc": "Every photo stays on your phone. No server. No database.",
+    "subtitle": "Everything happens on your device. We do not have servers, so we physically cannot see your photos.",
+    "point1Title": "Runs on Your Phone",
+    "point1Desc": "All processing happens right on your device. Your wardrobe stays with you.",
+    "point2Title": "No Cloud Uploads",
+    "point2Desc": "Every photo stays on your phone. No servers. No databases.",
     "point3Title": "Works Offline",
     "point3Desc": "Use Matchic on a plane, in a basement, anywhere. No connection needed.",
     "point4Title": "You Control Your Data",
-    "point4Desc": "Export, backup, or delete everything anytime. It's yours."
+    "point4Desc": "Export, backup, or delete everything anytime. It is yours."
   },
   "privacyComparison": {
     "eyebrow": "Privacy Comparison",
@@ -144,7 +144,7 @@
   "openSource": {
     "eyebrow": "Data Ownership",
     "title": "Your Wardrobe, Your Rules",
-    "subtitle": "Matchic gives you full control over your data. Export everything, back it up, or delete it all — anytime. We don't collect your data because we believe your wardrobe is personal.",
+    "subtitle": "Matchic gives you full control over your data. Export everything, back it up, or delete it all \u2014 anytime. We don't collect your data because we believe your wardrobe is personal.",
     "cta": "Learn More"
   },
   "waitlist": {
@@ -162,15 +162,15 @@
     "eyebrow": "FAQ",
     "title": "Questions? We Have Answers.",
     "q1": "Is Matchic really free?",
-    "a1": "Yes. Matchic is free. We don't sell data because we don't collect any.",,
+    "a1": "Yes. Matchic is free. We don't sell data because we don't collect any.",
     "q2": "Do I need an account?",
     "a2": "No. You can use Matchic without creating an account. Your data stays on your device.",
     "q3": "Does it work offline?",
     "a3": "Yes. All features work without internet. The AI runs entirely on your phone.",
     "q4": "Are my photos uploaded anywhere?",
-    "a4": "No. Your photos never leave your device. They are processed locally by on-device AI.",
+    "a4": "No. Your photos never leave your device. They are processed right on your phone.",
     "q5": "What AI does Matchic use?",
-    "a5": "Matchic uses Google's MediaPipe GenAI framework and Gemma 3 model, both running locally on your device.",
+    "a5": "Matchic uses AI that runs locally on your device. Nothing is sent to the cloud.",
     "q6": "Can I export my data?",
     "a6": "Yes. Your wardrobe data is stored locally and can be exported or backed up anytime.",
     "q7": "Can I export my wardrobe data?",
@@ -185,7 +185,7 @@
     "secondary": "Learn More"
   },
   "footer": {
-    "tagline": "Your wardrobe, understood — completely on your device.",
+    "tagline": "Your wardrobe, understood \u2014 completely on your device.",
     "product": "Product",
     "features": "Features",
     "howItWorks": "How It Works",
@@ -199,7 +199,7 @@
     "terms": "Terms of Service",
     "eula": "EULA",
     "license": "License",
-    "copyright": "© 2026 Matchic. All rights reserved.",
+    "copyright": "\u00a9 2026 Matchic. All rights reserved.",
     "madeWith": "Made with care for people who value their time."
   }
 }
