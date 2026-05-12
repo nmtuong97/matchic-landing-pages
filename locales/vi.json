@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Matchic — Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
-    "description": "Đứng trước tủ đầy đồ mà chẳng biết mặc gì? Matchic dùng AI chạy trên điện thoại để gợi ý outfit từ quần áo bạn đang có. Không upload. Không theo dõi. Mã nguồn mở.",
+    "description": "Đứng trước tủ đầy đồ mà chẳng biết mặc gì? Matchic dùng AI chạy trên điện thoại để gợi ý outfit từ quần áo bạn đang có. Không upload. Không theo dõi.",
     "ogTitle": "Matchic — Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
     "ogDescription": "Đứng trước tủ đầy đồ mà chẳng biết mặc gì? Matchic dùng AI gợi ý outfit từ quần áo bạn đang có.",
     "twitterTitle": "Matchic — Không Lo Thiếu Đồ Mặc. Mỗi Ngày.",
@@ -21,7 +21,7 @@
     "subtitle": "Matchic gợi ý outfit từ quần áo bạn đang có — với AI chạy ngay trên điện thoại. Không upload. Không theo dõi. Không cần tài khoản.",
     "ctaPrimary": "Dùng Matchic Ngay",
     "ctaSecondary": "Xem Cách Hoạt Động",
-    "trust1": "Mã Nguồn Mở",
+    "trust1": "AI Riêng Tư",
     "trust2": "Không Cần Tài Khoản",
     "trust3": "100% Ngoại Tuyến",
     "trust4": "Không Theo Dõi"
@@ -32,7 +32,7 @@
     "objectbox": "ObjectBox",
     "mediapipe": "MediaPipe",
     "gemma": "Gemma 3",
-    "opensource": "Mã Nguồn Mở"
+    "opensource": "Bảo Mật Hàng Đầu"
   },
   "problem": {
     "eyebrow": "Nỗi Ám Ảnh Mỗi Sáng",
@@ -83,8 +83,8 @@
     "feature4Desc": "Dùng trên máy bay, tầng hầm, bất kỳ đâu. Không cần internet. Không bao giờ.",
     "feature5Title": "Không Cần Tài Khoản",
     "feature5Desc": "Mở app và dùng. Không email, không mật khẩu, không đồng bộ đám mây.",
-    "feature6Title": "Mã Nguồn Mở",
-    "feature6Desc": "Mã nguồn công khai. Bạn có thể tự kiểm chứng lời hứa về quyền riêng tư của chúng tôi."
+    "feature6Title": "Dữ Liệu Của Bạn, Luật Của Bạn",
+    "feature6Desc": "Xuất, sao lưu, hoặc xóa mọi thứ bất cứ lúc nào. Dữ liệu tủ đồ thuộc về bạn."
   },
   "onDeviceAI": {
     "eyebrow": "AI Trên Thiết Bị",
@@ -118,9 +118,9 @@
     "row4Feature": "Ngoại tuyến",
     "row4Matchic": "Đầy đủ tính năng",
     "row4Others": "Thường hạn chế",
-    "row5Feature": "Mã nguồn mở",
-    "row5Matchic": "Có (MIT)",
-    "row5Others": "Thường không",
+    "row5Feature": "Xuất Dữ Liệu",
+    "row5Matchic": "Toàn quyền kiểm soát",
+    "row5Others": "Thường hạn chế",
     "row6Feature": "Theo dõi",
     "row6Matchic": "Không",
     "row6Others": "Thường nhiều",
@@ -142,10 +142,10 @@
     "point4Desc": "Quyết định thông minh về giữ, cho đi, hay mua đồ mới."
   },
   "openSource": {
-    "eyebrow": "Mã Nguồn Mở",
-    "title": "Xây Dựng Công Khai. Kiểm Chứng Bởi Bạn.",
-    "subtitle": "Matchic là mã nguồn mở theo giấy phép MIT. Mọi dòng code đều có thể xem. Chúng tôi không có gì để che giấu vì chúng tôi không có gì để thu thập.",
-    "cta": "Xem trên GitHub"
+    "eyebrow": "Quyền Sở Hữu Dữ Liệu",
+    "title": "Tủ Đồ Của Bạn, Luật Của Bạn",
+    "subtitle": "Matchic cho bạn toàn quyền kiểm soát dữ liệu. Xuất, sao lưu, hoặc xóa mọi thứ — bất cứ lúc nào. Chúng tôi không thu thập dữ liệu vì tin rằng tủ đồ của bạn là chuyện riêng tư.",
+    "cta": "Tìm Hiểu Thêm"
   },
   "waitlist": {
     "eyebrow": "Đăng Ký Trải Nghiệm Sớm",
@@ -162,7 +162,7 @@
     "eyebrow": "Câu Hỏi Thường Gặp",
     "title": "Có Thắc Mắc? Chúng Tôi Có Câu Trả Lời.",
     "q1": "Matchic có thực sự miễn phí không?",
-    "a1": "Có. Matchic miễn phí và mã nguồn mở. Chúng tôi không bán dữ liệu vì chúng tôi không thu thập dữ liệu.",
+    "a1": "Có. Matchic miễn phí. Chúng tôi không bán dữ liệu vì chúng tôi không thu thập dữ liệu.",
     "q2": "Tôi có cần tạo tài khoản không?",
     "a2": "Không. Bạn có thể dùng Matchic mà không cần tài khoản. Dữ liệu của bạn ở lại trên thiết bị.",
     "q3": "Nó có hoạt động khi không có internet không?",
@@ -173,8 +173,8 @@
     "a5": "Matchic sử dụng framework MediaPipe GenAI và mô hình Gemma 3 của Google, cả hai đều chạy cục bộ trên thiết bị của bạn.",
     "q6": "Tôi có thể xuất dữ liệu không?",
     "a6": "Có. Dữ liệu tủ đồ của bạn được lưu cục bộ và có thể xuất hoặc sao lưu bất cứ lúc nào.",
-    "q7": "Mã nguồn có thực sự mở không?",
-    "a7": "Có. Matchic được phát hành theo giấy phép MIT. Bạn có thể xem, fork, và đóng góp code trên GitHub.",
+    "q7": "Tôi có thể xuất dữ liệu tủ đồ không?",
+    "a7": "Có. Dữ liệu tủ đồ của bạn được lưu cục bộ và có thể xuất hoặc sao lưu bất cứ lúc nào. Bạn sở hữu dữ liệu của mình.",
     "q8": "Có phiên bản iOS không?",
     "a8": "Có. Chúng tôi đang xây dựng cho cả iOS và Android. Tham gia danh sách chờ để được thông báo."
   },
@@ -182,7 +182,7 @@
     "title": "Sẵn Sàng Ngừng Lãng Phí Buổi Sáng?",
     "subtitle": "Tham gia cùng hàng ngàn người muốn dành ít thời gian chọn đồ hơn và nhiều thời gian sống hơn.",
     "cta": "Dùng Matchic Ngay",
-    "secondary": "Xem trên GitHub"
+    "secondary": "Tìm Hiểu Thêm"
   },
   "footer": {
     "tagline": "Tủ đồ của bạn, được hiểu rõ — hoàn toàn trên thiết bị của bạn.",
@@ -192,14 +192,14 @@
     "privacy": "Quyền Riêng Tư",
     "company": "Công Ty",
     "about": "Giới Thiệu",
-    "openSource": "Mã Nguồn Mở",
     "support": "Hỗ Trợ",
     "legal": "Pháp Lý",
     "privacyPolicy": "Chính Sách Riêng Tư",
     "terms": "Điều Khoản Dịch Vụ",
     "eula": "EULA",
-    "license": "Giấy Phép MIT",
-    "copyright": "© 2026 Matchic. Mã nguồn mở theo giấy phép MIT.",
-    "madeWith": "Được xây dựng với tâm huyết cho những người trân trọng quyền riêng tư."
+    "license": "Giấy Phép",
+    "copyright": "© 2026 Matchic. Mọi quyền được bảo lưu.",
+    "madeWith": "Được xây dựng với tâm huyết cho những người trân trọng thời gian.",
+    "blog": "Blog"
   }
 }
