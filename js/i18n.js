@@ -10,7 +10,7 @@ const i18n = {
 
   async load(lang) {
     try {
-      const resp = await fetch(`/locales/${lang}.json`);
+      const resp = await fetch(`locales/${lang}.json`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       this.translations[lang] = await resp.json();
     } catch {
