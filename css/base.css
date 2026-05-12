@@ -1,5 +1,6 @@
 /* ============================================================
-   Matchic — Base Styles
+   Matchic — Base Styles v2
+   Liquid Glass Design System
    ============================================================ */
 
 *, *::before, *::after {
@@ -14,20 +15,21 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body {
   font-family: var(--font-family);
   background: var(--bg);
-  color: var(--text-primary);
-  line-height: var(--leading-normal);
+  color: var(--text);
+  line-height: var(--leading-relaxed);
   min-height: 100vh;
   overflow-x: hidden;
   transition: background var(--duration-normal) var(--ease-out-cubic),
               color var(--duration-normal) var(--ease-out-cubic);
 }
 
-/* Ambient background glow */
+/* Ambient background glow (Flutter: animated gradient backgrounds) */
 body::before {
   content: '';
   position: fixed;
@@ -49,23 +51,57 @@ body::before {
   100% { opacity: 0.6; transform: translate(-1%, -2%) scale(1); }
 }
 
-/* ===== TYPOGRAPHY ===== */
+/* Selection */
+::selection {
+  background: var(--primary-alpha-strong);
+  color: var(--text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 4px;
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-visible);
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
-  color: var(--text-primary);
+  color: var(--text);
   letter-spacing: var(--tracking-tight);
 }
 
-h1 { font-size: var(--text-3xl); }
-h2 { font-size: var(--text-2xl); }
-h3 { font-size: var(--text-xl); }
-h4 { font-size: var(--text-lg); }
+h1 { font-size: var(--text-display-lg); }
+h2 { font-size: var(--text-display-md); }
+h3 { font-size: var(--text-headline-lg); }
+h4 { font-size: var(--text-headline-md); }
+h5 { font-size: var(--text-headline-sm); }
+h6 { font-size: var(--text-title-lg); }
 
 p {
   color: var(--text-secondary);
   line-height: var(--leading-relaxed);
-  max-width: 65ch;
+}
+
+p.lead {
+  font-size: var(--text-body-lg);
+  color: var(--text);
 }
 
 a {
@@ -74,22 +110,33 @@ a {
   transition: color var(--duration-fast) var(--ease-out-cubic);
 }
 
-a:hover, a:focus {
-  color: var(--secondary);
+a:hover {
+  color: var(--primary-variant);
+  text-decoration: underline;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-  border-radius: var(--glass-radius-sm);
-}
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
 
-strong {
-  color: var(--text-primary);
-  font-weight: var(--font-semibold);
-}
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
-/* ===== UTILITIES ===== */
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+.text-primary { color: var(--text); }
+.text-secondary { color: var(--text-secondary); }
+.text-disabled { color: var(--text-disabled); }
+.text-hint { color: var(--text-hint); }
+
+.bg-primary { background: var(--primary); }
+.bg-surface { background: var(--surface); }
+.bg-elevated { background: var(--surface-high); }
+
 .gradient-text {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
@@ -97,9 +144,9 @@ strong {
   background-clip: text;
 }
 
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
 
 .sr-only {
   position: absolute;
@@ -113,36 +160,38 @@ strong {
   border: 0;
 }
 
-/* ===== SCROLLBAR ===== */
-::-webkit-scrollbar {
-  width: 6px;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+.skip-link:focus {
+  top: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 3px;
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
-}
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
 
-/* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
   }
-
+  
   body::before {
-    animation: none !important;
+    animation: none;
   }
 }

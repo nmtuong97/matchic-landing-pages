@@ -1,12 +1,17 @@
 /* ============================================================
-   Matchic — Layout
+   Matchic — Layout v2
+   Liquid Glass Design System
+   ============================================================ */
+
+/* ============================================================
+   CONTAINER
    ============================================================ */
 
 .container {
+  width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 var(--space-6);
-  width: 100%;
+  padding: 0 var(--space-4);
 }
 
 .container-narrow {
@@ -17,49 +22,10 @@
   max-width: var(--container-wide);
 }
 
-section {
-  padding: var(--space-20) 0;
-  position: relative;
-}
+/* ============================================================
+   GRID SYSTEM
+   ============================================================ */
 
-.section-alt {
-  background: linear-gradient(180deg, var(--surface) 0%, transparent 100%);
-}
-
-/* ===== SECTION HEADER ===== */
-.section-header {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto var(--space-12);
-}
-
-.section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-4);
-  background: var(--surface);
-  backdrop-filter: blur(var(--glass-blur-sm));
-  border: var(--glass-border) solid var(--border);
-  border-radius: var(--glass-radius-sm);
-  font-size: var(--text-xs);
-  color: var(--primary);
-  font-weight: var(--font-medium);
-  letter-spacing: var(--tracking-wide);
-  margin-bottom: var(--space-4);
-}
-
-.section-header h2 {
-  margin-bottom: var(--space-4);
-}
-
-.section-header p {
-  font-size: var(--text-lg);
-  opacity: 0.85;
-  margin: 0 auto;
-}
-
-/* ===== GRID ===== */
 .grid {
   display: grid;
   gap: var(--space-4);
@@ -68,42 +34,260 @@ section {
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-6 { grid-template-columns: repeat(6, 1fr); }
 
-/* ===== FLEX ===== */
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.gap-2 { gap: var(--space-2); }
-.gap-4 { gap: var(--space-4); }
-.gap-6 { gap: var(--space-6); }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  section {
-    padding: var(--space-16) 0;
-  }
-}
-
+/* Responsive grid */
 @media (max-width: 768px) {
   .grid-2,
   .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: var(--space-12) 0;
-  }
-
-  .container {
-    padding: 0 var(--space-4);
+  .grid-4,
+  .grid-5,
+  .grid-6 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 480px) {
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   FLEX UTILITIES
+   ============================================================ */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+.gap-5 { gap: var(--space-5); }
+.gap-6 { gap: var(--space-6); }
+.gap-8 { gap: var(--space-8); }
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.section {
+  padding: var(--space-16) 0;
+  position: relative;
+}
+
+.section-sm {
+  padding: var(--space-10) 0;
+}
+
+.section-lg {
+  padding: var(--space-20) 0;
+}
+
+.section-hero {
+  padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border) 20%,
+    var(--border) 80%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   SPACING UTILITIES
+   ============================================================ */
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mt-10 { margin-top: var(--space-10); }
+.mt-12 { margin-top: var(--space-12); }
+.mt-16 { margin-top: var(--space-16); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+.mb-10 { margin-bottom: var(--space-10); }
+.mb-12 { margin-bottom: var(--space-12); }
+.mb-16 { margin-bottom: var(--space-16); }
+
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.p-4 { padding: var(--space-4); }
+.p-5 { padding: var(--space-5); }
+.p-6 { padding: var(--space-6); }
+.p-8 { padding: var(--space-8); }
+
+/* ============================================================
+   HERO LAYOUT
+   ============================================================ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.hero-content {
+  max-width: 540px;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    order: 2;
+  }
+  
+  .hero-visual {
+    order: 1;
+  }
+}
+
+/* ============================================================
+   CARD GRIDS
+   ============================================================ */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.card-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .card-grid-2,
+  .card-grid-3,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE UTILITIES
+   ============================================================ */
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   Z-INDEX UTILITIES
+   ============================================================ */
+
+.z-base { z-index: var(--z-base); }
+.z-above { z-index: var(--z-above); }
+.z-nav { z-index: var(--z-nav); }
+.z-dropdown { z-index: var(--z-dropdown); }
+.z-modal { z-index: var(--z-modal); }
+.z-tooltip { z-index: var(--z-tooltip); }
