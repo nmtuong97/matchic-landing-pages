@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="css/app-mockup.css">
   <link rel="stylesheet" href="css/visuals.css">
   <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/lang-switcher.css">
   <link rel="stylesheet" href="css/animations.css">
 
   <!-- Manifest -->
@@ -174,10 +175,7 @@
       </nav>
 
       <div class="nav-controls">
-        <div class="lang-switcher" role="group" aria-label="Language selector">
-          <button type="button" data-lang="en" class="active" aria-label="English">EN</button>
-          <button type="button" data-lang="vi" aria-label="Vietnamese">VI</button>
-        </div>
+        <div id="language-selector" class="nav-lang"></div>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
           <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
@@ -937,14 +935,7 @@
   <!-- Language Switcher -->
   <script>
     (function() {
-      document.querySelectorAll('.lang-switcher button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const lang = btn.dataset.lang;
-          if (window.matchicI18n) {
-            window.matchicI18n.setLanguage(lang);
-          }
-        });
-      });
+
     })();
   </script>
 </body>
