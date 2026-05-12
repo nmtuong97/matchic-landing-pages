@@ -1,281 +1,589 @@
 /* ============================================================
-   Matchic — Animation System
-   Cinematic scroll storytelling with accessibility fallbacks
+   Matchic — Animation System v2
+   Liquid Glass Motion (from Flutter)
+   ============================================================
+   
+   Design Principles:
+   - 250ms default duration (Flutter glassAnimationDuration)
+   - easeOutCubic default easing (Flutter glassAnimationCurve)
+   - Subtle, purposeful — never gratuitous
+   - prefers-reduced-motion fully supported
+   
+   Animation Categories:
+   1. Page Load (hero entrance)
+   2. Scroll Reveal (section entry)
+   3. Micro-interactions (hover, tap, focus)
+   4. Glass Material (shimmer, depth, light)
+   5. Ambient (continuous, subtle)
+   6. State Transitions (loading, success, error)
    ============================================================ */
 
-/* ===== REVEAL SYSTEM ===== */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.8s var(--ease-out-expo),
-    transform 0.8s var(--ease-out-expo);
+/* ============================================================
+   1. PAGE LOAD — Hero Entrance Sequence
+   ============================================================ */
+
+/* Main orchestrator — applied to body on load */
+.page-loaded .hero-content > * {
+  animation: hero-entrance var(--duration-slower) var(--ease-out-expo) forwards;
 }
 
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
+.page-loaded .hero-content > *:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+.page-loaded .hero-content > *:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
+.page-loaded .hero-content > *:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+.page-loaded .hero-content > *:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
+.page-loaded .hero-content > *:nth-child(5) { animation-delay: 0.5s; opacity: 0; }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-
-/* Reveal from left */
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition:
-    opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
-}
-
-.reveal-left.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Reveal from right */
-.reveal-right {
-  opacity: 0;
-  transform: translateX(60px);
-  transition:
-    opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
-}
-
-.reveal-right.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Scale reveal */
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.85);
-  transition:
-    opacity 0.7s var(--ease-out-expo),
-    transform 0.7s var(--ease-out-expo);
-}
-
-.reveal-scale.revealed {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Stagger children */
-.stagger-children > * {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.6s var(--ease-out-expo),
-    transform 0.6s var(--ease-out-expo);
-}
-
-.stagger-children.revealed > *:nth-child(1) { transition-delay: 0.0s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(7) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
-.stagger-children.revealed > *:nth-child(8) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
-
-/* ===== HERO ENTRANCE ===== */
-@keyframes hero-badge-slide {
-  0% {
+@keyframes hero-entrance {
+  from {
     opacity: 0;
-    transform: translateY(20px) scale(0.95);
+    transform: translateY(30px);
+    filter: blur(8px);
   }
-  100% {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Hero image/app mockup entrance */
+.page-loaded .hero-visual {
+  animation: hero-visual-entrance 1s var(--ease-out-expo) 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes hero-visual-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Floating elements */
+.page-loaded .hero-float {
+  animation: hero-float-entrance 0.8s var(--ease-out-expo) 0.6s forwards,
+             float-gentle 6s ease-in-out 1.4s infinite;
+  opacity: 0;
+}
+
+@keyframes hero-float-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
 
-@keyframes hero-title-slide {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes hero-subtitle-slide {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ============================================================
+   2. SCROLL REVEAL — Section Entry Animations
+   ============================================================ */
+
+/* Base reveal state */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out-expo),
+              transform 0.7s var(--ease-out-expo);
 }
 
-@keyframes hero-actions-slide {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Directional reveals */
+.reveal-up {
+  composes: reveal;
+  transform: translateY(40px);
 }
 
-@keyframes hero-trust-slide {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal-down {
+  composes: reveal;
+  transform: translateY(-40px);
 }
 
-.hero-badge {
-  animation: hero-badge-slide 0.7s var(--ease-out-expo) both;
+.reveal-left {
+  composes: reveal;
+  transform: translateX(-60px);
 }
 
-.hero h1 {
-  animation: hero-title-slide 0.8s var(--ease-out-expo) 0.15s both;
+.reveal-right {
+  composes: reveal;
+  transform: translateX(60px);
 }
 
-.hero-subtitle {
-  animation: hero-subtitle-slide 0.7s var(--ease-out-expo) 0.3s both;
+.reveal-scale {
+  composes: reveal;
+  transform: scale(0.9);
 }
 
-.hero-actions {
-  animation: hero-actions-slide 0.6s var(--ease-out-expo) 0.45s both;
+.reveal-scale-up {
+  composes: reveal;
+  transform: scale(0.9) translateY(30px);
 }
 
-.hero-trust {
-  animation: hero-trust-slide 0.6s var(--ease-out-expo) 0.6s both;
+/* Revealed state */
+.reveal.revealed,
+.reveal-up.revealed,
+.reveal-down.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed,
+.reveal-scale-up.revealed {
+  opacity: 1;
+  transform: translate(0) scale(1);
 }
 
-/* ===== HERO GLOW PULSE ===== */
-@keyframes hero-glow-pulse {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
+/* Stagger delays for children */
+.stagger-1 { transition-delay: 0.0s !important; }
+.stagger-2 { transition-delay: 0.08s !important; }
+.stagger-3 { transition-delay: 0.16s !important; }
+.stagger-4 { transition-delay: 0.24s !important; }
+.stagger-5 { transition-delay: 0.32s !important; }
+.stagger-6 { transition-delay: 0.40s !important; }
+.stagger-7 { transition-delay: 0.48s !important; }
+.stagger-8 { transition-delay: 0.56s !important; }
+
+/* Auto-stagger children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s var(--ease-out-expo),
+              transform 0.6s var(--ease-out-expo);
 }
 
-.hero-glow {
-  animation: hero-glow-pulse 6s ease-in-out infinite;
+.stagger-children.revealed > *:nth-child(1) { transition-delay: 0.00s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(2) { transition-delay: 0.08s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(3) { transition-delay: 0.16s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(4) { transition-delay: 0.24s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(5) { transition-delay: 0.32s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(7) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
+.stagger-children.revealed > *:nth-child(8) { transition-delay: 0.56s; opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   3. MICRO-INTERACTIONS — Hover, Tap, Focus
+   ============================================================ */
+
+/* Magnetic hover effect (subtle pull) */
+.magnetic-hover {
+  transition: transform var(--duration-normal) var(--ease-out-cubic);
 }
 
-/* ===== FLOATING ANIMATION ===== */
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  33% { transform: translateY(-12px) rotate(1deg); }
-  66% { transform: translateY(-6px) rotate(-1deg); }
+.magnetic-hover:hover {
+  transform: scale(1.02);
 }
 
-/* ===== PULSE BADGE ===== */
-@keyframes pulse-badge {
-  0%, 100% { opacity: 0.8; box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.2); }
-  50% { opacity: 1; box-shadow: 0 0 0 8px rgba(33, 150, 243, 0); }
+.magnetic-hover:active {
+  transform: scale(0.98);
+  transition-duration: var(--duration-fast);
 }
 
-/* ===== RIPPLE EFFECT ===== */
-@keyframes ripple-effect {
+/* Press feedback */
+.press-feedback {
+  transition: transform var(--duration-fast) var(--ease-out-cubic),
+              box-shadow var(--duration-fast) var(--ease-out-cubic);
+}
+
+.press-feedback:active {
+  transform: scale(0.96);
+}
+
+/* Ripple effect container */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
   to {
     transform: scale(4);
     opacity: 0;
   }
 }
 
-/* ===== MOCK ITEM POP ===== */
-@keyframes mock-fade-in {
-  0% { transform: scale(0.8); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+/* Focus ring (accessible) */
+.focus-ring {
+  transition: box-shadow var(--duration-fast) var(--ease-out-cubic);
 }
 
-/* ===== COUNTER ANIMATION ===== */
-@keyframes counter-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px var(--primary-alpha-strong);
 }
 
-/* ===== SHIMMER EFFECT ===== */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-/* ===== SECTION DIVIDER ANIMATION ===== */
-@keyframes divider-grow {
-  0% { transform: scaleX(0); }
-  100% { transform: scaleX(1); }
-}
-
-/* ===== TEXT GRADIENT ANIMATION ===== */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ===== HOVER LIFT ===== */
+/* Hover lift */
 .hover-lift {
-  transition: transform 0.3s var(--ease-out-cubic), box-shadow 0.3s var(--ease-out-cubic);
+  transition: transform var(--duration-normal) var(--ease-out-cubic),
+              box-shadow var(--duration-normal) var(--ease-out-cubic);
 }
 
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px var(--shadow-elevated);
 }
 
-/* ===== CARD TILT (desktop only) ===== */
-@media (hover: hover) {
-  .card-tilt {
-    transition: transform 0.15s ease-out;
-    transform-style: preserve-3d;
+.hover-lift:active {
+  transform: translateY(-1px);
+  transition-duration: var(--duration-fast);
+}
+
+/* ============================================================
+   4. GLASS MATERIAL ANIMATIONS
+   ============================================================ */
+
+/* Glass shimmer (light diffusion) */
+.glass-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    var(--color-specular-light) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) rotate(45deg);
+  animation: glass-shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glass-shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Glass depth shift on hover */
+.glass-depth {
+  transition: backdrop-filter var(--duration-normal) var(--ease-out-cubic),
+              background var(--duration-normal) var(--ease-out-cubic);
+}
+
+.glass-depth:hover {
+  backdrop-filter: blur(var(--glass-blur-lg)) saturate(1.3);
+  -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(1.3);
+  background: var(--surface-high);
+}
+
+/* Glass border glow pulse */
+.glass-glow {
+  animation: glass-glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glass-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--primary-alpha);
+  }
+  50% {
+    box-shadow: 0 0 0 4px var(--primary-alpha);
   }
 }
 
-/* ===== REDUCED MOTION ===== */
+/* ============================================================
+   5. AMBIENT — Continuous Subtle Motion
+   ============================================================ */
+
+/* Ambient gradient background */
+.ambient-gradient {
+  animation: ambient-shift 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating animation */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(0.5deg); }
+  50% { transform: translateY(-10px) rotate(0deg); }
+  75% { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+/* Subtle pulse */
+.pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Breathing scale */
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Rotating gradient border */
+.gradient-border-rotate {
+  position: relative;
+}
+
+.gradient-border-rotate::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    var(--primary),
+    var(--secondary),
+    var(--primary)
+  );n  animation: gradient-rotate 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gradient-rotate {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
+   6. STATE TRANSITIONS
+   ============================================================ */
+
+/* Loading spinner */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success checkmark */
+.check-draw {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: check-draw 0.6s var(--ease-out-expo) forwards;
+}
+
+@keyframes check-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Shake (error feedback) */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+/* Fade in/out */
+.fade-in {
+  animation: fade-in var(--duration-normal) var(--ease-out-cubic) forwards;
+}
+
+.fade-out {
+  animation: fade-out var(--duration-normal) var(--ease-out-cubic) forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Scale pop (for notifications) */
+.scale-pop {
+  animation: scale-pop 0.4s var(--ease-spring) forwards;
+}
+
+@keyframes scale-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Slide in from bottom (modal/bottom sheet) */
+.slide-up {
+  animation: slide-up var(--duration-normal) var(--ease-out-expo) forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from top */
+.slide-down {
+  animation: slide-down var(--duration-normal) var(--ease-out-expo) forwards;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   7. PARALLAX DEPTH LAYERS
+   ============================================================ */
+
+.parallax-layer {
+  will-change: transform;
+}
+
+.parallax-slow {
+  --parallax-speed: 0.3;
+}
+
+.parallax-medium {
+  --parallax-speed: 0.5;
+}
+
+.parallax-fast {
+  --parallax-speed: 0.7;
+}
+
+/* ============================================================
+   8. COUNTDOWN / COUNTER ANIMATION
+   ============================================================ */
+
+.count-up {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   ACCESSIBILITY — prefers-reduced-motion
+   ============================================================ */
+
 @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .page-loaded .hero-content > *,
+  .page-loaded .hero-visual,
+  .page-loaded .hero-float {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  
   .reveal,
+  .reveal-up,
+  .reveal-down,
   .reveal-left,
   .reveal-right,
   .reveal-scale,
+  .reveal-scale-up,
   .stagger-children > * {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
-
-  .hero-badge,
-  .hero h1,
-  .hero-subtitle,
-  .hero-actions,
-  .hero-trust {
-    animation: none !important;
-    opacity: 1 !important;
-  }
-
-  .hero-glow {
+  
+  .float,
+  .float-slow,
+  .float-fast,
+  .pulse-subtle,
+  .breathe,
+  .glass-shimmer::after,
+  .glass-glow,
+  .gradient-border-rotate::before {
     animation: none !important;
   }
-
-  .float-tag {
-    animation: none !important;
+  
+  .parallax-layer {
+    will-change: auto;
   }
+}
 
-  .mock-item {
-    animation: none !important;
-  }
+/* ============================================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================================ */
+
+/* GPU acceleration for animated elements */
+.gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Contain paint for complex animations */
+.paint-contain {
+  contain: paint;
+}
+
+/* Content visibility for off-screen sections */
+.content-visibility {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
