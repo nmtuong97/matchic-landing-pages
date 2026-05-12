@@ -177,7 +177,7 @@
    * Animated counters
    */
   function initCounters() {
-    const counters = document.querySelectorAll('.counter-number');
+    const counters = document.querySelectorAll('.stat-number');
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
